@@ -29,15 +29,16 @@ The first five-company B2B research-only benchmark is recorded. Connectsys and M
 
 ## Deployment state
 
-The private GitHub repository `bhaskaranjappa/peronal-ai-os` now exists and contains the canonical rebuild. Windows clone verification and runtime ingestion tests are still pending.
+The private GitHub repository `bhaskaranjappa/personal-ai-os` exists and contains the canonical rebuild. Windows clone verification is COMPLETE. Runtime ingestion and cross-platform parity tests are the next validation stage.
+
 
 ## Required next steps
 
-1. Verify the GitHub tree and manifest.
-2. Clone the repository on Windows.
-3. Verify local reproducibility and Git state.
-4. Execute cross-platform tests in Claude, Gemini, OpenCode, and Hermes.
-5. Fix failures at the canonical layer or adapter layer.
-6. Declare V1 only after runtime parity and governance gates pass.
+1. Maintain GitHub tree and manifest integrity.
+2. Verify local reproducibility and Git state.
+3. Execute cross-platform tests in Claude, Gemini, OpenCode, and Hermes.
+4. Fix failures at the canonical layer or adapter layer.
+5. Declare V1 only after runtime parity and governance gates pass.
 
 Build principle: Truth → Portability → Reversibility → Leverage → Controlled Autonomy.
+
