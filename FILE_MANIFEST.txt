@@ -1,0 +1,1 @@
+Canonical Personal AI OS file manifest. Start at `00_MASTER_INDEX.md`. The repository tree is the authoritative file list; this manifest is a convenience index.
