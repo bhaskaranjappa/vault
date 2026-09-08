@@ -2,7 +2,7 @@
 
 Generated: 2026-09-08
 Baseline branch: main
-Baseline commit before manifest regeneration: d1c0cbf2076de24e24c2e0338e49ad601b9996df
+Baseline commit before manifest regeneration: 847f54c0623f9e439070b8094675182bedab1fa4
 
 The GitHub repository tree remains authoritative. This manifest is a convenience index and must be regenerated whenever repository paths change.
 
@@ -78,6 +78,7 @@ The GitHub repository tree remains authoritative. This manifest is a convenience
 10_SOURCES/SOURCE_LEDGER.md
 11_STATE/B2B_BENCHMARK_2026-09-05.md
 11_STATE/STATE_INDEX.md
+12_VALIDATION/CROSS_PLATFORM_EVIDENCE_TEMPLATE.md
 12_VALIDATION/CROSS_PLATFORM_VALIDATION_REPORT.md
 12_VALIDATION/LIVE_HERMES_RUNTIME_CHECK.md
 12_VALIDATION/RECONCILIATION_REPORT.md
