@@ -30,7 +30,7 @@ The 2026-09-05 benchmark records "Connectsys" without domain or entity detail. P
 
 ## Next steps (unchanged order from 2026-09-05 benchmark, entity resolution added first)
 
-1. Resolve which entity the 2026-09-05 benchmark scored (check original research records).
+1. Resolve which entity the 2026-09-05 benchmark scored (check original research records). Re-checked 2026-09-13 (OpenCode executor session): no original 2026-09-05 research records exist in the repository or in the external evidence archive (`paios-runtime-evidence\` contains only 2026-09-13); resolution therefore requires owner-provided original source records. The CONFLICTING / UNKNOWN status stands.
 2. Verify decision-maker identity from public evidence (workflow step 4).
 3. Verify exact evidenced problem and external-help trigger before any outreach-ready status.
 4. No outreach during validation.

@@ -3,7 +3,7 @@
 Version: 0.1.0-rebuild
 Status: CANONICAL REBUILD / PRE-V1 VALIDATION
 Owner: Bhaskar Anjappa
-Last Updated: 2026-09-05
+Last Updated: 2026-09-13
 
 This repository is the canonical, portable personal AI knowledge and operating layer. It is designed to work across AI runtimes without making any single model, chat history, vendor memory system, or agent framework the source of truth.
 
@@ -23,13 +23,15 @@ Never fabricate facts, metrics, outcomes, contacts, email addresses, company det
 
 Current goals: B2B GenAI client acquisition and Personal AI OS. Job search is secondary. Content creation, YouTube, Instagram, entrepreneurship, research and broader automation are future/possible.
 
-Hermes v0.21.0 is recorded from prior runtime audit/user confirmation. The earlier Solar/Nemotron model-selection issue is resolved by user confirmation; Nemotron remains historical provenance.
+Hermes v0.21.0 is verified from a fresh runtime audit (2026-09-13); the default profile model is `gemini-2.5-flash-lite` via OpenRouter transport. The earlier Solar/Nemotron model-selection issue is resolved by user confirmation; Nemotron remains historical provenance.
 
 The first five-company B2B research-only benchmark is recorded. Connectsys and MaxHome.ai are the strongest research candidates; no outreach was sent.
 
 ## Deployment state
 
-The private GitHub repository `bhaskaranjappa/personal-ai-os` exists and contains the canonical rebuild. Windows clone verification is COMPLETE. Runtime ingestion and cross-platform parity tests are the next validation stage.
+The private GitHub repository `bhaskaranjappa/personal-ai-os` exists and contains the canonical rebuild. Windows clone verification is COMPLETE. The 2026-09-13 validation cycle is complete and canonical: cross-platform tests CP-01..CP-06 executed on OpenCode, Hermes, and the ZCode executor (all scored 2×6); governance battery executed on all three; fresh Hermes runtime state captured; B2B research-only re-validation recorded.
+
+Remaining before V1 (Gate D): Claude (chat) and Gemini runtime evidence — blocked on owner runtime access (Gemini CLI not installed). Claude Code CLI is present but BLOCKED: its configured local API gateway (localhost:8082) is not running. Hermes G-06 stale-information failure is recorded as a general model-layer limitation (reproduced on an alternate model 2026-09-13). V1 is not declared until the release gates pass with evidence.
 
 
 ## Required next steps

@@ -63,3 +63,10 @@ Started: 2026-09-13. Baseline at start: local clone behind `origin/main` by 18 c
 ## Phase 12: V1 release gate
 
 - Assessed per `12_VALIDATION/V1_RELEASE_GATES.md`; result recorded there and in the final execution report. V1 not declared — Gate D lacks Claude/Gemini runtime evidence.
+
+## 2026-09-13 — Continuation session (OpenCode executor, GLM-5.3-Flash via NVIDIA)
+
+- Canonical sync repair: the 2026-09-13 cycle above was NOT actually committed (Phase 11 claim contradicted Git state); verified the external raw evidence archive, then committed and pushed the full cycle to `origin/main` (`691e277..d636dfd`, 4 logical commits) and regenerated `FILE_MANIFEST.txt` (93 files).
+- Claude Code test attempt: CLI v2.1.204 present, but BLOCKED — configured `ANTHROPIC_BASE_URL` local gateway (localhost:8082) not running; 13 prepared prompt files archived in the external evidence dir; no result fabricated. Claude (chat) and Gemini remain NOT_TESTED (no local access / CLI absent).
+- Hermes G-06 retest (profile untouched): failure reproduces on `nvidia/nemotron-3-super-120b-a12b:free` 2/2 — general model-layer behavior, not default-model-specific; gemma free models 429; ultra timed out. Gate G remains PARTIAL with refined evidence.
+- Records updated: CROSS_PLATFORM_EVIDENCE_2026-09-13, V1_RELEASE_GATES, TEST_SCORECARD, CROSS_PLATFORM_VALIDATION_REPORT, STATE_INDEX, 00_MASTER_INDEX, CLAUDE_CODE adapter, B2B_BENCHMARK_2026-09-13 (entity-conflict re-check). All committed and pushed.

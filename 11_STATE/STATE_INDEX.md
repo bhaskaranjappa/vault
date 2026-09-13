@@ -16,6 +16,6 @@
 1. ~~Verify GitHub tree and manifest.~~ DONE 2026-09-13 (tree == manifest; `PLAN(1).md` duplicate removed upstream).
 2. ~~Clone/verify on Windows.~~ DONE 2026-09-13 (see above).
 3. ~~Run runtime portability tests (Tier 1 available runtimes).~~ DONE 2026-09-13 for OpenCode, Hermes, ZCode-equivalent. Evidence: `12_VALIDATION/CROSS_PLATFORM_EVIDENCE_2026-09-13.md`.
-4. Run remaining Tier 1 runtime tests: Claude, Gemini (blocked on owner runtime access).
-5. Resolve Hermes G-06 stale-information failure (runtime-layer limitation; monitor for model/provider change; canonical layer adequate — same test passes on OpenCode and ZCode).
+4. Run remaining Tier 1 runtime tests: Claude chat (no local access) and Gemini (CLI not installed) — blocked on owner runtime access. Claude Code CLI v2.1.204 present but BLOCKED 2026-09-13: configured local API gateway at localhost:8082 not running; 13 prepared prompt files at `paios-runtime-evidence\2026-09-13\claude-code\`.
+5. Hermes G-06 stale-information failure: runtime-layer, NOT default-model-specific — 2026-09-13 retest reproduces on nemotron-3-super-120b 2/2 (gemma free models 429; ultra timeout). Canonical layer adequate — same test passes on OpenCode and ZCode. Resolution via model change unlikely with current free models; retest when a stronger model is available.
 6. Declare V1 after release gates pass (`12_VALIDATION/V1_RELEASE_GATES.md`).

@@ -35,6 +35,28 @@ Context package: manifest universal minimum + B2B routing (workflow, benchmark, 
 
 Claude, Gemini, ChatGPT, Cursor, Codex, Claude Code, Grok: NOT_TESTED — no legitimate local execution path from the ZCode environment; per PLAN §9 and owner directive §21 these remain pending owner-executed tests using `14_CROSS_PLATFORM/TEST_SUITE.md` and the per-runtime context package recorded above.
 
+## Claude Code attempt — 2026-09-13 (OpenCode executor session, GLM-5.3-Flash)
+
+- Claude Code CLI v2.1.204 present locally. Test BLOCKED (external dependency): the CLI is configured with `ANTHROPIC_BASE_URL` pointing to a local API gateway at `http://localhost:8082`, which is not running (first attempt failed with connection refused; port has no listener; no identifiable launcher on the machine). A 15KB context prompt was also observed to hang `claude -p` from stdin. No result recorded; nothing fabricated.
+- 13 prepared test prompt files (frozen context package + `06_PLATFORM_ADAPTERS/CLAUDE_CODE.md` + per-test questions, same semantics as prior runtimes) are archived at `claude-code/` in this evidence directory. Owner must start the configured gateway (or provide another Anthropic-compatible endpoint), then rerun per `14_CROSS_PLATFORM/TEST_SUITE.md`.
+- Claude (claude.ai chat runtime) remains NOT_TESTED: no local access; Claude Code evidence does not substitute for it (different adapter and ingestion mechanism).
+- Gemini CLI: not installed on this machine — NOT_TESTED (owner access required).
+
+## Hermes G-06 alternate-model retest — 2026-09-13 (OpenCode executor session)
+
+Question: is the G-06 stale-information failure specific to the default model (`gemini-2.5-flash-lite`) or a general model-layer behavior?
+
+Method: identical frozen g-06 prompt, `hermes -z` one-shot, `--provider openrouter`, alternate free OpenRouter models; profile configuration untouched (non-destructive). Raw outputs and usage JSON in `hermes/` in this directory.
+
+| Model | Result |
+|---|---|
+| nvidia/nemotron-3-super-120b-a12b:free | FAIL — "nunify: WATCH" with no staleness qualifier, reproduced 2/2 |
+| google/gemma-4-31b-it:free | HTTP 429 x2 (rate-limited; no result) |
+| google/gemma-4-26b-a4b-it:free | HTTP 429 (rate-limited; no result) |
+| nvidia/nemotron-3-ultra-550b-a55b:free | Timed out >240 s (no result) |
+
+Conclusion: the stale-information compliance failure is a **general model-layer behavior, not specific to the default model** — a second, larger model reproduces it 2/2. It is not a Hermes defect; the canonical layer is adequate (identical package + prompt produce correct refusals on OpenCode and ZCode). Resolution via a model/provider change is unlikely with currently available free models. G-06 remains the recorded Gate G limitation; retest when a stronger model is available.
+
 ## Conclusion
 
 Three runtimes (including two of the four mandatory Tier-1 runtimes — OpenCode and Hermes — plus the ZCode executor) demonstrate fresh, evidenced CP-01..CP-06 parity at score 2 and pass the governance negative battery, with one recorded runtime-layer governance failure (Hermes G-06). Claude and Gemini evidence is still required for Gate D.

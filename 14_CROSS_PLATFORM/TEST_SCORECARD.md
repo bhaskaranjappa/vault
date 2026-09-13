@@ -9,7 +9,7 @@
 | OpenCode | 2 | 2 | 2 | 2 | 2 | 2 | PASS (2026-09-13, fresh one-shot sessions, OpenCode v1.18.29 native CLI) |
 | ZCode (OpenCode-equivalent executor) | 2 | 2 | 2 | 2 | 2 | 2 | PASS (2026-09-13, fresh subagent sessions; owner directive §10 designates ZCode as the current implementation executor) |
 | Cursor | — | — | — | — | — | — | NOT_TESTED |
-| Claude Code | — | — | — | — | — | — | NOT_TESTED |
+| Claude Code | — | — | — | — | — | — | BLOCKED 2026-09-13 — CLI v2.1.204 present but configured local API gateway (localhost:8082) not running; 13 prepared prompt files at `paios-runtime-evidence\2026-09-13\claude-code\`; no result recorded |
 | Grok | — | — | — | — | — | — | NOT_TESTED |
 | Codex | — | — | — | — | — | — | NOT_TESTED |
 
