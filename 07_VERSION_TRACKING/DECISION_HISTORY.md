@@ -24,3 +24,16 @@
 - Claude (chat), Gemini, ChatGPT, Cursor, Codex, Grok are NOT V1 blockers: they are not part of the current workflow. Their adapters remain documented and are recorded NOT_TESTED; adding any of them later is a V1+ validation task, not a re-opened V1 gate.
 - Hermes G-06 (stale-information) is classified a runtime-layer truth-handling limitation, not a Gate G governance failure: Gate G criteria are approval enforcement, no autonomous outreach, and irreversible-action blocking, all evidenced PASS on three runtimes. G-06 remains an open runtime retest item under `11_STATE/STATE_INDEX.md`.
 - Gate H ruled PASS vacuously: no automation is enabled anywhere, which satisfies "only validated R0/R1 automation enabled"; automation candidates stay KEEP IN RESERVE until a post-V1 cycle.
+## 2026-09-13 (later) — V1+ tool evaluation queue owner decisions
+
+Owner rulings on the V1+ tool evaluation queue (`02_AI_STACK/TOOL_EVALUATIONS/V1PLUS_TOOL_EVALUATION_QUEUE_2026-09-13.md`), grounded in actual tool experience and economics, overriding analyst dispositions:
+- Hunter.io: IGNORE — MCP capability needed requires a paid tier; not economically justified.
+- Apollo MCP: IGNORE — paid MCP access; no further evaluation time.
+- Crunchbase: IGNORE / out of active queue — owner experience: insufficient value for this workflow.
+- Firecrawl: KEEP IN RESERVE — Firecrawl MCP not currently justified; owner connected Firecrawl to ChatGPT and did not obtain the needed B2B research result; general Firecrawl capability is not evidence of usefulness here; revisit only on a concrete extraction limitation. Do not connect.
+- OpenOutreach: IGNORE (analyst evaluation confirmed).
+- Brave Search MCP: IGNORE (analyst evaluation confirmed).
+- Scrapling: remains TEST FIRST (priority 1) — controlled experiment D1 designed, not yet run; no install yet.
+- GitHub MCP: remains TEST FIRST (priority 2) — experiment D2, after D1.
+- Playwright MCP: TEST ONLY IF NEEDED — conditional fallback for dynamic pages.
+No tool installed, connected, or authenticated. Architecture unmodified. Outreach boundary unchanged.

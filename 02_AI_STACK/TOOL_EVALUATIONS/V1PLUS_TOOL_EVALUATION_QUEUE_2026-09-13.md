@@ -6,6 +6,24 @@ Baseline being improved: B2B workflow `05_WORKFLOWS/B2B_CLIENT_ACQUISITION.md` a
 
 ---
 
+## OWNER DECISION REVISION — 2026-09-13
+
+The dispositions below in records/queue sections were the analyst recommendation. The owner has since ruled on dispositions based on actual tool experience and economics. Owner decisions OVERRIDE analyst dispositions and are marked OWNER-DECISION. The original analyst text is preserved for provenance. Decision recorded in `07_VERSION_TRACKING/DECISION_HISTORY.md`.
+
+| Candidate | Owner disposition | Owner reason |
+|---|---|---|
+| Hunter.io | IGNORE (was TEST FIRST) | MCP usage requires a paid tier for the capability needed — not economically justified for current workflow. |
+| Apollo MCP | IGNORE (was KEEP IN RESERVE) | Paid MCP access unsuitable; no further evaluation time. |
+| Crunchbase MCP | IGNORE / OUT OF ACTIVE QUEUE (was KEEP IN RESERVE) | Owner experience: insufficient value for this workflow. |
+| Firecrawl | KEEP IN RESERVE (demoted from TEST FIRST) | IMPORTANT DISTINCTION: Firecrawl capability itself may be useful, but Firecrawl MCP is not currently justified. Owner already connected Firecrawl to ChatGPT and did not obtain the needed B2B research result. General Firecrawl capability is NOT evidence of usefulness here. Revisit only if a concrete research/extraction limitation appears that Firecrawl is likely to solve. Do not connect. |
+| OpenOutreach | IGNORE (confirmed) | Architectural duplication + autonomous outreach conflict with governance. |
+| Brave Search MCP | IGNORE (confirmed) | Substantial overlap with working web-search capability. |
+| Scrapling | TEST FIRST (confirmed, priority 1) | Highest-priority actual tool experiment. |
+| GitHub MCP | TEST FIRST (confirmed, priority 2) | Specifically for technical-company research: repo activity, engineering activity, tech signals, issues/projects, evidence-backed technical pain signals; does it add info the web-research baseline misses? |
+| Playwright MCP | TEST ONLY IF NEEDED (conditional fallback) | For dynamic/browser-only research ordinary HTTP extraction cannot handle. |
+
+---
+
 ## CANDIDATE RECORDS
 
 ### 1. Scrapling (+ official MCP)
@@ -172,62 +190,86 @@ Baseline being improved: B2B workflow `05_WORKFLOWS/B2B_CLIENT_ACQUISITION.md` a
 
 ---
 
-## A. EVALUATION QUEUE (expected value order)
+## A. EVALUATION QUEUE — REVISED PER OWNER DECISIONS (operative)
 
-1. Scrapling (+MCP) — TEST FIRST
-2. GitHub MCP (official) — TEST FIRST
-3. Firecrawl MCP — TEST FIRST (head-to-head vs #1; install at most one)
-4. Hunter verifier — TEST FIRST (verifier mode only)
-5. Playwright MCP — TEST FIRST (conditional, fallback only)
-6. Apollo MCP — KEEP IN RESERVE
-7. Crunchbase MCP — KEEP IN RESERVE
+1. Scrapling (+MCP) — TEST FIRST (experiment D1 below)
+2. GitHub MCP (official) — TEST FIRST (experiment D2, run after D1)
+3. Playwright MCP — CONDITIONAL (only on D1 trigger: dynamic pages HTTP extraction cannot handle)
+4. Firecrawl — KEEP IN RESERVE (owner experience; revisit only on a concrete extraction limitation)
+5. Hunter.io — IGNORE (owner: paid tier required)
+6. Apollo MCP — IGNORE (owner: paid, no further evaluation)
+7. Crunchbase MCP — IGNORE / out of active queue (owner experience)
 8. OpenOutreach — IGNORE
 9. Brave Search MCP — IGNORE
 
+(Superseded analyst-only queue: Firecrawl was originally TEST FIRST #3, Hunter #4, Playwright #5 — overridden above.)
+
 ## B. TOP 5 TEST-FIRST RATIONALE
-Covered in records 1, 4, 5, 6, 7 above. Shared thread: each attacks a measured cycle-1 gap (evidence reproducibility, signal freshness, contact verification, JS-page fallback) without duplicating working capabilities or breaching governance.
+Superseded: only 2 active TEST-FIRST candidates remain (Scrapling, GitHub MCP). Rationale in records 1 and 4 stands.
 
 ## C. DO-NOT-INSTALL-YET LIST
-- **Apollo MCP** — paid, inferred data, R2-adjacent sequences; revisit at higher volume.
-- **Crunchbase MCP** — redundant with news search now; paid; community server stale.
-- **OpenOutreach** — competing architecture; autonomous send violates R2; IGNORE.
-- **Brave Search MCP** — duplicates built-in search; IGNORE.
+Per owner decisions: Firecrawl (RESERVE; do not connect), Hunter.io, Apollo, Crunchbase, OpenOutreach, Brave Search — all IGNORE/RESERVE. No installs of any kind until the installation gate (section E) is passed.
 
-## D. TEST DESIGNS (BASELINE = current OS workflow; ENHANCED = OS + candidate; same prospect universe unless stated)
+## D. EXPERIMENT D1 — SCRAPLING CONTROLLED EXPERIMENT PROTOCOL (planned 2026-09-13, not yet executed)
 
-**D1. Scrapling vs Firecrawl (one experiment, two arms + baseline).**
-- Universe: the 5 cycle-1 prospects + 5 new prospects (fixed list, frozen before test).
-- Task per tool: for each company, produce (a) careers/jobs evidence, (b) tech-stack evidence, (c) one raw evidence snapshot per claim (HTML/screenshot/markdown) with URL + timestamp.
-- Measure: discovery coverage (signals found vs baseline's 12 cycle-1 signals), false positives (claims not supportable by snapshot), false negatives (baseline-known signals missed), evidence/provenance completeness (snapshot per claim %), extraction accuracy (spot-check 10 claims), time to complete batch, token/compute usage (metered), operational complexity (setup + failures), governance compliance (public pages only, robots respected).
-- Pass bar: ≥ baseline signal coverage with ≥90% snapshot-backed claims, at acceptable time cost.
+### Frozen company set (fixed before any run; identical for both arms)
+The 5 cycle-1 prospects (`11_STATE/B2B_CYCLE_2026-09-13.md`), chosen because a complete baseline evidence record already exists for them:
+1. Logibee (connectsys/logibee.ai)
+2. Bolna AI (bolna.ai)
+3. MaxHome.AI (maxhome.ai)
+4. GreyLabs AI (greylabs.ai)
+5. Simplismart (simplismart.ai)
 
-**D2. GitHub MCP.**
-- Universe: same 10 companies' GitHub orgs.
-- Task: enumerate hiring/tech-stack signals (careers README, jobs repos, languages, activity) for stage 3.
-- Measure: new Tier-1 signals not in baseline record; conflicts resolved/created vs third-party job boards (e.g., Simplismart Series B claim); false positives; time; token usage.
-- Pass bar: ≥3 new or corrected Tier-1 signals across the batch with zero fabricated entries.
+### Frozen signal taxonomy (what counts as a signal; fixed before run)
+For each company, evidence-backed items in these classes:
+- S1 open roles / hiring (careers pages, boards)
+- S2 funding/financial events
+- S3 product/technology positioning
+- S4 decision-maker identity
+- S5 contact channel (public, verified)
+- S6 tech-stack evidence (repos, docs, engineering blogs)
 
-**D3. Hunter verifier.**
-- Task: take 10 already-publicly-identified contact addresses/domains (from cycle 1 + new batch; no finder mode), verify deliverability.
-- Measure: verification success rate, agreement with manual/public-listing check, false positives (marked deliverable but bounced — cannot fully measure pre-send, so treat as unverifiable and record as such), time, cost in credits.
-- Pass bar: verifier-only usage demonstrably compliant; ≥80% of public addresses resolved with a deliverability verdict; no guessed addresses generated.
+### Baseline arm
+Existing cycle-1 record (documented methodology: runtime web search + WebFetch; evidence = cited URLs; 12 recorded signals). No new baseline run — the baseline is the frozen cycle-1 record, applied identically via its recorded methodology if a gap requires re-checking.
 
-**D4. Playwright MCP (conditional on D1).**
-- Trigger: only if D1 shows both Scrapling and Firecrawl failing on ≥2 JS-heavy target pages.
-- Task: capture evidence from the failed pages; measure success rate, screenshot evidence quality, time.
-- Pass bar: recovers ≥1 of the failed pages with reproducible screenshot evidence.
+### Enhanced arm (only after owner authorizes install for this test)
+Personal AI OS + Scrapling (base + `[fetchers]`; MCP optional and separately recorded if used). Scope limits: public pages only; respect robots.txt; no login-walled or LinkedIn automation; no StealthyFetcher anti-bot features in this test (plain Fetcher/DynamicFetcher only — governance constraint, recorded as deviation from full capability set).
 
-## E. INSTALLATION GATE (evidence required before entering AI_TOOL_REGISTRY)
-1. Controlled-test pass at/above the stated bar, recorded in `02_AI_STACK/TOOL_EVALUATIONS/` with raw evidence.
-2. Lifecycle honesty: INSTALLED/CONFIGURED/AUTHENTICATED/VERIFIED states recorded separately, VERIFIED only from direct runtime inspection.
-3. Output mapping: tool output maps to canonical record schema (source, date, status, confidence, conflict notes); vendor data NEVER becomes source of truth.
-4. Secrets: no keys/tokens in Git; local env only.
-5. Governance: written scope limits (public pages, verifier-only, read-only PAT, etc.); R2 boundary unchanged — no tool may send outreach.
-6. Failure behavior tested: missing-data, rate-limit, offline behavior documented.
-7. Owner approval for INSTALL recorded in DECISION_HISTORY.md.
+### Task (identical target list per company)
+For each company: (a) find S1 signals on the company's own careers/jobs pages; (b) extract S3/S6 evidence from product/docs pages; (c) store one raw evidence snapshot per claim (HTML/markdown/screenshot) with URL + retrieval timestamp into a local evidence folder OUTSIDE the canonical repo; (d) log elapsed time and any failures.
 
-## F. RECOMMENDED ORDER
-**Test Scrapling first.** Rationale: evidence collection is the highest-leverage, cross-cutting stage (feeds stages 2, 3, and 7); it is free, self-hosted, and runtime-agnostic; and D1 doubles as the Firecrawl evaluation, resolving the only either/or in one experiment. GitHub MCP second (simplest, free, official). Hunter third (small, gated to verifier mode). Playwright only if triggered.
+### Measurements
+| Metric | Method |
+|---|---|
+| Relevant signal coverage | count of taxonomy signals found, vs baseline per company |
+| Evidence quality | each claim classified FACT/INFERENCE/CLAIM with source tier |
+| Provenance completeness | % of claims with stored snapshot + URL + timestamp |
+| Extraction accuracy | spot-check 10 extracted facts against live page content |
+| False positives | claims not supportable by their snapshot |
+| False negatives | baseline-known signals missed by Scrapling arm |
+| Time/effort | wall-clock + operator steps per company |
+| Token/compute overhead | metered where the MCP/LLM path is used; else dependency-install footprint and runtime notes |
+| Reproducibility | re-run 3 extrctions on 3 targets; snapshot hash stability / adaptive relocation success |
+| Governance compliance | public-page scope held, robots respected, no ToS-risky fetch modes |
+| Material usefulness | any NEW decision-relevant signal the baseline missed |
 
-## Boundary statement
-No tool installed, authenticated, or connected. No outreach sent. No contacts guessed. Canonical architecture unmodified except this evaluation record.
+### C. SUCCESS / FAILURE THRESHOLDS
+- **PASS (authorize INSTALL consideration):** signal coverage ≥ baseline (≥12 total across set) AND ≥90% of enhanced-arm claims snapshot-backed AND ≥2 materially new decision-relevant signals found AND zero governance breaches AND extraction spot-check ≥9/10 accurate.
+- **PARTIAL:** coverage ≥ baseline but <2 new signals, or snapshots ≥75% — keep as documented capability, RESERVE disposition, revisit at higher volume.
+- **FAIL:** coverage < baseline, or any false positive reaching the record, or governance breach, or reproducibility broken (snapshots not regenerable).
+- Owner makes the final INSTALL call; thresholds inform, they do not decide.
+
+### E. INSTALLATION GATE (unchanged from original, restated for this test)
+1. D1 pass at/above bar with raw evidence recorded here.
+2. Lifecycle recorded separately: INSTALLED/CONFIGURED/VERIFIED (VERIFIED only via direct runtime inspection).
+3. Output maps to canonical schema; Scrapling snapshots are evidence inputs, never source of truth.
+4. No secrets in Git (none expected — no API keys required).
+5. Written scope limits (above) enforced; R2 boundary unchanged.
+6. Failure behavior tested and documented (404, JS-heavy failure, robots disallow).
+7. Owner approval recorded in DECISION_HISTORY.md.
+
+### Next recommended experiment after D1
+**D2 — GitHub MCP (official):** same frozen 5-company set; enumerate org repos, languages, activity, careers README/jobs repos, issues/projects for S6/S1 signals; measure new Tier-1 signals vs both baseline AND D1 results (three-way comparison), false positives, time, PAT read-only scope. Pass bar: ≥3 new or corrected Tier-1 technical signals across the set with zero fabricated entries.
+
+## F. RECOMMENDED ORDER (revised)
+D1 Scrapling first (highest leverage, free, self-hosted; resolves evidence-collection quality directly). D2 GitHub MCP second. Playwright MCP only if D1 logs show HTTP-extraction failures on dynamic pages within the frozen set.
