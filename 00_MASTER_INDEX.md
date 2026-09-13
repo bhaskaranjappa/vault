@@ -33,13 +33,32 @@ The private GitHub repository `bhaskaranjappa/personal-ai-os` exists and contain
 
 V1 DECLARED 2026-09-14: all release gates PASS with evidence (`12_VALIDATION/V1_RELEASE_GATES.md`). The V1 mandatory runtime set is the owner's actual workflow — ZCode, OpenCode, Hermes — defined by owner decision 2026-09-14 (`07_VERSION_TRACKING/DECISION_HISTORY.md`) per PLAN.md §9/§17. Claude chat and Gemini are NOT_TESTED and non-blocking (not in current workflow); Claude Code is recorded BLOCKED (local API gateway down at test time). Hermes G-06 stale-information failure is recorded as a general model-layer limitation (reproduced on an alternate model 2026-09-13) and classified as a runtime-layer truth-handling limitation, not a Gate G governance failure.
 
+## V1+ execution model
+
+The canonical AI Tool / Repository Discovery and Capability-Enhancement Workflow is defined in `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`.
+
+Execution roles:
+- ChatGPT or another capable research LLM: repository discovery, deep documentation/source study, architecture and suitability analysis, baseline definition, evaluator application, experiment specification and result review.
+- ZCode: preferred hands-on executor for installation, runtime experimentation, benchmarking and evidence capture.
+- OpenCode: secondary executor and failover runtime when ZCode exhausts usable tokens/context, becomes unavailable, or cannot continue reliably.
+- Claude, Gemini, Grok and other supported LLMs: consumers of the portable canonical workflow and evidence; they may perform research, planning or review using their native mechanisms.
+
+Standard pipeline:
+`Capability gap → Discover repository/tool → Deep research → Protocol assessment → Bounded test specification → ZCode execution → OpenCode failover if required → Measure → Independent review → PASS/PARTIAL/FAIL → INSTALL/REPLACE/RESERVE/IGNORE/REJECT → Canonical evidence → Runtime integration → Production rebenchmark`
+
+Executor continuity is standardized by `11_STATE/EXECUTOR_HANDOFF_TEMPLATE.md`. A handoff preserves completed work, evidence, repository state, remaining work, failures and constraints so the destination executor resumes from the exact incomplete action rather than restarting.
+
+Capability search is not restricted to MCP. Candidate classes include tools/MCP, skills, sub-agents, orchestration, context/memory, browser/automation, research/extraction and engineering utilities. Candidates are evaluated against a concrete capability gap rather than popularity or tool count.
+
 ## Required next steps
 
 1. Maintain GitHub tree and manifest integrity.
 2. Verify local reproducibility and Git state.
 3. Retest Claude Code when its local API gateway is running; validate other adapters only if they enter the actual workflow (V1+ tasks).
 4. Fix failures at the canonical layer or adapter layer; retest Hermes G-06 when a stronger model is available.
-5. V1+ backlog (PLAN.md §20): controlled automation expansion, specialist/prompt library, deeper tool integrations, multi-agent workflows, job-search/content automation, cross-runtime synchronization.
+5. Use the V1+ capability-enhancement workflow for future repository/tool discovery and evaluation.
+6. Promote only evidence-backed components and rebenchmark the enhanced production workflow.
+7. Preserve ZCode-first execution with OpenCode failover and standardized handoff state.
+8. V1+ backlog (PLAN.md §20): controlled automation expansion, specialist/prompt library, deeper tool integrations, multi-agent workflows, job-search/content automation, cross-runtime synchronization.
 
-Build principle: Truth → Portability → Reversibility → Leverage → Controlled Autonomy.
-
+Build principle: Truth → Portability → Reversibility → Leverage → Controlled Autonomy
