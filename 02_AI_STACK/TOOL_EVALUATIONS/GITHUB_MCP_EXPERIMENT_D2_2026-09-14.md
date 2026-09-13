@@ -75,6 +75,8 @@ Executed per owner directive (D2: GitHub MCP, three-way comparison baseline/D1/D
 
 **INSTALL** as the OSS-diligence layer of the B2B research workflow, scoped: read-only mode, bounded per-company call budgets, entity-resolution rule mandatory, unauthenticated (or scoped fine-grained PAT) operation. Rationale: only source of repo-level truth in the stack; decisive negatives (4/5) have standalone decision value; official GitHub product at highest maturity; free in unauth mode; zero governance risk in read-only. **Owner approval pending and required in `07_VERSION_TRACKING/DECISION_HISTORY.md`; thresholds inform, they do not decide.**
 
+**Promoted 2026-09-14** (owner promotion pass): disposition formalized as INSTALL — registered in `02_AI_STACK/AI_TOOL_REGISTRY.md` as INSTALLED → VERIFIED, CURRENT (read-only OSS-diligence layer). Lifecycle precision recorded: ENABLED no (not wired into any runtime MCP config), CONFIGURED no, AUTHENTICATED no (unauthenticated zero-permission mode is the operating mode; if a token is ever configured it must be a read-only fine-grained PAT with no repo-write scopes). Official binary relocated from temp to `C:\Users\ABhas\tools\github-mcp-server\` (26,080,768 B, SHA-256 `19a2a274472f535bef3080e7b2a79becb767a18ce8bb8ca4add6a708498b55e2`).
+
 Scope limits carried forward: no write scopes; no issue-text mining without explicit relevance; name-match attribution prohibited without first-party evidence; 60 req/hr unauth budget.
 
 ## 8. Provenance

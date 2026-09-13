@@ -74,6 +74,8 @@ The canonical D3 spec justifies Playwright **only if** Scrapling fails on JS-hea
 
 **KEEP IN RESERVE** — conditional fallback for dynamic/interactive pages, consistent with the queue's own framing. Evidence-backed rationale: (1) the tested need did not materialize (Scrapling 3/3, zero interaction required); (2) Playwright MCP itself works reliably (13/13 calls, official Microsoft product) and is the right instrument **if** a future target requires true interaction (pagination, filtered views, state changes) or if a WAF blocks Scrapling's rendering path; (3) it is not IGNORE because D3 did not find it broken — it found it unnecessary; (4) revisit trigger: a concrete Scrapling extraction/interaction failure, or an Ashby-style board that actually requires pagination/filtering. If ever promoted to INSTALL, pin output paths absolutely (see §3.3) and scope the toolset to navigation/snapshot only.
 
+**Confirmed 2026-09-14** (owner promotion pass): KEEP IN RESERVE formalized in `02_AI_STACK/AI_TOOL_REGISTRY.md` — INSTALLED (npx cache, ephemeral) → VERIFIED (D3), but NOT promoted to the production stack; revisit trigger recorded there.
+
 ## 8. Provenance
 
 - Arm A evidence: `C:\Users\ABhas\projects\paios-runtime-evidence\2026-09-13\d3-comparison\scrapling\` — `d3-fetch-log-js.json` + per-page HTML/text/meta (SHA-256, timestamps, elapsed) for maxhome and greylabs; fetch log timestamps 2026-09-14 03:26 IST.

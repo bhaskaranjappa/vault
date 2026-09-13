@@ -102,6 +102,8 @@ Classification: Tier 1 = company's own domain/docs; Tier 2 = company-controlled 
 
 **INSTALL** (as the evidence-capture layer of the B2B research workflow — company research and signal collection), with lifecycle recorded separately: INSTALLED (pre-existing 0.4.15) → VERIFIED (direct runtime use in this experiment). Install-gate items from §E: raw evidence recorded (this file + external archive) ✓; output maps to canonical schema — snapshots are evidence inputs, never source of truth ✓; no secrets ✓; written scope limits enforced ✓; failure behavior tested and documented (404 / JS-shell / robots) ✓; R2 boundary unchanged ✓. **Owner approval for formalizing the disposition is pending and required in `07_VERSION_TRACKING/DECISION_HISTORY.md`; thresholds inform, they do not decide.**
 
+**Promoted 2026-09-14** (owner promotion pass): disposition formalized as INSTALL — registered in `02_AI_STACK/AI_TOOL_REGISTRY.md` as INSTALLED → VERIFIED, CURRENT (B2B evidence-capture layer), with production scope and governance constraints recorded there.
+
 Scope limit carried forward (recorded as deviation from full capability set): no StealthyFetcher/anti-bot bypass; public pages + robots.txt compliance only; no LinkedIn automation. Playwright MCP remains conditional and NOT triggered — Scrapling's own DynamicFetcher handled all JS-rendered targets in the frozen set.
 
 ## 8. Provenance

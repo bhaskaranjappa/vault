@@ -84,7 +84,7 @@ The dispositions below in records/queue sections were the analyst recommendation
 12. **Cost/license:** MIT; free with existing GitHub account.
 13. **Maturity:** Official GitHub product, actively developed — highest possible maturity class here.
 14. **Evaluation type:** Controlled A/B on same prospect batch (signal discovery completeness).
-  15. **Disposition:** TEST FIRST (consistent with PLAN.md Phase 9 candidate "GitHub") → **EXECUTED as D2 (2026-09-14): PASS — 3 new Tier-1 signals (Bolna only: first-party MCP server, skills package, active OSS core); 4/5 companies have no attributable public GitHub org (hypothesis §4.6 DISPROVED); zero fabricated; provenance preserved. Record: `GITHUB_MCP_EXPERIMENT_D2_2026-09-14.md`. Recommended disposition: INSTALL (read-only OSS-diligence layer) — owner approval pending.**
+  15. **Disposition:** TEST FIRST (consistent with PLAN.md Phase 9 candidate "GitHub") → **EXECUTED as D2 (2026-09-14): PASS — 3 new Tier-1 signals (Bolna only: first-party MCP server, skills package, active OSS core); 4/5 companies have no attributable public GitHub org (hypothesis §4.6 DISPROVED); zero fabricated; provenance preserved. Record: `GITHUB_MCP_EXPERIMENT_D2_2026-09-14.md`. Recommended disposition: INSTALL (read-only OSS-diligence layer) — **PROMOTED 2026-09-14** (registered INSTALLED → VERIFIED in `02_AI_STACK/AI_TOOL_REGISTRY.md`; read-only, unauth zero-permission operating mode).**
 16. **Reason:** Free, official, Tier-1 provenance, low complexity, direct fit to stage 3.
 
 ### 5. Firecrawl MCP Server
@@ -212,7 +212,7 @@ Per owner decisions: Firecrawl (RESERVE; do not connect), Hunter.io, Apollo, Cru
 
 ## D. EXPERIMENT D1 — SCRAPLING CONTROLLED EXPERIMENT PROTOCOL (designed 2026-09-13; EXECUTED 2026-09-13 UTC — result: PASS)
 
-> **D1 outcome (recorded):** PASS on all five frozen thresholds (coverage 6/6 classes ~30 items ≥ baseline 12; 100% claims snapshot-backed; 6 materially new decision-relevant signals incl. corrected Bolna role list and GreyLabs co-founder conflict resolution; zero governance breaches; 12/12 spot-check accuracy). Recommended disposition: INSTALL as the B2B evidence-capture layer — owner approval pending. Full result: `02_AI_STACK/TOOL_EVALUATIONS/SCRAPLING_EXPERIMENT_D1_2026-09-13.md`. Raw evidence: `paios-runtime-evidence\2026-09-13\d1-scrapling\` (outside repo). Design below is preserved unmodified.
+> **D1 outcome (recorded):** PASS on all five frozen thresholds (coverage 6/6 classes ~30 items ≥ baseline 12; 100% claims snapshot-backed; 6 materially new decision-relevant signals incl. corrected Bolna role list and GreyLabs co-founder conflict resolution; zero governance breaches; 12/12 spot-check accuracy). Recommended disposition: INSTALL as the B2B evidence-capture layer — **PROMOTED 2026-09-14** (registered INSTALLED → VERIFIED in `02_AI_STACK/AI_TOOL_REGISTRY.md`). Full result: `02_AI_STACK/TOOL_EVALUATIONS/SCRAPLING_EXPERIMENT_D1_2026-09-13.md`. Raw evidence: `paios-runtime-evidence\2026-09-13\d1-scrapling\` (outside repo). Design below is preserved unmodified.
 
 ### Frozen company set (fixed before any run; identical for both arms)
 The 5 cycle-1 prospects (`11_STATE/B2B_CYCLE_2026-09-13.md`), chosen because a complete baseline evidence record already exists for them:
