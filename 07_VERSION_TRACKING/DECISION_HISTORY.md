@@ -37,3 +37,11 @@ Owner rulings on the V1+ tool evaluation queue (`02_AI_STACK/TOOL_EVALUATIONS/V1
 - GitHub MCP: remains TEST FIRST (priority 2) — experiment D2, after D1.
 - Playwright MCP: TEST ONLY IF NEEDED — conditional fallback for dynamic pages.
 No tool installed, connected, or authenticated. Architecture unmodified. Outreach boundary unchanged.
+
+## 2026-09-14 — Scrapling experiment D1 executed (V1+)
+
+- D1 run per the frozen design in `02_AI_STACK/TOOL_EVALUATIONS/V1PLUS_TOOL_EVALUATION_QUEUE_2026-09-13.md` §D (design and thresholds unmodified). Result: **PASS** on all five frozen criteria — coverage 6/6 taxonomy classes (~30 snapshot-backed items) ≥ baseline 12; 100% of enhanced-arm claims snapshot-backed; 6 materially new decision-relevant signals (Bolna current ATS role list correcting a stale baseline pain signal, GreyLabs 6-founder leadership team resolving a recorded CONFLICT, GreyLabs direct public contact, GreyLabs seed-round history with Z47, Logibee AI Operations Planning capability, Simplismart cost/GPU case metrics); zero governance breaches (robots enforced in code, public pages only, no stealth features, no outreach); extraction spot-check 12/12.
+- Record: `02_AI_STACK/TOOL_EVALUATIONS/SCRAPLING_EXPERIMENT_D1_2026-09-13.md`. Raw snapshots + fetch logs + scripts archived OUTSIDE the canonical repo (`paios-runtime-evidence\2026-09-13\d1-scrapling\`, 78+ files). Snapshots are evidence inputs, never canonical truth.
+- Scrapling lifecycle: INSTALLED (pre-existing 0.4.15, pip) → VERIFIED through direct runtime use in D1.
+- **Recommended disposition: INSTALL** as the B2B evidence-capture layer — recorded as a recommendation; final INSTALL decision rests with the owner per the installation gate. Scope limits carried forward: no StealthyFetcher/anti-bot bypass, public pages + robots.txt only, no LinkedIn automation. Playwright MCP not triggered (Scrapling DynamicFetcher handled all JS-rendered targets).
+- Next experiment (D2 — GitHub MCP) is queued but NOT started, per directive.

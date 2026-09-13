@@ -210,7 +210,9 @@ Superseded: only 2 active TEST-FIRST candidates remain (Scrapling, GitHub MCP). 
 ## C. DO-NOT-INSTALL-YET LIST
 Per owner decisions: Firecrawl (RESERVE; do not connect), Hunter.io, Apollo, Crunchbase, OpenOutreach, Brave Search — all IGNORE/RESERVE. No installs of any kind until the installation gate (section E) is passed.
 
-## D. EXPERIMENT D1 — SCRAPLING CONTROLLED EXPERIMENT PROTOCOL (planned 2026-09-13, not yet executed)
+## D. EXPERIMENT D1 — SCRAPLING CONTROLLED EXPERIMENT PROTOCOL (designed 2026-09-13; EXECUTED 2026-09-13 UTC — result: PASS)
+
+> **D1 outcome (recorded):** PASS on all five frozen thresholds (coverage 6/6 classes ~30 items ≥ baseline 12; 100% claims snapshot-backed; 6 materially new decision-relevant signals incl. corrected Bolna role list and GreyLabs co-founder conflict resolution; zero governance breaches; 12/12 spot-check accuracy). Recommended disposition: INSTALL as the B2B evidence-capture layer — owner approval pending. Full result: `02_AI_STACK/TOOL_EVALUATIONS/SCRAPLING_EXPERIMENT_D1_2026-09-13.md`. Raw evidence: `paios-runtime-evidence\2026-09-13\d1-scrapling\` (outside repo). Design below is preserved unmodified.
 
 ### Frozen company set (fixed before any run; identical for both arms)
 The 5 cycle-1 prospects (`11_STATE/B2B_CYCLE_2026-09-13.md`), chosen because a complete baseline evidence record already exists for them:
