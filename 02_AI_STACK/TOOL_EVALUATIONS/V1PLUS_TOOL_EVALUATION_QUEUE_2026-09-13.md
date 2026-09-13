@@ -138,7 +138,7 @@ The dispositions below in records/queue sections were the analyst recommendation
 12. **Cost/license:** Apache-2.0; free.
 13. **Maturity:** Official Microsoft, very active.
 14. **Evaluation type:** Fallback-scenario test only.
-15. **Disposition:** TEST FIRST (lowest priority of the five) — only if Scrapling/Firecrawl fail on JS-heavy targets in the head-to-head.
+  15. **Disposition:** TEST FIRST (lowest priority of the five) — only if Scrapling/Firecrawl fail on JS-heavy targets in the head-to-head → **TESTED as D3 (2026-09-14): fallback condition NOT MET — Scrapling DynamicFetcher covered 3/3 JS-dependent targets (Ashby board, MaxHome, GreyLabs); Playwright MCP retrieved the same information with no fact beyond it; no target required interaction beyond rendering. Record: `PLAYWRIGHT_MCP_EXPERIMENT_D3_2026-09-14.md`. Recommended disposition: KEEP IN RESERVE (conditional fallback; revisit on a concrete Scrapling extraction/interaction failure).**
 16. **Reason:** Free and official but largely duplicates working ZCode capability; condition on the scraping test outcome.
 
 ### 8. Apollo.io MCP plugin
