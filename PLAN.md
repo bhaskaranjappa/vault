@@ -1,8 +1,9 @@
 # PERSONAL AI OS — MASTER EXECUTION PLAN
 
 Version: 1.0
-Status: ACTIVE — PRE-V1 VALIDATION → V1
-Primary executor: OpenCode
+Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
+Primary executor: ZCode
+Secondary/failover executor: OpenCode
 Primary runtime validation target: Hermes
 Canonical source of truth: this repository on GitHub
 Owner: Bhaskar Anjappa
@@ -42,6 +43,8 @@ Known repository state:
 - validation and V1 gate documents already exist
 - first five-company B2B research-only benchmark already exists
 - Hermes v0.21.0 is recorded as prior verified runtime state
+- V1 was formally declared 2026-09-14 for the owner's mandatory runtime set: ZCode, OpenCode, Hermes
+- V1+ capability-enhancement workflow is now canonical for future tool/repository evaluation
 
 Do not recreate existing architecture documents unless evidence shows they are wrong, incomplete, stale, or contradictory.
 
@@ -107,9 +110,17 @@ Never introduce a new infrastructure layer merely because it is technically inte
 
 ## 4. EXECUTION MODEL
 
-OpenCode is the primary implementation executor.
+### V1+ operating model
 
-OpenCode must work in this loop:
+ZCode is the preferred hands-on executor for implementation, installation, runtime experimentation, benchmarking and evidence capture because it is currently the fastest practical execution environment for the owner's workflow.
+
+OpenCode is the secondary executor and controlled fallback. Use it when ZCode exhausts usable tokens/context, becomes unavailable, fails to continue reliably, or when an independent execution path materially improves verification.
+
+ChatGPT or another capable research LLM may act as the research/evaluation planner: discover repositories, study documentation/source, assess architecture and fit, define the baseline, apply the evaluator protocol, design bounded experiments, and review evidence.
+
+Claude, Gemini, Grok and other supported runtimes may consume the same canonical workflow for research, planning or review through their native mechanisms. None becomes a source of truth.
+
+### Standard executor loop
 
 INSPECT
 → PLAN
@@ -121,6 +132,15 @@ INSPECT
 → RECORD EVIDENCE
 
 Prefer small, reversible changes.
+
+### Executor failover rule
+
+When a task moves from ZCode to OpenCode or another executor, preserve the exact execution state using:
+`11_STATE/EXECUTOR_HANDOFF_TEMPLATE.md`
+
+The destination executor must verify the handoff, repository state and evidence before continuing. It must resume from the first incomplete action rather than restarting completed work.
+
+Failover changes the executor, not the scope, acceptance criteria or governance rules.
 
 Before changing any canonical file:
 1. read the current file;
@@ -299,7 +319,9 @@ Exit condition:
 
 ## 9. PHASE 4 — RUNTIME PRIORITY
 
-Validate in this order:
+This section describes the historical V1 validation priority. It is not the V1+ execution hierarchy.
+
+For V1 validation, the historical order was:
 
 ### Tier 1
 1. OpenCode
@@ -316,16 +338,17 @@ Validate in this order:
 8. Cursor
 9. Grok
 
-Reason:
-Tier 1 covers the primary engineering executor, Hermes execution runtime, and strongest semantic comparators.
+For V1+ operations, use the executor model defined in §4: ZCode first, then OpenCode failover where required.
 
 Do not block V1 indefinitely on a runtime that is unavailable or irrelevant.
 Instead record:
 UNTESTED / BLOCKED / PARTIAL
 
-But the V1 gate must define which runtimes are mandatory.
+The V1 gate defines which runtimes are mandatory.
 
 ## 10. PHASE 5 — OPENCODE IMPLEMENTATION
+
+This phase records the pre-V1 implementation model and remains historical reference.
 
 OpenCode must:
 1. read PLAN.md;
@@ -348,6 +371,8 @@ OpenCode must not:
 - build automatic cross-runtime memory synchronization;
 - build a giant OS manager;
 - add dozens of integrations without workflow justification.
+
+For V1+, OpenCode is the controlled secondary executor described in §4 and the primary target for independent runtime integration/debugging when that produces meaningful value.
 
 ## 11. PHASE 6 — HERMES VALIDATION
 
@@ -491,6 +516,8 @@ For each connected tool:
 - test failure and missing-data behavior.
 
 Tool selection must follow workflow requirements.
+
+For V1+, apply `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md` before runtime testing. Capability search is broader than MCP and includes skills, sub-agents, orchestration, context/memory, browser/automation, research/extraction and engineering utilities.
 
 ## 15. PHASE 10 — AUTOMATION
 
@@ -656,21 +683,50 @@ Only after V1 evidence is stable, evaluate:
 These are V1+ decisions.
 Do not pre-build them.
 
-## 21. OPEN-CODE OPERATING INSTRUCTION
+The V1+ capability-enhancement workflow is now the required front door for evaluating repositories or components for those areas.
 
-When this file is placed at repository root, OpenCode must treat it as the master execution plan.
+## 21. EXECUTOR OPERATING INSTRUCTION
+
+All supported executors must treat this file as the master execution plan, with the V1+ executor hierarchy defined in §4.
 
 At startup:
 1. read PLAN.md;
 2. read 00_MASTER_INDEX.md;
 3. inspect Git state;
-4. identify the current incomplete phase;
-5. continue from that phase;
-6. never restart completed work without evidence;
+4. identify the current incomplete task or phase;
+5. continue from that point;
+6. never restart completed work without a new hypothesis or evidence gap;
 7. update the plan checklist as work progresses;
 8. update canonical state files only when evidence changes state;
 9. run validation before declaring success;
 10. report blockers precisely.
+
+### ZCode-first rule
+
+For hands-on V1+ work, start in ZCode unless the task explicitly requires another runtime.
+
+Provide ZCode with the relevant canonical context, bounded objective, acceptance criteria and test specification.
+
+### OpenCode failover rule
+
+Move to OpenCode when ZCode:
+- exhausts usable tokens/context;
+- becomes unavailable;
+- fails to continue reliably;
+- or leaves an independently verifiable task incomplete.
+
+Before failover, create or update:
+`11_STATE/EXECUTOR_HANDOFF_TEMPLATE.md`
+
+OpenCode must:
+1. inspect the handoff;
+2. verify repository HEAD and working tree;
+3. verify completed actions and evidence;
+4. identify the first incomplete action;
+5. continue without restarting completed work;
+6. preserve the original scope, governance and acceptance criteria;
+7. update the handoff as work progresses;
+8. close the handoff only after final evidence and repository state are verified.
 
 If a required external runtime test cannot be executed locally:
 - prepare the exact test procedure;
@@ -678,54 +734,50 @@ If a required external runtime test cannot be executed locally:
 - do not fabricate the result;
 - continue with other independently executable work.
 
-## 22. FIRST EXECUTION TASK
+## 22. V1+ EXECUTION ENTRYPOINT
 
-Start here:
+V1 is already declared. Do not replay the old Phase 0→12 release sequence unless a specific regression or change requires it.
 
-PHASE 0
-→ verify the complete repository state
+For a new V1+ capability task, start with:
 
-Then:
+1. **Identify the capability gap**
+   - What concrete workflow bottleneck exists?
+   - What is the current baseline?
+   - What measurable improvement is required?
 
-PHASE 1
-→ canonical integrity
+2. **Discover candidate repositories/tools**
+   - Use ChatGPT or another research-capable LLM for discovery and deep study.
+   - Prefer official documentation, source, releases, issue history and authoritative configuration guidance.
 
-Then:
+3. **Apply the AI Tool Evaluation Protocol**
+   - Assess overlap, incremental value, cost, licensing, maintenance, security, privacy, reversibility and integration complexity.
+   - Reject popularity-only reasoning.
 
-PHASE 2
-→ adapter/manifest validation
+4. **Specify a bounded experiment**
+   - Define targets, baseline, success/failure thresholds, evidence requirements and governance boundaries.
 
-Then:
+5. **Execute in ZCode first**
+   - Inspect → install/run only what is needed → benchmark → capture evidence.
 
-PHASE 3
-→ execute CP-01 through CP-06
+6. **Fail over to OpenCode when required**
+   - Use the handoff template.
+   - Resume from the exact incomplete action.
 
-Then:
+7. **Review and decide**
+   - Compare baseline against enhanced workflow.
+   - Classify PASS / PARTIAL / FAIL.
+   - Decide INSTALL / REPLACE / KEEP IN RESERVE / IGNORE / REJECT.
 
-PHASE 4
-→ prioritize OpenCode, Hermes, Claude, Gemini
+8. **Record canonically**
+   - Update the tool registry, evaluation record, decision history and relevant workflow references.
+   - Preserve raw evidence outside the canonical repository when appropriate.
 
-Then:
+9. **Promote and rebenchmark**
+   - Integrate only after evidence supports installation.
+   - Verify runtime integration separately.
+   - Test the real production workflow again.
 
-PHASE 6
-→ fresh Hermes runtime validation
-
-Then:
-
-PHASE 8
-→ B2B workflow runtime benchmark
-
-Then:
-
-PHASE 10
-→ controlled automation only after gates pass
-
-Finally:
-
-PHASE 12
-→ V1 release decision
-
-Do not skip directly to automation.
+Do not begin with installation merely because a repository is popular or highly starred.
 
 ## 23. MASTER RULE
 
@@ -752,3 +804,14 @@ Never confuse:
 “possible”
 with
 “required.”
+
+Never confuse:
+“tool exists”
+with
+“tool closes a real capability gap.”
+
+Never confuse:
+“ZCode stopped”
+with
+“work failed.”
+A valid handoff means execution can continue in OpenCode without restarting completed work.
