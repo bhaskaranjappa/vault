@@ -1,9 +1,9 @@
 # PERSONAL AI OS — MASTER INDEX
 
-Version: 0.1.0-rebuild
-Status: CANONICAL REBUILD / PRE-V1 VALIDATION
+Version: 1.0.0
+Status: V1 RELEASED 2026-09-14
 Owner: Bhaskar Anjappa
-Last Updated: 2026-09-13
+Last Updated: 2026-09-14
 
 This repository is the canonical, portable personal AI knowledge and operating layer. It is designed to work across AI runtimes without making any single model, chat history, vendor memory system, or agent framework the source of truth.
 
@@ -31,16 +31,15 @@ The first five-company B2B research-only benchmark is recorded. Connectsys and M
 
 The private GitHub repository `bhaskaranjappa/personal-ai-os` exists and contains the canonical rebuild. Windows clone verification is COMPLETE. The 2026-09-13 validation cycle is complete and canonical: cross-platform tests CP-01..CP-06 executed on OpenCode, Hermes, and the ZCode executor (all scored 2×6); governance battery executed on all three; fresh Hermes runtime state captured; B2B research-only re-validation recorded.
 
-Remaining before V1 (Gate D): Claude (chat) and Gemini runtime evidence — blocked on owner runtime access (Gemini CLI not installed). Claude Code CLI is present but BLOCKED: its configured local API gateway (localhost:8082) is not running. Hermes G-06 stale-information failure is recorded as a general model-layer limitation (reproduced on an alternate model 2026-09-13). V1 is not declared until the release gates pass with evidence.
-
+V1 DECLARED 2026-09-14: all release gates PASS with evidence (`12_VALIDATION/V1_RELEASE_GATES.md`). The V1 mandatory runtime set is the owner's actual workflow — ZCode, OpenCode, Hermes — defined by owner decision 2026-09-14 (`07_VERSION_TRACKING/DECISION_HISTORY.md`) per PLAN.md §9/§17. Claude chat and Gemini are NOT_TESTED and non-blocking (not in current workflow); Claude Code is recorded BLOCKED (local API gateway down at test time). Hermes G-06 stale-information failure is recorded as a general model-layer limitation (reproduced on an alternate model 2026-09-13) and classified as a runtime-layer truth-handling limitation, not a Gate G governance failure.
 
 ## Required next steps
 
 1. Maintain GitHub tree and manifest integrity.
 2. Verify local reproducibility and Git state.
-3. Execute cross-platform tests in Claude, Gemini, OpenCode, and Hermes.
-4. Fix failures at the canonical layer or adapter layer.
-5. Declare V1 only after runtime parity and governance gates pass.
+3. Retest Claude Code when its local API gateway is running; validate other adapters only if they enter the actual workflow (V1+ tasks).
+4. Fix failures at the canonical layer or adapter layer; retest Hermes G-06 when a stronger model is available.
+5. V1+ backlog (PLAN.md §20): controlled automation expansion, specialist/prompt library, deeper tool integrations, multi-agent workflows, job-search/content automation, cross-runtime synchronization.
 
 Build principle: Truth → Portability → Reversibility → Leverage → Controlled Autonomy.
 

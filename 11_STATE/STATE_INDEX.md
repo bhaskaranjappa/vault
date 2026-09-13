@@ -1,7 +1,7 @@
 # STATE INDEX
 
 ## Current state
-- Personal AI OS: canonical rebuild committed to GitHub.
+- Personal AI OS: **V1 DECLARED 2026-09-14** — all release gates PASS (`12_VALIDATION/V1_RELEASE_GATES.md`); mandatory runtime set (ZCode, OpenCode, Hermes) defined by owner decision 2026-09-14 (`07_VERSION_TRACKING/DECISION_HISTORY.md`).
 - GitHub canonical repo: `bhaskaranjappa/personal-ai-os` (private).
 - Windows clone: verified 2026-09-13 by direct inspection — synced to `origin/main` HEAD `691e277` (18 upstream commits absorbed), clean tree, disk tree == `FILE_MANIFEST.txt` (90 files at sync time), 0 broken internal file references (38 unique refs audited; only mechanism filenames named inside adapters — `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` — have no repo file by design). Pre-sync local uncommitted state preserved on branch `zcode-local-snapshot-2026-09-13`.
 - Cross-platform tests executed 2026-09-13 from canonical @ `691e277` with manifest-minimum context, fresh sessions, raw outputs archived outside the repo:
@@ -16,6 +16,6 @@
 1. ~~Verify GitHub tree and manifest.~~ DONE 2026-09-13 (tree == manifest; `PLAN(1).md` duplicate removed upstream).
 2. ~~Clone/verify on Windows.~~ DONE 2026-09-13 (see above).
 3. ~~Run runtime portability tests (Tier 1 available runtimes).~~ DONE 2026-09-13 for OpenCode, Hermes, ZCode-equivalent. Evidence: `12_VALIDATION/CROSS_PLATFORM_EVIDENCE_2026-09-13.md`.
-4. Run remaining Tier 1 runtime tests: Claude chat (no local access) and Gemini (CLI not installed) — blocked on owner runtime access. Claude Code CLI v2.1.204 present but BLOCKED 2026-09-13: configured local API gateway at localhost:8082 not running; 13 prepared prompt files at `paios-runtime-evidence\2026-09-13\claude-code\`.
+4. V1+ tasks (non-blocking, post-V1): retest Claude Code when its local API gateway (localhost:8082) is running — 13 prepared prompt files at `paios-runtime-evidence\2026-09-13\claude-code\`; validate Claude chat / Gemini adapters only if they enter the actual workflow.
 5. Hermes G-06 stale-information failure: runtime-layer, NOT default-model-specific — 2026-09-13 retest reproduces on nemotron-3-super-120b 2/2 (gemma free models 429; ultra timeout). Canonical layer adequate — same test passes on OpenCode and ZCode. Resolution via model change unlikely with current free models; retest when a stronger model is available.
-6. Declare V1 after release gates pass (`12_VALIDATION/V1_RELEASE_GATES.md`).
+6. ~~Declare V1 after release gates pass~~ DONE 2026-09-14 — declared with Gate D/G/H rulings per decision record in `07_VERSION_TRACKING/DECISION_HISTORY.md`.
