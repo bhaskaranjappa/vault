@@ -84,7 +84,7 @@ The dispositions below in records/queue sections were the analyst recommendation
 12. **Cost/license:** MIT; free with existing GitHub account.
 13. **Maturity:** Official GitHub product, actively developed — highest possible maturity class here.
 14. **Evaluation type:** Controlled A/B on same prospect batch (signal discovery completeness).
-15. **Disposition:** TEST FIRST (consistent with PLAN.md Phase 9 candidate "GitHub").
+  15. **Disposition:** TEST FIRST (consistent with PLAN.md Phase 9 candidate "GitHub") → **EXECUTED as D2 (2026-09-14): PASS — 3 new Tier-1 signals (Bolna only: first-party MCP server, skills package, active OSS core); 4/5 companies have no attributable public GitHub org (hypothesis §4.6 DISPROVED); zero fabricated; provenance preserved. Record: `GITHUB_MCP_EXPERIMENT_D2_2026-09-14.md`. Recommended disposition: INSTALL (read-only OSS-diligence layer) — owner approval pending.**
 16. **Reason:** Free, official, Tier-1 provenance, low complexity, direct fit to stage 3.
 
 ### 5. Firecrawl MCP Server
