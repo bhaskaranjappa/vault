@@ -690,16 +690,19 @@ The V1+ capability-enhancement workflow is now the required front door for evalu
 All supported executors must treat this file as the master execution plan, with the V1+ executor hierarchy defined in §4.
 
 At startup:
-1. read PLAN.md;
-2. read 00_MASTER_INDEX.md;
-3. inspect Git state;
-4. identify the current incomplete task or phase;
-5. continue from that point;
-6. never restart completed work without a new hypothesis or evidence gap;
-7. update the plan checklist as work progresses;
-8. update canonical state files only when evidence changes state;
-9. run validation before declaring success;
-10. report blockers precisely.
+1. read `START.md`;
+2. read PLAN.md;
+3. read 00_MASTER_INDEX.md;
+4. inspect Git state;
+5. read `03_PROTOCOLS/AGENT_BOOTSTRAP_PROTOCOL.md`;
+6. identify the current incomplete task or phase;
+7. continue from that point;
+8. never restart completed work without a new hypothesis or evidence gap;
+9. update the plan checklist as work progresses;
+10. update canonical state files only when evidence changes state;
+11. run validation before declaring success;
+12. follow the `START.md` closeout protocol before ending the task;
+13. report blockers precisely.
 
 ### ZCode-first rule
 
@@ -815,3 +818,10 @@ Never confuse:
 with
 “work failed.”
 A valid handoff means execution can continue in OpenCode without restarting completed work.
+
+Never confuse:
+“task output exists”
+with
+“canonical project state has been updated.”
+
+A task is not fully closed until acceptance, evidence, canonical write-back, validation and Git closeout have been checked according to `START.md`.
