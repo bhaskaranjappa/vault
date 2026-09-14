@@ -4,8 +4,9 @@ Lifecycle: SUPPORTED → INSTALLED → ENABLED → CONFIGURED → AUTHENTICATED 
 
 Status usage: `CURRENT` records whether the tool is in active use in the stack; it does not assert a lifecycle stage. Installation/configuration/verification state must be stated separately using the lifecycle.
 
+ZCode — V1+ primary hands-on executor (implementation, installation, runtime experimentation, benchmarking, evidence capture per PLAN.md §4) — CURRENT; validated in the V1 mandatory runtime set (owner decision 2026-09-14, `07_VERSION_TRACKING/DECISION_HISTORY.md`; `12_VALIDATION/ZCODE_VALIDATION_JOURNAL.md`).
 Hermes Agent — orchestration/automation — VERIFIED by prior audit/user confirmation.
-OpenCode — development/debugging — CURRENT primary coding environment.
+OpenCode — development/debugging — CURRENT secondary/failover executor (PLAN.md §4 ZCode-first rule); valuable for independent runtime integration/debugging. Historical note: served as the primary coding environment through the 2026-09-13 validation cycle, before the V1+ ZCode-first executor model.
 ChatGPT — general reasoning/research/architecture — CURRENT.
 Claude — general/specialist runtime — CURRENT/UNVERIFIED for canonical-repo integration.
 Gemini — model/research/Vertex work — CURRENT.
