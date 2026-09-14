@@ -35,13 +35,14 @@ V1 DECLARED 2026-09-14: all release gates PASS with evidence (`12_VALIDATION/V1_
 
 ## Cold-start / agent bootstrap
 
-For any new LLM, coding agent, runtime or human operator entering the project, use:
-`AGENTS.md` as the thin coding-agent entrypoint and `03_PROTOCOLS/AGENT_BOOTSTRAP_PROTOCOL.md` as the authoritative cold-start procedure.
+For any new LLM, coding agent, runtime or human operator entering the project, start with `START.md` for the compact boot/closeout instruction.
+
+Then use `AGENTS.md` as the thin coding-agent entrypoint and `03_PROTOCOLS/AGENT_BOOTSTRAP_PROTOCOL.md` as the authoritative cold-start procedure.
 
 Bootstrap order:
-`Canonical GitHub repository → PLAN.md → 00_MASTER_INDEX.md → AGENTS.md / Agent Bootstrap Protocol → current state → task-specific protocols/workflows/state → runtime state → execute → validate → record → sync`
+`Canonical GitHub repository → START.md → PLAN.md → 00_MASTER_INDEX.md → AGENTS.md / Agent Bootstrap Protocol → current state → task-specific protocols/workflows/state → runtime state → execute → validate → record → sync → closeout`
 
-The bootstrap protocol defines cold-start behavior, minimum relevant context loading, source hierarchy, external repository research order, ZCode-first execution, OpenCode failover, executor handoff, evidence handling and canonical write-back.
+The bootstrap protocol defines cold-start behavior, minimum relevant context loading, source hierarchy, external repository research order, ZCode-first execution, OpenCode failover, executor handoff, evidence handling and canonical write-back. `START.md` additionally defines the mandatory end-of-task closeout sequence.
 
 ## V1+ execution model
 
@@ -69,7 +70,7 @@ Capability search is not restricted to MCP. Candidate classes include tools/MCP,
 5. Use the V1+ capability-enhancement workflow for future repository/tool discovery and evaluation.
 6. Promote only evidence-backed components and rebenchmark the enhanced production workflow.
 7. Preserve ZCode-first execution with OpenCode failover and standardized handoff state.
-8. Treat `AGENTS.md` and `03_PROTOCOLS/AGENT_BOOTSTRAP_PROTOCOL.md` as the standard cold-start entry path for new coding agents and LLM runtimes.
+8. Treat `START.md`, `AGENTS.md` and `03_PROTOCOLS/AGENT_BOOTSTRAP_PROTOCOL.md` as the standard cold-start and closeout entry path for new coding agents and LLM runtimes.
 9. V1+ backlog (PLAN.md §20): controlled automation expansion, specialist/prompt library, deeper tool integrations, multi-agent workflows, job-search/content automation, cross-runtime synchronization.
 
 Build principle: Truth → Portability → Reversibility → Leverage → Controlled Autonomy
