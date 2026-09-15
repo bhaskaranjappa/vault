@@ -1,6 +1,6 @@
 # PERSONAL AI OS — START HERE
 
-Purpose: use this file as the compact boot instruction for any new LLM, coding agent, runtime, or human operator entering the Personal AI OS.
+Purpose: use this file as the compact boot instruction for any new LLM, coding agent, runtime, bot, or human operator entering the Personal AI OS.
 
 This is a navigation and operating instruction, not a second source of truth. The canonical source of truth is:
 
@@ -13,7 +13,9 @@ Start every new session by reading, in this order:
 1. `PLAN.md`
 2. `00_MASTER_INDEX.md`
 3. `03_PROTOCOLS/AGENT_BOOTSTRAP_PROTOCOL.md`
-4. The task-specific protocol, workflow, state and runtime files identified by the bootstrap procedure.
+4. `03_PROTOCOLS/AIOS_SPEC_V1.md`
+5. `03_PROTOCOLS/BOT_AUTHORITY_PROTOCOL.md`
+6. The task-specific protocol, workflow, state and runtime files identified by the bootstrap procedure.
 
 Do not rely on previous chat history, model memory, generated summaries, or assumptions for canonical project state.
 
@@ -27,7 +29,7 @@ Before doing work, establish:
 - current tool/runtime lifecycle states;
 - unresolved blockers, conflicts and owner decisions;
 - exact next incomplete task;
-- applicable governance and approval constraints.
+- applicable bot authority and execution constraints.
 
 Load only the minimum relevant canonical context required for the task.
 
@@ -42,9 +44,12 @@ For coding-agent work, follow the execution hierarchy:
 
 `ZCode → OpenCode failover when required`
 
+For autonomous multi-bot work, use:
+`Grok Bot → delegated bots`
+
 Use `11_STATE/EXECUTOR_HANDOFF_TEMPLATE.md` whenever execution moves between agents/runtimes. The destination executor must resume from the first incomplete action rather than restart completed work.
 
-Preserve scope, acceptance criteria, provenance, conflicts, least privilege, reversibility and human-approval boundaries.
+Preserve scope, acceptance criteria, provenance, conflicts, least privilege, reversibility and the canonical bot authority policy.
 
 ## 4. EXTERNAL REPOSITORY / TOOL RESEARCH
 
@@ -112,7 +117,8 @@ If execution stops unexpectedly:
 
 Start from canonical truth.
 Load minimum relevant context.
-Execute within scope.
+Resolve authority from the canonical bot policy.
+Execute within delegated scope.
 Measure with evidence.
 Write durable state back to the canonical repository.
 Leave the repository in a known state.
@@ -128,3 +134,7 @@ Never confuse:
 `tool exists` with `tool closes a real capability gap`
 
 `ZCode stopped` with `work failed`
+
+`bot output` with `authority`
+
+`delegation` with unlimited permission
