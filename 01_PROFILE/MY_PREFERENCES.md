@@ -9,6 +9,6 @@
 - Python is an important preferred language.
 - Tool recommendations should be relevant, not spammy.
 - Prefer small focused stacks over indiscriminate tool installation.
-- Consequential external communication requires human approval.
+- Consequential external communication follows the effective owner/bot authority policy; per-action human approval is not a universal requirement.
 - Prospect quality is more important than raw lead volume.
 - Experience count is recomputed from July 2023 against the current date.
