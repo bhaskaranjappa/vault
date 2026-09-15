@@ -121,6 +121,39 @@ Possible layers include:
 
 Do not assume an MCP server will solve a sub-agent, orchestration or context-management problem. Evaluate each capability layer separately.
 
+### Tool trust and evaluation depth
+
+Evaluation depth is proportional to **trust, privilege, risk, and integration depth**. Do not automatically treat a first-party vendor tool and an unknown third-party repository as equivalent diligence cases, and do not reject a tool merely because it is open-source, community-built, solo-developed or small.
+
+#### First-party / major-vendor tools
+
+For a tool built and maintained by a major vendor or first-party ecosystem:
+- verify the relevant official documentation and supported capability claims;
+- verify availability, configuration and actual runtime behavior where the capability matters;
+- check material cost, permissions, privacy/security constraints and integration fit;
+- deep source-code inspection is normally unnecessary unless the privilege/risk or the workflow requires it.
+
+#### Established open-source / community projects
+
+For an established open-source or community project:
+- perform documentation and source/release review appropriate to the capability;
+- inspect maintenance/activity, dependencies, licensing, security posture and operational constraints;
+- run a bounded runtime test before production promotion when practical.
+
+#### Unknown / small / solo-developer projects
+
+For unknown or lightly established projects:
+- perform deeper source/code and dependency review;
+- inspect permissions, network access, credential handling, install/build behavior and data handling;
+- check maintenance/release history and licensing;
+- use an isolated or least-privilege bounded experiment before promotion when practical.
+
+#### Privilege overrides brand
+
+Any tool that receives sensitive credentials, filesystem write access, browser control, email/external communication, code execution, autonomous agent authority or other high-impact privileges requires appropriately strong verification regardless of who built it.
+
+The objective is not to prefer Big Tech over open source. The objective is to spend diligence where failure or misuse would matter, while still verifying that every promoted component closes a real capability gap.
+
 ### Cross-LLM portability
 
 The canonical workflow must be understandable and executable by ChatGPT, Claude, Gemini, Grok and other supported LLM runtimes.
@@ -133,7 +166,6 @@ The portable instruction is:
 
 ### Governance boundaries
 
-- No autonomous external outreach.
 - No fabricated evidence, contacts, metrics, capabilities or lifecycle states.
 - No secret material committed to the repository.
 - No unnecessary write permissions.
@@ -141,3 +173,4 @@ The portable instruction is:
 - No installation solely for popularity, novelty or completeness.
 - No restart from zero after executor failover when a valid handoff exists.
 - No final promotion without evidence.
+- External communication follows the effective owner/bot authority policy; per-action human approval is not a universal V1+ requirement.
