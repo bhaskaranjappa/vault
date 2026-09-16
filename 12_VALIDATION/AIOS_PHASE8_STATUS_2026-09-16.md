@@ -44,6 +44,7 @@ validation remains DEFERRED.
 - Retrieval type: structured + lexical only; semantic/vector retrieval NOT implemented (extension point: `SemanticAdapter`).
 - Checkpoints: logical checkpoint/restore only; no filesystem/process snapshotting.
 - OpenCode independent parity testing: PENDING (attempt 2026-09-16 blocked by OpenCode runtime hang; see parity attempt evidence file).
+- ZCode independent parity validation: **PARITY PASS WITH GAPS** (2026-09-16) — `12_VALIDATION/AIOS_PHASE8_ZCODE_PARITY_2026-09-16.md`. 17/17 MC/CT re-verified under pytest; 7/7 adversarial checks PASS; cross-process persistence proven. Gap: secret-write heuristic bypassable via underscore-embedded credential names (minor hygiene finding, fix recommended, not patched mid-validation); acknowledged limitations confirmed as reported. Phase 8 implementation/validation gate is COMPLETE at implementation level; OpenCode parity remains blocked at the runtime layer; Hermes DEFERRED.
 - Hermes live validation: DEFERRED (unchanged).
 - Grok Bot remains NOT_TESTED because runtime access is unavailable.
 
