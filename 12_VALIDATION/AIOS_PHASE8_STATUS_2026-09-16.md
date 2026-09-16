@@ -24,7 +24,16 @@ Phase: Memory & Context Hardening
 
 ## Next execution step
 
-Use OpenCode for independent parity/failover testing of the implementation recorded below.
+OpenCode independent parity/failover testing was attempted on 2026-09-16 and
+**did not complete**: `opencode run` (v1.18.31) hangs after init with no model
+output across four bounded attempts. Evidence:
+`12_VALIDATION/AIOS_OPENCODE_PARITY_ATTEMPT_EVIDENCE_2026-09-16.md`.
+OpenCode parity status remains PENDING/BLOCKED at the runtime layer. The ZCode
+test suite was independently re-verified on 2026-09-16: 17/17 PASS.
+
+Next viable execution step: resolve or route around the OpenCode runtime hang,
+or defer OpenCode parity until the runtime is functional. Hermes live
+validation remains DEFERRED.
 
 ## Implementation state (updated 2026-09-16, ZCode executor)
 
@@ -34,7 +43,7 @@ Use OpenCode for independent parity/failover testing of the implementation recor
 - Implementation evidence: `12_VALIDATION/AIOS_PHASE8_IMPLEMENTATION_EVIDENCE_2026-09-16.md`.
 - Retrieval type: structured + lexical only; semantic/vector retrieval NOT implemented (extension point: `SemanticAdapter`).
 - Checkpoints: logical checkpoint/restore only; no filesystem/process snapshotting.
-- OpenCode independent parity testing: PENDING.
+- OpenCode independent parity testing: PENDING (attempt 2026-09-16 blocked by OpenCode runtime hang; see parity attempt evidence file).
 - Hermes live validation: DEFERRED (unchanged).
 - Grok Bot remains NOT_TESTED because runtime access is unavailable.
 

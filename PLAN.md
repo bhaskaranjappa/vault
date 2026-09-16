@@ -416,6 +416,10 @@ Adapter updated. New V1+ runtime capabilities require live verification.
 ### OpenCode
 
 Adapter/failover role exists. New V1+ behavior requires live verification.
+Note (2026-09-16): headless `opencode run` (v1.18.31) hangs after init with no
+model output; the Phase 8 OpenCode parity test is blocked at the runtime layer
+(evidence: `12_VALIDATION/AIOS_OPENCODE_PARITY_ATTEMPT_EVIDENCE_2026-09-16.md`).
+OpenCode failover must be considered degraded until re-verified.
 
 ### Grok Bot
 
