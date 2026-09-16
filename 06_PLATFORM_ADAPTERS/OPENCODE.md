@@ -18,12 +18,28 @@ Load only task-relevant canonical files plus this adapter.
 - Do not silently overwrite canonical knowledge.
 - Preserve BRUTALIST behavioral rules.
 - OpenCode instruction/configuration files are runtime context, not canonical project truth.
+- PAIOS authority remains an external policy layer unless runtime enforcement is directly verified.
 
-## Verification status
-- Ingestion mechanism: SUPPORTED by current OpenCode documentation.
-- Installed OpenCode v1.18.29 configuration: NOT_TESTED in this current validation cycle.
-- CP-01 through CP-06: NOT_TESTED.
+## Runtime role
+Secondary/failover engineering executor.
 
-References:
-- https://opencode.ai/v2/docs/instructions
-- https://opencode.ai/v2/docs/agents
+Use OpenCode when ZCode is unavailable, exhausted, unreliable, or when an independent execution path materially improves verification.
+
+## Verification status — 2026-09-15
+- Runtime: VERIFIED for bounded V1+ validation.
+- OpenCode v1.18.30 tested.
+- Execution discipline: VERIFIED.
+- Parallel execution: VERIFIED.
+- Explicit-contract delegation + task resume: VERIFIED.
+- Selective context packaging: VERIFIED.
+- Untrusted-content behavioral boundary: VERIFIED.
+- Native persistent/semantic memory: NOT_SUPPORTED.
+- In-runtime per-agent model/reasoning routing: NOT_SUPPORTED.
+- Nested delegation beyond depth 1: NOT_SUPPORTED.
+- Native automation: NOT_SUPPORTED.
+- True snapshot/rollback checkpoint restore: NOT_SUPPORTED.
+- Machine-enforced authority scope/identity/revocation: NOT_SUPPORTED.
+- GitHub MCP: CONFIGURED but not verified because authentication/configuration was invalid during validation.
+- Overall role status: **READY WITH GAPS**.
+
+Evidence: `12_VALIDATION/AIOS_V1PLUS_OPENCODE_EVIDENCE_2026-09-15.md`
