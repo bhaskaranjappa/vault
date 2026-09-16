@@ -27,6 +27,10 @@ Implement the vendor-neutral AIOS specification through ZCode's native coding-ag
 | authority | AIOS bot identity/scope policy |
 | evidence | task output + canonical evidence records |
 
+## Phase 8 memory/context engine boundary
+
+The PAIOS file-backed memory/context engine (`13_AUTOMATION/memory_engine/paios_memory/`) is an external implementation consumed by ZCode sessions; ZCode does not natively provide it. Memory records, relevance gating, sensitivity gating, context packages and logical checkpoints are supplied by that engine. ZCode session memory and compaction remain runtime mechanisms and must not be treated as the PAIOS memory engine.
+
 ## Rules
 
 - ZCode is the preferred hands-on executor for V1+ work.

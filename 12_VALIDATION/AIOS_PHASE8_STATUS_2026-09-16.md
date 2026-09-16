@@ -24,11 +24,19 @@ Phase: Memory & Context Hardening
 
 ## Next execution step
 
-Use ZCode to implement the file-backed memory/context engine against these contracts, then execute MC-01..MC-09 and CT-01..CT-08. Use OpenCode for independent parity/failover testing after the ZCode path is working.
+Use OpenCode for independent parity/failover testing of the implementation recorded below.
 
-Hermes live validation remains intentionally deferred until the end of the broader phase roadmap.
+## Implementation state (updated 2026-09-16, ZCode executor)
 
-Grok Bot remains NOT_TESTED because runtime access is unavailable.
+- Architecture complete: YES (canonical contracts listed above).
+- Implementation complete: YES (file-backed, stdlib-only) — `13_AUTOMATION/memory_engine/paios_memory/`; implementation notes in `13_AUTOMATION/memory_engine/IMPLEMENTATION.md`.
+- Executable tests: 17/17 PASS (`13_AUTOMATION/memory_engine/tests/test_phase8.py`, MC-01..MC-09 + CT-01..CT-08; Python 3.14.0).
+- Implementation evidence: `12_VALIDATION/AIOS_PHASE8_IMPLEMENTATION_EVIDENCE_2026-09-16.md`.
+- Retrieval type: structured + lexical only; semantic/vector retrieval NOT implemented (extension point: `SemanticAdapter`).
+- Checkpoints: logical checkpoint/restore only; no filesystem/process snapshotting.
+- OpenCode independent parity testing: PENDING.
+- Hermes live validation: DEFERRED (unchanged).
+- Grok Bot remains NOT_TESTED because runtime access is unavailable.
 
 ## Important status rule
 
