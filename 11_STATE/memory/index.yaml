@@ -1,0 +1,6 @@
+version: 1
+description: PAIOS durable-memory retrieval index; implementation state only, not canonical project knowledge.
+records: []
+conflicts: []
+retrieval_log: []
+last_updated: null
