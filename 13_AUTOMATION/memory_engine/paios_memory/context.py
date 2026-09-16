@@ -60,6 +60,7 @@ class ContextRequest:
     evidence_required: list = field(default_factory=list)
     evidence_refs: list = field(default_factory=list)
     inheritance_mode: str = "SELECTED"
+    store: object | None = None                    # direct MemoryStore lookup (SELECTED mode)
     parent_context_refs: list = field(default_factory=list)
     selected_memory_ids: list = field(default_factory=list)  # SELECTED mode
     max_sensitivity: str = "INTERNAL"
@@ -83,9 +84,10 @@ class ContextBuilder:
         selected: list[dict] = []
         excluded: list[str] = []
         if req.inheritance_mode == "SELECTED":
-            if req.retriever is not None:
+            store = req.store or (req.retriever.store if req.retriever is not None else None)
+            if store is not None:
                 for mid in req.selected_memory_ids:
-                    rec = req.retriever.store.get(mid)
+                    rec = store.get(mid)
                     if rec is None:
                         raise KeyError(f"selected memory not found: {mid}")
                     if SENSITIVITY_ORDER[rec.sensitivity] > SENSITIVITY_ORDER[req.max_sensitivity]:
