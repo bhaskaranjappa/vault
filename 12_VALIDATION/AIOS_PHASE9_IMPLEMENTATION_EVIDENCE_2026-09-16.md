@@ -14,9 +14,9 @@ It does NOT verify runtime capabilities of ZCode/OpenCode/Hermes/Grok sessions.
 - Repository: bhaskaranjappa/personal-ai-os, branch main
 - Commit tested: recorded at commit time (see git history for this file's commit)
 - Implementation: `13_AUTOMATION/orchestration_engine/paios_orch/` (stdlib only)
-- Tests: `13_AUTOMATION/orchestration_engine/tests/test_phase9.py`
-- Run: `cd 13_AUTOMATION/orchestration_engine && python -m unittest tests.test_phase9 -v`
-- Result: **30/30 OK** (OR-01..OR-20 + 8 adversarial; ~0.6 s)
+- Tests: 31 tests, all PASS (`13_AUTOMATION/orchestration_engine/tests/test_phase9.py`
+  + `tests/test_phase9_subprocess.py`; OR-01..OR-20 + 8 adversarial + real
+  subprocess-boundary persistence; Python 3.14.0).
 
 ## Phase 8 regression
 
@@ -41,7 +41,7 @@ It does NOT verify runtime capabilities of ZCode/OpenCode/Hermes/Grok sessions.
 | OR-12 parent acceptance | PASS | `OR12_ParentAcceptance.test_OR12_reject_incomplete_child` | criterion evidence mapping required; free-text claim alone insufficient |
 | OR-13 evidence/provenance | PASS | `OR13_EvidenceProvenance.test_OR13_evidence_attached` | output/evidence refs + event log entries |
 | OR-14 context/authority inheritance | PASS | `OR14_ContextAuthorityInheritance.test_OR14_selected_context_no_leakage` | PERSONAL record excluded via sensitivity ceiling |
-| OR-15 persistence | PASS | `OR15_Persistence.test_OR15_process_boundary` | simulated process boundary (fresh Orchestrator instance, disk-only reconstruction); not a true separate OS process |
+| OR-15 persistence | PASS | `OR15_Persistence.test_OR15_process_boundary` (in-process fresh-instance) + `test_phase9_subprocess.test_OR15_real_process_boundary` (REAL two-process proof) | Process A creates task/3 workers, completes one, leaves one RUNNING, exits; separate Process B boots a fresh orchestrator, reloads ledger from disk, reconstructs hierarchy (ancestry), identifies incomplete work, flags the stale RUNNING worker for reconciliation without completing it |
 | OR-16 stale reconciliation | PASS | `OR16_StaleWorker.test_OR16_stale_reconciliation` | stale RUNNING marked, not completed; dispatcher routes REDIRECT |
 | OR-17 parent aggregation | PASS | `OR17_ParentAggregation.test_OR17_mixed_outcomes` | 1 of 3 failed → parent not accepted |
 | OR-18 recovery w/o scope expansion | PASS | `OR18_RecoveryWithoutScopeExpansion.test_OR18_bounded_recovery` | replacement keeps identical scope/constraints |
@@ -64,9 +64,17 @@ It does NOT verify runtime capabilities of ZCode/OpenCode/Hermes/Grok sessions.
 ## Persistence result
 
 Worker ledger (`WRK-*.json`), task registry (`tasks.json`), and event log
-(`events.jsonl`) survive complete orchestrator reconstruction from disk.
-OR-15 simulates the process boundary with a fresh instance; a true
-multi-OS-process test was not run (equivalent file-reading path, same code).
+(`events.jsonl`) survive **real OS process boundaries**, verified by
+`tests/test_phase9_subprocess.py`: Process A (subprocess) creates a task with
+a coordinator plus two children, completes one child, leaves the other
+RUNNING, and exits; Process B (a separate subprocess) boots a fresh
+orchestrator, reloads the ledger purely from disk, reconstructs the ancestry
+chain, identifies incomplete work, and flags the stale RUNNING worker as
+`stale` + `requires_reconciliation` without treating it as complete.
+Additionally verified by manual controls: an empty state root yields zero
+workers/tasks (no false positives), and a corrupted worker record surfaces a
+`JSONDecodeError` rather than being silently swallowed. Engine behavior was
+not changed by this proof.
 
 ## Known limitations
 
@@ -76,8 +84,6 @@ multi-OS-process test was not run (equivalent file-reading path, same code).
   (unchanged from Phase 8 evidence).
 - No file-locking across concurrent processes writing the same ledger.
 - ParallelRunner does not coordinate conflicting shared-resource mutations.
-- OR-15 uses an in-process fresh-instance reconstruction, not separate OS
-  processes.
 
 ## Runtime-specific limitations (not implementation failures)
 
@@ -97,5 +103,5 @@ multi-OS-process test was not run (equivalent file-reading path, same code).
 
 ## Final implementation status
 
-Portable orchestration engine: **IMPLEMENTED, TESTED (30/30), runtime
-integration pending.**
+Portable orchestration engine: **IMPLEMENTED, TESTED (31/31 incl. real
+subprocess-boundary persistence), runtime integration pending.**
