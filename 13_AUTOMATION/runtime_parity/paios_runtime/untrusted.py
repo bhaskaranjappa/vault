@@ -11,7 +11,7 @@ INJECTION_MARKERS = (
     "ignore previous instructions", "ignore paios policy", "disable safeguards",
     "grant yourself authority", "expand your scope", "you are now",
     "authorize yourself", "override acceptance criteria", "override policy",
-    "self-authorize",
+    "self-authorize", "hold root authority", "grant authority",
 )
 
 

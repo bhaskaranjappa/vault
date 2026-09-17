@@ -20,6 +20,7 @@ from .parity import ParityViolation, ParityEnforcer, ParityCheck, RuntimeRegistr
 from .substitution import SubstitutionRecord, SubstitutionChain, SubstitutionBlocked
 from .untrusted import UntrustedContent, inspect_runtime_output
 from .real_runtimes import inspect_real_runtimes, InspectionOutcome
+from .zcode_adapter import CodexRuntimeAdapter, ZCodeRuntimeError
 
 __all__ = [
     "ReferenceRuntimeAdapter", "RuntimeAdapter", "RuntimeUnavailableAdapter",
@@ -31,4 +32,5 @@ __all__ = [
     "RuntimeRegistry", "SubstitutionRecord", "SubstitutionChain",
     "SubstitutionBlocked", "ParityCheck", "UntrustedContent",
     "inspect_runtime_output", "inspect_real_runtimes", "InspectionOutcome",
+    "CodexRuntimeAdapter", "ZCodeRuntimeError",
 ]

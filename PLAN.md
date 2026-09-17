@@ -617,11 +617,13 @@ Every automation must be:
 - tied to acceptance criteria;
 - recoverable/reversible where possible.
 
-## 21. PHASE 13 — CROSS-RUNTIME PARITY [CURRENT]
+## 21. PHASE 13 — CROSS-RUNTIME PARITY
 
 Status 2026-09-17: cross-runtime parity layer implemented and validated
 (28/28 tests; see `12_VALIDATION/AIOS_PHASE13_STATUS_2026-09-17.md`).
-Real-runtime adapters remain the next integration step.
+Phase 14 follow-up: real runtime adapter integrated — Codex CLI verified
+live through the canonical adapter (see
+`12_VALIDATION/AIOS_PHASE14_STATUS_2026-09-17.md`).
 
 Once ZCode, Hermes and OpenCode have been exercised, compare the same semantic tasks across runtimes.
 

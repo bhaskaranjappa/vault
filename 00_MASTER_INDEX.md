@@ -4,7 +4,7 @@ Version: 1.2.0
 Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
 Owner: Bhaskar Anjappa
 Last Updated: 2026-09-15
-Current execution phase: V1+ Phase 13 — Cross-Runtime Parity (parity layer implemented; real-runtime adapters pending)
+Current execution phase: V1+ Phase 14 — Real Runtime Integration (Codex CLI verified live through the canonical adapter)
 
 This repository is the canonical, portable personal AI knowledge and operating layer. It is designed to work across AI runtimes without making any single model, chat history, vendor memory system, or agent framework the source of truth.
 
