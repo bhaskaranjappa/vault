@@ -1,6 +1,6 @@
 # AIOS V1+ PHASE 12 STATUS — 2026-09-17
 
-Status: ACTIVE
+Status: IMPLEMENTATION COMPLETE (portable layer)
 Phase: Automation Expansion
 
 ## Completed before Phase 12
@@ -34,12 +34,37 @@ Active authority model:
 
 Per-action human approval is not universally required. External communication may be autonomous only when owner policy explicitly delegates that capability and scope. Irreversible/high-impact actions require policy-level authorization and remain subject to safety/platform constraints.
 
-## Next execution
+## Implementation status (2026-09-17)
 
-Implement the portable automation engine with durable automation intents, run records, trigger abstraction, authority checks, context/checkpoint references, acceptance evaluation, idempotency, failure/retry handling, disablement and evidence-backed closeout.
+- Portable automation engine implemented: `13_AUTOMATION/automation_engine/paios_automation/` (stdlib-only).
+- Durable automation intents, run records (append-only history), trigger
+  abstraction (MANUAL/SCHEDULED/RECURRING/CONDITION/EVENT), authority hook,
+  idempotency, bounded retry, UNKNOWN reconciliation, acceptance evaluation,
+  disablement, evidence event log, checkpoint references and restart recovery.
+- Tests: **30/30 PASS** (AU-01..AU-20 + AD-01..AD-08), including a real
+  OS-process-boundary persistence test. Evidence:
+  `12_VALIDATION/AIOS_PHASE12_IMPLEMENTATION_EVIDENCE_2026-09-17.md`.
+- Regressions: Phase 8 = 17/17, Phase 9 = 31/31, Phase 10 = 27/27,
+  Phase 11 = 28/28 (all PASS).
+- Real external actions performed during this phase: **NO**.
 
-Native scheduler/runtime integration remains separate.
+## Remaining work
 
-## Completion gate
+- Runtime executor adapters (ZCode first; OpenCode failover) — NOT_STARTED.
+- Native scheduler integration — separate step, requires a concrete workflow need.
+- Production authority backend behind the verification hook — NOT_STARTED.
 
-AU-01..AU-20 and relevant adversarial tests must have an executable implementation path before Phase 12 can close at the portable layer.
+## Scheduler status
+
+No native scheduler support is claimed. SCHEDULED/RECURRING metadata is
+validated and persisted only; firing is adapter-driven.
+
+## Hermes status
+
+Hermes live validation remains deferred. Grok Bot remains NOT_TESTED.
+
+## Next integration step
+
+Connect a ZCode executor adapter implementing `execute`/`verify` with
+declared capabilities, then re-run AU-20 against the real adapter in a
+sandbox scope. Next phase: Phase 13 — Cross-Runtime Parity.

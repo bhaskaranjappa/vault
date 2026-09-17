@@ -582,7 +582,11 @@ During benchmark validation:
 
 Do not repeat completed benchmarks unless a new runtime or capability hypothesis requires it.
 
-## 20. PHASE 12 — AUTOMATION EXPANSION
+## 20. PHASE 12 — AUTOMATION EXPANSION [CURRENT]
+
+Status 2026-09-17: portable automation engine implemented and validated
+(30/30 tests; see `12_VALIDATION/AIOS_PHASE12_IMPLEMENTATION_EVIDENCE_2026-09-17.md`).
+Runtime executor adapters and native scheduler integration remain separate steps.
 
 Automation may expand only after evidence demonstrates:
 - bounded authority;
