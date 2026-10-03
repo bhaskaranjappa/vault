@@ -5,7 +5,7 @@ Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
 Current phase: V1+ Phase 14 — Real Runtime Integration
 Primary executor: ZCode
 Secondary/failover executor: OpenCode
-Primary runtime validation target: Hermes
+Primary runtime validation target: any second authenticated/usable runtime, with Hermes preferred when its provider path is available
 Initial root-orchestrator target: Grok Bot (NOT_TESTED — runtime access unavailable)
 Canonical source of truth: this repository on GitHub
 Owner: Bhaskar Anjappa
@@ -648,7 +648,7 @@ Classify each difference as:
 
 Do not hide runtime-specific limitations.
 
-## 22. PHASE 14 — SPECIALIST & PRODUCT MODULES
+## 22. FUTURE TRACK — SPECIALIST & PRODUCT MODULES
 
 Only after core AIOS invariants are stable, build reusable specialized modules for:
 - B2B acquisition;
@@ -661,7 +661,7 @@ Only after core AIOS invariants are stable, build reusable specialized modules f
 
 Specialist modules should consume canonical context and AIOS protocols rather than creating independent mini-OSs.
 
-## 23. PHASE 15 — ADVANCED ORCHESTRATION & OPTIONAL INFRASTRUCTURE
+## 23. FUTURE TRACK — ADVANCED ORCHESTRATION & OPTIONAL INFRASTRUCTURE
 
 Consider only when real scale or workflow evidence justifies it:
 - richer semantic indexes;
@@ -776,46 +776,54 @@ For every new capability or integration:
 15. Update canonical state and Git history.
 16. Rebenchmark the real workflow.
 
-## 29. CURRENT PHASE STATUS — 2026-09-15
+## 29. CURRENT PHASE STATUS — 2026-10-03
 
 ### Completed
 
 - V1 foundation released.
-- Three system-prompt architectures studied.
-- Reusable architecture primitives extracted.
-- AIOS specification created.
-- Bot authority protocol created.
-- Orchestration protocol created.
-- Memory/context protocol created.
-- V1+ governance override created.
-- Runtime integration matrix created.
-- ZCode adapter created and partially live-verified.
-- Grok Bot adapter created.
-- Hermes adapter updated.
-- Capability test suite created.
+- Three system-prompt architectures studied and normalized into portable AIOS primitives.
+- AIOS specification, bot authority, orchestration, memory/context, governance and routing layers created.
+- Portable automation engine implemented and validated.
+- Cross-runtime parity contract implemented and validated.
+- Phase 14 real-runtime integration implemented.
+- Codex CLI verified live through the canonical adapter with bounded read-only execution.
+- Canonical external-repository evaluation completed for Munder Difflin, Paperclip, OpenMuse and the two relevant OpenDots repositories.
 
-### In progress now
+### Current incomplete objective
 
-**V1+ Phase 6 — Runtime Integration & Capability Validation**
+**Complete real cross-runtime parity by obtaining one additional authenticated/usable runtime and exercising it through the canonical adapter boundary.**
 
-Primary work:
-- formalize and preserve ZCode runtime evidence;
-- reconcile old V1 policy statements;
-- run Hermes capability tests;
-- run OpenCode failover/integration tests;
-- classify runtime-specific gaps honestly;
-- update adapters from evidence;
-- establish cross-runtime parity baseline.
+Current known runtime evidence:
+- Codex CLI: VERIFIED.
+- OpenCode: execution UNVERIFIED; latest recorded probe hung with zero output.
+- Hermes: installed/claimed, but provider endpoint was unavailable during the latest recorded probe.
+- Grok: installed/claimed, but not signed in during the latest recorded probe.
+- Kimi: installed/claimed, but quota-blocked during the latest recorded probe.
+
+The next action is runtime-level, not architecture-level:
+1. Re-probe the most practical second runtime when its authentication/provider path is available.
+2. Verify it through the canonical adapter.
+3. Run the Phase 13 parity suite against Codex plus the second verified runtime.
+4. Record real substitution/failover evidence if both runtimes satisfy the same capability contract.
+5. Update the runtime matrix and decision history from direct evidence.
+
+No external repository should be installed merely to work around this runtime-verification gap.
 
 ### Deferred until evidence justifies it
 
 - deep semantic memory infrastructure;
-- formal worker-state ledger;
-- per-agent model routing where the runtime does not expose it;
-- durable policy-linked automation;
+- richer worker/multi-agent infrastructure beyond the existing portable engines;
+- policy-linked durable runtime automation;
 - cross-runtime state synchronization;
-- advanced multi-bot infrastructure;
-- broader product modules.
+- broader specialist/product modules;
+- advanced OS-manager or distributed orchestration concepts.
+
+### Phase naming clarification
+
+`V1+ Phase 14 — Real Runtime Integration` is the current canonical phase.
+
+The previous roadmap entries for specialist/product modules and advanced orchestration are retained as future tracks. They are not current numbered phases and must not override the real-runtime integration objective.
+
 
 ## 30. MASTER RULE
 
