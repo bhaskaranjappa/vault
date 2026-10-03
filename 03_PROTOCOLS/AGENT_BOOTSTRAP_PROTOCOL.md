@@ -290,7 +290,7 @@ If any of these cannot be determined, inspect the canonical repository further b
 
 A supported LLM or coding agent may use this compact instruction:
 
-`Open the canonical Personal AI OS repository. Read PLAN.md first, then 00_MASTER_INDEX.md. Determine the current V1+ state and active objective. Load only the authoritative protocols, workflows, state and runtime documents required for the current task. Do not rely on chat history or runtime memory as canonical truth. For hands-on work, execute in ZCode first and fail over to OpenCode using the handoff protocol when required. Validate results, preserve provenance and conflicts, update the correct canonical records, and never restart completed work without a new evidence gap or hypothesis.`
+`Open the canonical Personal AI OS repository. Read PLAN.md first, then 00_MASTER_INDEX.md. Determine the current V1+ state and active objective. Load only the authoritative protocols, workflows, state and runtime documents required for the current task. Do not rely on chat history or runtime memory as canonical truth. For hands-on work, use the executor currently selected by the owner from ZCode, OpenCode, Antigravity or Freebuff. Design prompts and tests for that runtime's native surface. Switch executors when token/context limits require it, preserving state through the handoff procedure. Do not require universal coding-agent testing. Validate results, preserve provenance and conflicts, update the correct canonical records, and never restart completed work without a new evidence gap or hypothesis.`
 
 ## 15. DESIGN PRINCIPLE
 
