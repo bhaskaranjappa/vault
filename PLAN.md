@@ -2,7 +2,7 @@
 
 Version: 1.1
 Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
-Current phase: V1+ Phase 3 — Runtime Integration & Capability Validation
+Current phase: V1+ Phase 14 — Real Runtime Integration
 Primary executor: ZCode
 Secondary/failover executor: OpenCode
 Primary runtime validation target: Hermes
@@ -49,10 +49,10 @@ Known repository state:
 - orchestration protocol exists: `03_PROTOCOLS/AIOS_ORCHESTRATION_PROTOCOL.md`
 - memory/context protocol exists: `03_PROTOCOLS/AIOS_MEMORY_CONTEXT_PROTOCOL.md`
 - runtime integration matrix exists: `03_PROTOCOLS/AIOS_RUNTIME_INTEGRATION_MATRIX_V1.md`
-- ZCode adapter exists and has undergone live bounded verification
+- ZCode-class Codex adapter exists and has undergone live bounded read-only verification (Phase 14)
 - Grok Bot adapter exists but Grok Bot runtime is currently NOT_TESTED because the owner does not currently have access
 - Hermes adapter has been updated; live V1+ verification remains pending for the newly integrated capabilities
-- OpenCode remains the secondary/failover executor; new V1+ runtime behavior remains pending live verification
+- OpenCode remains the secondary/failover executor; `opencode run` remains execution-UNVERIFIED after the latest 2026-09-17 re-probe
 - V1+ capability test suite exists: `12_VALIDATION/AIOS_V1PLUS_CAPABILITY_TESTS.md`
 - V1 release documents remain historical evidence and must not silently override V1+ policy
 
