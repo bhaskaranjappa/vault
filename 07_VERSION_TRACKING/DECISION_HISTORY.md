@@ -82,3 +82,17 @@ No tool installed, connected, or authenticated. Architecture unmodified. Outreac
 - TEST B (Scrapling, same frozen ICP): discovery via Bing HTML + base64 redirect decode — 26 unique domains in ~4.5 s across 5 ICP queries (DDG HTML endpoint returned 202 anti-bot; unusable with plain fetcher); extraction 11/12 homepages with careers/contact follow-up (up to 3 pages/company), public email capture, JSONL structured output; 1 SSL-chain failure; JS-only sites return empty shells with the plain fetcher. Discovery noise requires the agent/LLM qualification layer.
 - **Disposition: OpenOutreach = IGNORE (maintained from owner ruling 2026-09-13, upgraded from analyst analysis to implementation-level evidence).** Recommended B2B lead-finding architecture: agent-driven discovery + Scrapling extraction + agent qualification/reasons (existing PAIOS pattern). Scrapling remains INSTALLED→VERIFIED. No new installs.
 - Record: `02_AI_STACK/TOOL_EVALUATIONS/OPENOUTREACH_VS_SCRAPLING_TEST_2026-09-15.md`. Registry updated: `02_AI_STACK/AI_TOOL_REGISTRY.md`. Raw evidence preserved in the isolated workspace (`scrapling_results.jsonl`, `scrapling_test.log`, benchmark script, OpenOutreach clone, venv).
+
+
+## 2026-10-03 — external agent repository evaluation (V1+)
+
+- Evaluated `HarnessMD/munder-difflin`, `paperclipai/paperclip`, `tahodev/openmuse`, `CopilotKit/OpenDots`, and `diggerhq/opendots` under `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`.
+- The OpenDots name was resolved as two distinct relevant repositories: Digger's `diggerhq/opendots` and CopilotKit's `CopilotKit/OpenDots`.
+- Current fit: **Munder Difflin = TEST FIRST** as an external multi-CLI execution/harness candidate. It most directly overlaps the current PAIOS runtime/orchestration surface and supports Codex/OpenCode and other terminal agents.
+- **Paperclip = KEEP IN RESERVE** for a future control-plane integration, especially B2B operations. Its task, org, budget, routine, governance and adapter layers overlap substantially with existing PAIOS engines.
+- **OpenMuse = KEEP IN RESERVE** as a security-primitives benchmark. Its exact-action approval model is materially different from PAIOS policy-level delegated autonomy.
+- **CopilotKit OpenDots = KEEP IN RESERVE** as a future user-facing agent-workspace/product reference.
+- **Digger OpenDots = KEEP IN RESERVE** as a personal-agent UX reference; its OpenComputer dependency is not a current PAIOS runtime-parity solution.
+- No candidate was installed, authenticated or runtime-verified. No candidate was promoted to the production runtime stack.
+- Full evidence: `02_AI_STACK/TOOL_EVALUATIONS/EXTERNAL_REPOSITORIES_2026-10-03.md`.
+
