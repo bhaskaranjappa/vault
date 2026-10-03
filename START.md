@@ -40,9 +40,15 @@ Use the repository's applicable protocol before acting.
 For V1+ capability or repository evaluation, use:
 `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`
 
-For coding-agent work, follow the execution hierarchy:
+Execution selection, token-limit switching and runtime-specific prompt/test rules in that protocol override older generic executor-order assumptions.
 
-`ZCode → OpenCode failover when required`
+For coding-agent work, use the owner-selected active executor from the current pool: ZCode, OpenCode, Antigravity or Freebuff.
+
+The owner may switch executors when token/context limits, availability, task fit or workflow preference require it. Preserve the exact execution state through the handoff procedure when switching.
+
+Do not require universal coding-agent testing. For any repository/tool test, write the test specification and prompt specifically for the executor the owner is currently using.
+
+Codex and Cursor are currently unavailable to the owner and must not be selected unless the owner explicitly reports access again.
 
 For autonomous multi-bot work, use:
 `Grok Bot → delegated bots`
