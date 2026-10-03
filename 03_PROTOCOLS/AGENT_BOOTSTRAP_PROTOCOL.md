@@ -154,26 +154,24 @@ Never recommend installation merely because a repository is popular, highly star
 
 For V1+ hands-on work:
 
-### Preferred executor
-ZCode
+### Active execution policy
+The owner currently uses ZCode, OpenCode, Antigravity and Freebuff for hands-on execution.
 
-Use ZCode first for:
-- installation;
-- runtime experiments;
-- benchmarking;
-- evidence capture;
-- implementation tasks where its native sub-agents, skills and tools provide practical leverage.
+The owner selects the executor for each task based on access, token/context availability, task fit and workflow preference.
 
-### Secondary/failover executor
-OpenCode
+When writing an implementation, test or repository-evaluation prompt, target the executor the owner is currently using. Adapt commands, tool calls, agent syntax, MCP setup and recovery instructions to that runtime. Do not assume capabilities from another runtime.
 
-Use OpenCode when:
-- ZCode exhausts usable tokens/context;
-- ZCode becomes unavailable;
-- ZCode cannot continue reliably;
-- an independent execution path materially improves verification.
+ZCode is a preferred/default engineering option, but it is not mandatory when the owner is working elsewhere.
 
-Failover changes the executor, not the task scope, acceptance criteria or governance rules.
+Token/context exhaustion is an expected reason to switch executors. Use the executor handoff procedure to preserve the exact incomplete action and evidence before switching when practical.
+
+### Currently unavailable runtimes
+Codex and Cursor are currently unavailable to the owner. Do not schedule execution through them, do not require their verification, and do not infer access from historical adapters or documentation.
+
+### Universal parity rule
+PAIOS does not require every coding agent to be installed, tested or verified. Test only the runtime needed for the current capability hypothesis, task or evidence gap.
+
+A runtime switch changes the executor, not the task scope, acceptance criteria, authority or canonical state.
 
 ### Research/review runtimes
 ChatGPT, Claude, Gemini, Grok and other supported LLMs may perform research, planning, analysis or review through native mechanisms.
@@ -278,7 +276,7 @@ A new agent is ready to execute only after it can accurately state:
 
 - canonical repository and branch;
 - current project/V1+ status;
-- primary and failover executors;
+- active executor pool and current executor-selection policy;
 - current objective;
 - relevant canonical files for the task;
 - completed work that must not be repeated;
