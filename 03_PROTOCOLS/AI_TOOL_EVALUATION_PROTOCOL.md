@@ -16,9 +16,15 @@ The goal is not maximum tool count. The goal is measurable incremental capabilit
 
 **ChatGPT or another capable research LLM** is the research and evaluation planner.
 
-**ZCode** is the preferred hands-on executor for implementation, installation, runtime testing and evidence capture because it is currently the fastest practical execution environment for the owner's workflow.
+**Active executor pool:** the owner currently uses ZCode, OpenCode, Antigravity and Freebuff. The owner selects the runtime for each hands-on task according to access, token/context limits, task fit and workflow preference.
 
-**OpenCode** is the secondary executor and controlled fallback when ZCode reaches token/context limits, becomes unavailable, or cannot complete the current task cleanly.
+**Prompt/test design rule:** every implementation, installation, repository-evaluation or benchmark prompt must be written for the executor the owner is currently using. Use that runtime's native commands, agent model, MCP/configuration surface and recovery mechanisms. Do not assume another runtime's interface.
+
+**Executor switching:** token/context exhaustion is an expected operating condition. When switching executors, preserve the exact execution state with the handoff procedure and continue from the first incomplete action.
+
+**Universal parity is not required:** do not test every coding agent merely to establish that all agents work. Test only the executor and runtime capability required by the current task or hypothesis.
+
+Codex and Cursor are currently unavailable to the owner and should not be selected for execution until the owner explicitly reports access again.
 
 **Other LLM runtimes** such as Claude, Gemini and Grok may consume the canonical protocol and evidence to perform equivalent research, analysis, review or planning. No runtime becomes the source of truth.
 
@@ -46,14 +52,15 @@ The goal is not maximum tool count. The goal is measurable incremental capabilit
    - Produce a bounded test specification only when the candidate has a credible path to measurable value.
    - Candidate disposition before runtime testing: `IGNORE`, `KEEP IN RESERVE`, `TEST FIRST`, or another approved decision state.
 
-5. **Preferred execution: ZCode first**
-   - Give ZCode the complete test specification and relevant canonical context.
-   - ZCode inspects the repository/runtime first, then installs or runs only what is required.
-   - ZCode captures raw evidence, measurements, failure modes and reproducibility information.
+5. **Preferred execution: owner-selected active executor**
+   - Give the currently selected executor the complete test specification and relevant canonical context.
+   - The executor inspects the repository/runtime first, then installs or runs only what is required.
+   - The executor captures raw evidence, measurements, failure modes and reproducibility information.
+   - Design the prompt specifically for that executor rather than copying a runtime-generic command sequence.
    - Keep tool-call, reasoning and execution budgets bounded.
 
-6. **Controlled failover to OpenCode**
-   - If ZCode exhausts its available tokens/context before completing the task, cannot continue reliably, or becomes operationally unavailable, create or update a handoff record containing:
+6. **Controlled executor switch**
+   - If the active executor exhausts usable tokens/context, becomes unavailable, or cannot continue reliably, create or update a handoff record containing:
      - current task and objective;
      - exact progress completed;
      - files changed;
@@ -63,9 +70,9 @@ The goal is not maximum tool count. The goal is measurable incremental capabilit
      - known failures and hypotheses;
      - repository commit/branch/state;
      - constraints that must not be violated.
-   - Resume in OpenCode from that handoff state instead of restarting the experiment.
-   - OpenCode must first inspect the inherited state and verify the handoff before continuing.
-   - The failover is execution continuity, not permission to expand scope.
+   - Resume in the newly selected executor from that handoff state instead of restarting the experiment.
+   - The destination executor must first inspect the inherited state and verify the handoff before continuing.
+   - The executor switch is execution continuity, not permission to expand scope.
 
 7. **Runtime evaluation**
    - Compare baseline versus tool-enhanced workflow using the same decision-relevant task set.
