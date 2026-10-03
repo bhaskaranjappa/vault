@@ -33,3 +33,16 @@ Lifecycle precision (distinction preserved — no state asserted without evidenc
 - **Firecrawl**: NOT INSTALLED in the runtime stack — **KEEP IN RESERVE** (owner decision 2026-09-13; revisit only on a concrete extraction limitation).
 - **Hunter.io, Apollo MCP, Crunchbase, OpenOutreach, Brave Search MCP**: **IGNORE** (owner decisions 2026-09-13). OpenOutreach IGNORE independently re-confirmed 2026-09-15 by implementation-level comparison test vs Scrapling: verified NO arbitrary-website scraping (discovery = BetterContact licensed DB API; no scraping library in `openoutfind` source); live `find` blocked on external account/credits; adds no capability over Scrapling+agent. Evidence: `02_AI_STACK/TOOL_EVALUATIONS/OPENOUTREACH_VS_SCRAPLING_TEST_2026-09-15.md`.
 - **Scrapling B2B benchmark (2026-09-15)**: extraction-layer role confirmed for B2B lead finding — 26 domains discovered via Bing HTML (plain Fetcher), 11/12 company-site extractions with careers/contact follow-up and email capture, JSONL agent-consumable output; DDG HTML 202 anti-bot and JS-only shells are documented failure modes. Discovery alone is noisy — agent/LLM qualification layer remains required.
+
+## External repository evaluations — 2026-10-03
+
+| Repository | Disposition | Intended role | Boundary |
+|---|---|---|---|
+| **HarnessMD/munder-difflin** | TEST FIRST | external local multi-agent execution/UI harness | PAIOS remains canonical policy, state and authority |
+| **paperclipai/paperclip** | KEEP IN RESERVE | future agent-team/control-plane integration | must not become a second canonical control plane |
+| **tahodev/openmuse** | KEEP IN RESERVE | security/threat-model reference | exact-action approval model differs from PAIOS delegated autonomy |
+| **CopilotKit/OpenDots** | KEEP IN RESERVE | future agent-workspace/product surface | heavy CopilotKit/AG-UI/Intelligence/OpenBot edge stack |
+| **diggerhq/opendots** | KEEP IN RESERVE | personal-agent UX reference | OpenComputer dependency; not current runtime-parity solution |
+
+Full evidence: `02_AI_STACK/TOOL_EVALUATIONS/EXTERNAL_REPOSITORIES_2026-10-03.md`.
+No candidate was installed, authenticated or runtime-verified during this evaluation.
