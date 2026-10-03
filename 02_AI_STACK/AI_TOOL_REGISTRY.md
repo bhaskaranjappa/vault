@@ -47,5 +47,9 @@ Lifecycle precision (distinction preserved — no state asserted without evidenc
 Full evidence: `02_AI_STACK/TOOL_EVALUATIONS/EXTERNAL_REPOSITORIES_2026-10-03.md`.
 No candidate was installed, authenticated or runtime-verified during this evaluation.
 
-| **kkonstvol-lab/obsidian-memory** | KEEP IN RESERVE | human-readable Obsidian/Markdown memory and source-backed wiki reference | PAIOS already uses Git/Markdown as canonical truth; do not create a second source of truth; revisit only for a concrete knowledge-workspace or measured memory gap |
-| **rohitg00/agentmemory** | TEST FIRST | external persistent-memory capability provider behind a PAIOS adapter | runtime memory remains non-canonical; authority stays with PAIOS; context injection and cross-agent sharing require bounded safety/quality validation |
+### Memory repository evaluations — 2026-10-03
+
+| Repository | Disposition | Intended role | Boundary |
+|---|---|---|---|
+| **kkonstvol-lab/obsidian-memory** | KEEP IN RESERVE | human-readable Obsidian/Markdown memory and source-backed wiki reference | PAIOS remains the sole canonical source of truth; use only as a sidecar/view or after a concrete knowledge-workspace gap |
+| **rohitg00/agentmemory** | TEST FIRST | external persistent-memory capability provider behind a PAIOS adapter | runtime memory remains non-canonical; PAIOS authority, policy and durable project state remain authoritative; context injection requires qualification |
