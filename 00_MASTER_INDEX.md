@@ -3,7 +3,7 @@
 Version: 1.2.0
 Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
 Owner: Bhaskar Anjappa
-Last Updated: 2026-09-15
+Last Updated: 2026-10-03
 Current execution phase: V1+ Phase 14 — Real Runtime Integration (Codex CLI verified live through the canonical adapter)
 
 This repository is the canonical, portable personal AI knowledge and operating layer. It is designed to work across AI runtimes without making any single model, chat history, vendor memory system, or agent framework the source of truth.
@@ -92,7 +92,9 @@ Child authority cannot exceed parent authority. Bots cannot self-grant authority
 
 ## Current phase
 
-**V1+ Phase 6 — Runtime Integration & Capability Validation**
+**V1+ Phase 14 — Real Runtime Integration**
+
+Phase 14 implementation is complete. Codex CLI is the first directly verified real runtime through the canonical adapter.
 
 Completed foundations:
 - source architecture study;
@@ -101,27 +103,18 @@ Completed foundations:
 - bot authority protocol;
 - orchestration protocol;
 - memory/context protocol;
-- governance override;
-- runtime integration matrix;
-- ZCode adapter and initial live capability verification;
-- capability test suite.
+- governance reconciliation;
+- model/tool routing;
+- automation engine;
+- cross-runtime parity contract;
+- Codex real-runtime adapter and bounded live verification.
 
 Current priority:
-1. preserve/formalize ZCode evidence;
-2. reconcile remaining current-tense legacy approval statements;
-3. validate Hermes;
-4. validate OpenCode/failover;
-5. establish cross-runtime parity baseline;
-6. verify Grok Bot when access becomes available.
-
-Deferred until evidence justifies them:
-- deep semantic memory infrastructure;
-- formal worker-state ledger;
-- per-agent model routing where unsupported natively;
-- policy-linked durable automation;
-- cross-runtime synchronization;
-- advanced multi-bot infrastructure;
-- broader specialist/product modules.
+1. Obtain a second authenticated/usable runtime and verify it through the canonical runtime-adapter boundary.
+2. Run the Phase 13 parity suite against two real adapters.
+3. Record real substitution/failover evidence without silently changing authority, acceptance criteria or task identity.
+4. Validate OpenCode if its runtime hang is resolved, or use authenticated Hermes/Grok when a real execution path becomes available.
+5. Keep deep semantic memory, advanced multi-bot infrastructure and broader synchronization deferred until a concrete evidence-backed capability gap justifies them.
 
 ## Required next steps
 
