@@ -4,11 +4,11 @@ Version: 1.2.0
 Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
 Owner: Bhaskar Anjappa
 Last Updated: 2026-10-03
-Current execution phase: V1+ Phase 14 — Real Runtime Integration (Codex CLI verified live through the canonical adapter)
+Current execution phase: V1+ Phase 14 — Real Runtime Integration
 
 This repository is the canonical, portable personal AI knowledge and operating layer. It is designed to work across AI runtimes without making any single model, chat history, vendor memory system, or agent framework the source of truth.
 
-Primary runtimes: ChatGPT, Claude, Gemini, Grok Bot, Hermes Agent, OpenCode, Cursor, Codex, Claude Code.
+Active execution runtimes (owner-confirmed): ZCode, OpenCode, Antigravity, Freebuff. Codex and Cursor are currently unavailable to the owner.
 
 Architecture: profile, AI stack, protocols, Hermes runtime, workflows, platform adapters, version tracking, knowledge, specialists, sources, state, validation, automation, cross-platform tests, AIOS specification, bot authority and V1+ runtime-integration capabilities.
 
@@ -69,11 +69,13 @@ The canonical AI Tool / Repository Discovery and Capability-Enhancement Workflow
 
 Execution roles:
 - ChatGPT or another capable research LLM: repository discovery, deep documentation/source study, architecture/suitability analysis, baseline definition, experiment specification and result review.
-- ZCode: preferred hands-on executor for implementation, runtime experimentation, benchmarking and evidence capture.
-- OpenCode: secondary executor and failover runtime.
-- Hermes: primary target for runtime portability validation.
+- ZCode: active engineering executor; use when selected by the owner.
+- OpenCode: active engineering executor and common failover option.
+- Antigravity: active engineering executor when selected by the owner.
+- Freebuff: active engineering executor when selected by the owner.
+- Runtime choice is task-specific. Token/context exhaustion is an expected reason to switch executors.
 - Grok Bot: initial root orchestrator target for autonomous multi-bot execution under `03_PROTOCOLS/BOT_AUTHORITY_PROTOCOL.md`; currently NOT_TESTED because owner access is unavailable.
-- Claude, Gemini, Codex, Cursor, Claude Code and other supported runtimes: used where their real workflow role justifies integration or parity testing.
+- Other runtimes: use only when the owner has access and the task provides a concrete reason to test or integrate them. Do not require all coding agents to be verified.
 
 Standard capability pipeline:
 `Capability gap → Discover → Deep research → Primitive extraction → Protocol assessment → Bounded test → ZCode execution → OpenCode failover if required → Measure → Review → PASS/PARTIAL/FAIL → Promote/Reserve/Ignore/Reject → Canonical evidence → Runtime integration → Production rebenchmark`
@@ -110,10 +112,10 @@ Completed foundations:
 - Codex real-runtime adapter and bounded live verification.
 
 Current priority:
-1. Obtain a second authenticated/usable runtime and verify it through the canonical runtime-adapter boundary.
-2. Run the Phase 13 parity suite against two real adapters.
-3. Record real substitution/failover evidence without silently changing authority, acceptance criteria or task identity.
-4. Validate OpenCode if its runtime hang is resolved, or use authenticated Hermes/Grok when a real execution path becomes available.
+1. Continue real runtime integration using the owner-selected executor from ZCode, OpenCode, Antigravity or Freebuff.
+2. For tool/repository tests, write the test specification and prompt for the executor currently selected by the owner.
+3. Use cross-runtime parity only when a concrete hypothesis or evidence gap requires it; universal coding-agent verification is not a PAIOS requirement.
+4. Preserve exact task identity, acceptance criteria and evidence across executor switches caused by token/context exhaustion.
 5. Keep deep semantic memory, advanced multi-bot infrastructure and broader synchronization deferred until a concrete evidence-backed capability gap justifies them.
 
 ## Required next steps
