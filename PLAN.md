@@ -3,9 +3,10 @@
 Version: 1.1
 Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
 Current phase: V1+ Phase 14 — Real Runtime Integration
-Primary executor: ZCode
-Secondary/failover executor: OpenCode
-Primary runtime validation target: any second authenticated/usable runtime, with Hermes preferred when its provider path is available
+Active execution policy: user-selected executor from the currently usable pool
+Current usable execution pool (owner-confirmed): ZCode, OpenCode, Antigravity, Freebuff
+Codex and Cursor: owner currently has no access; do not plan work around them or infer availability
+Runtime validation is task-specific; universal coding-agent parity is not required
 Initial root-orchestrator target: Grok Bot (NOT_TESTED — runtime access unavailable)
 Canonical source of truth: this repository on GitHub
 Owner: Bhaskar Anjappa
@@ -49,10 +50,10 @@ Known repository state:
 - orchestration protocol exists: `03_PROTOCOLS/AIOS_ORCHESTRATION_PROTOCOL.md`
 - memory/context protocol exists: `03_PROTOCOLS/AIOS_MEMORY_CONTEXT_PROTOCOL.md`
 - runtime integration matrix exists: `03_PROTOCOLS/AIOS_RUNTIME_INTEGRATION_MATRIX_V1.md`
-- ZCode-class Codex adapter exists and has undergone live bounded read-only verification (Phase 14)
+- Codex CLI adapter exists and historical verification remains recorded, but Codex is currently unavailable to the owner and must not be treated as an active execution option
 - Grok Bot adapter exists but Grok Bot runtime is currently NOT_TESTED because the owner does not currently have access
 - Hermes adapter has been updated; live V1+ verification remains pending for the newly integrated capabilities
-- OpenCode remains the secondary/failover executor; `opencode run` remains execution-UNVERIFIED after the latest 2026-09-17 re-probe
+- OpenCode is currently usable according to owner-confirmed execution context; historical runtime probes may remain evidence, but they do not override the current owner-selected execution state
 - V1+ capability test suite exists: `12_VALIDATION/AIOS_V1PLUS_CAPABILITY_TESTS.md`
 - V1 release documents remain historical evidence and must not silently override V1+ policy
 
@@ -207,15 +208,19 @@ High-impact capabilities require explicit policy-level authorization before use.
 
 ### V1+ runtime roles
 
-**ZCode — preferred hands-on executor**
+**Active executor pool — owner-selected**
 
-Use for implementation, repository modification, runtime experimentation, bounded subagent testing, benchmarking and evidence capture.
+Current owner-confirmed execution options are ZCode, OpenCode, Antigravity and Freebuff. For each hands-on task, select the runtime the owner is currently using and design commands, tests, prompts and handoff instructions for that runtime's native surface.
 
-**OpenCode — secondary/failover executor**
+ZCode remains a strong default engineering executor, but it is not an exclusive requirement. The owner may switch executors whenever token/context limits, availability, task fit or workflow preference require it.
 
-Use when ZCode exhausts usable context/tokens, becomes unavailable, fails to continue reliably, or when an independent execution path materially improves verification.
+When execution moves between agents, preserve state through the handoff procedure and resume from the first incomplete action. Token exhaustion is an expected operational condition, not evidence that the task failed.
 
-**Hermes — primary runtime validation target**
+**Unsupported/unavailable-by-owner runtimes**
+
+Codex and Cursor are currently unavailable to the owner. Do not select them for execution, do not require their verification, and do not assume they are usable merely because an adapter or historical evidence exists.
+
+**Hermes — optional runtime validation target**
 
 Use to validate the portability of the AIOS architecture against a real autonomous runtime and to maintain fresh Hermes state evidence.
 
