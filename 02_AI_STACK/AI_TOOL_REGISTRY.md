@@ -4,15 +4,17 @@ Lifecycle: SUPPORTED → INSTALLED → ENABLED → CONFIGURED → AUTHENTICATED 
 
 Status usage: `CURRENT` records whether the tool is in active use in the stack; it does not assert a lifecycle stage. Installation/configuration/verification state must be stated separately using the lifecycle.
 
-ZCode — V1+ primary hands-on executor (implementation, installation, runtime experimentation, benchmarking, evidence capture per PLAN.md §4) — CURRENT; validated in the V1 mandatory runtime set (owner decision 2026-09-14, `07_VERSION_TRACKING/DECISION_HISTORY.md`; `12_VALIDATION/ZCODE_VALIDATION_JOURNAL.md`).
+ZCode — active owner-selected hands-on executor — CURRENT by owner confirmation; use for implementation, runtime experimentation, benchmarking and evidence capture when selected.
+OpenCode — active owner-selected hands-on executor — CURRENT by owner confirmation; use directly or after token/context exhaustion when selected.
+Antigravity — active owner-selected hands-on executor — CURRENT by owner confirmation; runtime lifecycle/verification state remains unspecified unless directly tested.
+Freebuff — active owner-selected hands-on executor — CURRENT by owner confirmation; runtime lifecycle/verification state remains unspecified unless directly tested.
 Hermes Agent — orchestration/automation — VERIFIED by prior audit/user confirmation.
-OpenCode — development/debugging — CURRENT secondary/failover executor (PLAN.md §4 ZCode-first rule); valuable for independent runtime integration/debugging. Historical note: served as the primary coding environment through the 2026-09-13 validation cycle, before the V1+ ZCode-first executor model.
 ChatGPT — general reasoning/research/architecture — CURRENT.
 Claude — general/specialist runtime — CURRENT/UNVERIFIED for canonical-repo integration.
 Gemini — model/research/Vertex work — CURRENT.
 Grok — target runtime — UNVERIFIED.
-Cursor — development/IDE — UNVERIFIED.
-Codex — development/agent runtime — UNVERIFIED.
+Cursor — development/IDE — UNAVAILABLE_TO_OWNER; do not use for current execution or testing until access is explicitly restored.
+Codex — development/agent runtime — UNAVAILABLE_TO_OWNER; do not use for current execution or testing until access is explicitly restored.
 Claude Code — coding runtime — UNVERIFIED.
 
 Tool evaluations follow `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`.
