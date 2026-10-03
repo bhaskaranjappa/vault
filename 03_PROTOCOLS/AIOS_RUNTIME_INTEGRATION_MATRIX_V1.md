@@ -20,6 +20,7 @@ Current owner-confirmed execution pool:
 - OpenCode
 - Antigravity
 - Freebuff
+- Freebuff
 
 Codex and Cursor are currently unavailable to the owner. Historical adapter records must not be interpreted as current access.
 
@@ -35,8 +36,8 @@ PAIOS does not require universal runtime parity. Test only the runtime needed fo
 | ChatGPT | Research / planning / review | MEDIUM |
 | Claude | Research / memory-oriented consumer | MEDIUM |
 | Gemini | Research / execution consumer | MEDIUM |
-| Codex | Engineering/runtime consumer | MEDIUM |
-| Cursor | Coding/runtime consumer | MEDIUM |
+| Codex | Engineering/runtime consumer | CONDITIONAL |
+| Cursor | Coding/runtime consumer | CONDITIONAL |
 
 ## 3. Portable capability groups
 
@@ -113,10 +114,13 @@ Implement as root dispatcher using native agent/tool/automation surfaces. Preser
 Implement authority-aware orchestration, memory relevance, execution discipline and context selection through Hermes-native configuration/plugins/tools where verified.
 
 ### ZCode
-Implement agent/context/model-routing contracts through native sub-agent, planning, tool, session and permission mechanisms. ZCode remains the preferred hands-on executor.
+Implement agent/context/model-routing contracts through native sub-agent, planning, tool, session and permission mechanisms. ZCode is an active owner-selected engineering executor.
 
 ### OpenCode
-Implement the same contracts through AGENTS.md, native agents/tasks, skills, MCP, TodoWrite, permissions and available hooks/background mechanisms. OpenCode remains controlled failover.
+Implement the same contracts through AGENTS.md, native agents/tasks, skills, MCP, TodoWrite, permissions and available hooks/background mechanisms. OpenCode is an active owner-selected engineering executor and may be used directly or after token/context exhaustion elsewhere.
+
+### Antigravity / Freebuff
+Treat as active owner-selected engineering executors. Inspect their native runtime mechanisms at task time. Do not infer parity from another runtime.
 
 ### ChatGPT / Claude / Gemini / other chats and projects
 Use lightweight modules derived from AIOS_SPEC. Inject only the task-relevant kernel plus project context. Never require the entire AIOS specification to be pasted into ordinary conversations.
