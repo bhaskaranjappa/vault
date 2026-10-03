@@ -626,11 +626,10 @@ Every automation must be:
 
 Status 2026-09-17: cross-runtime parity layer implemented and validated
 (28/28 tests; see `12_VALIDATION/AIOS_PHASE13_STATUS_2026-09-17.md`).
-Phase 14 follow-up: real runtime adapter integrated — Codex CLI verified
-live through the canonical adapter (see
-`12_VALIDATION/AIOS_PHASE14_STATUS_2026-09-17.md`).
+Phase 14 follow-up: a real Codex adapter was historically verified through the canonical adapter (see
+`12_VALIDATION/AIOS_PHASE14_STATUS_2026-09-17.md`). This historical result does not create a current requirement to use or retest Codex.
 
-Once ZCode, Hermes and OpenCode have been exercised, compare the same semantic tasks across runtimes.
+Cross-runtime comparison is conditional. Compare the same semantic tasks across runtimes only when a concrete substitution, capability, regression or evidence hypothesis requires it.
 
 Measure:
 - identity fidelity;
@@ -770,11 +769,11 @@ For every new capability or integration:
 4. Determine whether the requirement is portable, adapter-specific, vendor-specific or rejected.
 5. Research candidate repositories/tools using authoritative sources.
 6. Apply `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`.
-7. Design a bounded experiment.
-8. Execute in ZCode first.
+7. Design a bounded experiment for the concrete gap.
+8. Execute in the runtime currently selected by the owner.
 9. Capture raw evidence.
-10. Fail over to OpenCode when required.
-11. Validate on Hermes or another target runtime when relevant.
+10. Switch executors when needed because of token/context limits, availability or task fit, using the handoff procedure to preserve state.
+11. Validate another runtime only when the task or evidence hypothesis actually requires cross-runtime comparison.
 12. Compare against baseline.
 13. Record PASS / PARTIAL / FAIL and the responsible layer.
 14. Promote only after evidence supports integration.
@@ -796,7 +795,7 @@ For every new capability or integration:
 
 ### Current incomplete objective
 
-**Complete real cross-runtime parity by obtaining one additional authenticated/usable runtime and exercising it through the canonical adapter boundary.**
+**Continue Phase 14 with owner-selected, task-specific runtime validation and integration. Universal coding-agent parity is not an objective.**
 
 Current known runtime evidence:
 - Codex CLI: VERIFIED.
@@ -805,12 +804,12 @@ Current known runtime evidence:
 - Grok: installed/claimed, but not signed in during the latest recorded probe.
 - Kimi: installed/claimed, but quota-blocked during the latest recorded probe.
 
-The next action is runtime-level, not architecture-level:
-1. Re-probe the most practical second runtime when its authentication/provider path is available.
-2. Verify it through the canonical adapter.
-3. Run the Phase 13 parity suite against Codex plus the second verified runtime.
-4. Record real substitution/failover evidence if both runtimes satisfy the same capability contract.
-5. Update the runtime matrix and decision history from direct evidence.
+The next action is runtime-level and task-specific:
+1. Select the executor the owner is currently using from ZCode, OpenCode, Antigravity or Freebuff.
+2. Run only the bounded validation required for the current capability hypothesis.
+3. Preserve task identity, acceptance criteria and evidence if token/context exhaustion causes an executor switch.
+4. Run cross-runtime comparison only when the current task has a concrete substitution, regression or portability hypothesis.
+5. Update runtime/evaluation records only when direct evidence changes their state.
 
 No external repository should be installed merely to work around this runtime-verification gap.
 
