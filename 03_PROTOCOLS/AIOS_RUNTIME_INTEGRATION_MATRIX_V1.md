@@ -13,6 +13,18 @@ Pipeline:
 
 ## 2. Runtime roles
 
+Execution availability is owner-controlled and task-specific. The matrix describes architectural roles, not a requirement that every runtime be installed, authenticated or verified.
+
+Current owner-confirmed execution pool:
+- ZCode
+- OpenCode
+- Antigravity
+- Freebuff
+
+Codex and Cursor are currently unavailable to the owner. Historical adapter records must not be interpreted as current access.
+
+PAIOS does not require universal runtime parity. Test only the runtime needed for the current task, capability hypothesis or evidence gap.
+
 | Runtime | Primary role | Integration priority |
 |---|---|---|
 | Grok Bot | Root orchestrator / dispatcher | HIGH |
