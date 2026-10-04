@@ -104,3 +104,12 @@ No tool installed, connected, or authenticated. Architecture unmodified. Outreac
 - Owner-confirmed execution pool policy (ZCode, OpenCode, Antigravity, Freebuff; Codex/Cursor restricted) remains authoritative for task planning; live adapter evidence is recorded separately and does not by itself change owner policy.
 - Next V1+ objective: bounded agent-memory follow-up evaluation of rohitg00/agentmemory (isolated-scope concurrency + npm package verification). agentmemory retains TEST FIRST; not installed into PAIOS; not verified for PAIOS use.
 - Closeout record: `12_VALIDATION/AIOS_PHASE14_CLOSEOUT_2026-10-04.md`.
+
+## 2026-10-04 — agentmemory isolated-scope follow-up
+
+- Isolated-scope follow-up evaluation of rohitg00/agentmemory executed (PARTIAL, leaning PASS FOR NEXT STAGE). Per-call agentId isolation is correct and restart-durable on all tested retrieval surfaces (REST search, smart-search, context) including 20/20 concurrent writes and 10/10 concurrent retrievals.
+- Isolation is cooperative client scoping, NOT a security boundary: wildcard `agentId:"*"` and agentId-less reads return all agents' memories by design; the REST bearer secret is the actual access boundary. `project` is confirmed not a security boundary.
+- `AGENTMEMORY_AGENT_SCOPE=isolated` silently degrades to shared mode without a server-wide `AGENT_ID`, and the documented hard-refusal branch is unreachable code (upstream finding).
+- Abrupt kill within the 3.5 s capture durability window silently loses accepted events (documented window measured, not worked around).
+- Disposition remains TEST FIRST; no integration. Smallest next experiment if pursued: a thin PAIOS wrapper that always passes an explicit agentId, refuses wildcard/unscoped reads, and verifies isolated mode is active at startup.
+- Evidence: `12_VALIDATION/AIOS_AGENTMEMORY_ISOLATED_SCOPE_EVIDENCE_2026-10-04.md`.
