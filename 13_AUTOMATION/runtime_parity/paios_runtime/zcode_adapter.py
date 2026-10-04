@@ -6,8 +6,12 @@ observable execution (Phase 14, RT-01..RT-20 evidence):
 
 - executable: `codex` (npm `@openai/codex` 0.144.1) on PATH
 - auth: ChatGPT-account mode (`~/.codex/auth.json`, auth_mode=chatgpt)
-- working model verified live: `gpt-5.5` (from ~/.codex/models_cache.json;
-  the configured default `gpt-5.4-mini` is rejected by the account tier)
+- working model verified live: `gpt-5.6-terra` (probe 2026-10-03; the
+  previously verified `gpt-5.5` now returns HTTP 404 from the ChatGPT
+  backend — "does not exist or you do not have access to it" — an upstream
+  model rotation, recorded as an external-dependency change. Historical:
+  `gpt-5.5` was verified live 2026-09-17; the configured default
+  `gpt-5.4-mini` is rejected by the account tier)
 - invocation: `codex exec --skip-git-repo-check -m <model> -C <dir> -s <mode>`
   with the prompt piped via stdin
 - sandbox: `-s read-only` is honored (verified: a write request inside the
@@ -91,7 +95,7 @@ class CodexRuntimeAdapter(RuntimeAdapter):
         "working_directory",    # -C honored (verified live)
     })
 
-    def __init__(self, *, model: str = "gpt-5.5",
+    def __init__(self, *, model: str = "gpt-5.6-terra",
                  sandbox: str = "read-only",
                  timeout_seconds: int = 240,
                  workspace_root: str | None = None):

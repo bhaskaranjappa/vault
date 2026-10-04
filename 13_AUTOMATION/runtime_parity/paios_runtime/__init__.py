@@ -21,6 +21,7 @@ from .substitution import SubstitutionRecord, SubstitutionChain, SubstitutionBlo
 from .untrusted import UntrustedContent, inspect_runtime_output
 from .real_runtimes import inspect_real_runtimes, InspectionOutcome
 from .zcode_adapter import CodexRuntimeAdapter, ZCodeRuntimeError
+from .hermes_adapter import HermesRuntimeAdapter, HermesRuntimeError
 
 __all__ = [
     "ReferenceRuntimeAdapter", "RuntimeAdapter", "RuntimeUnavailableAdapter",
@@ -33,4 +34,5 @@ __all__ = [
     "SubstitutionBlocked", "ParityCheck", "UntrustedContent",
     "inspect_runtime_output", "inspect_real_runtimes", "InspectionOutcome",
     "CodexRuntimeAdapter", "ZCodeRuntimeError",
+    "HermesRuntimeAdapter", "HermesRuntimeError",
 ]

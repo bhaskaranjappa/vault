@@ -1,13 +1,19 @@
-"""Phase 14 real runtime integration tests: RT-01..RT-20 + AD-14-01..08.
+"""Phase 14 real runtime integration tests: RT-01..RT-21 + AD-14-01..08.
 
 The Codex CLI adapter executes the REAL installed runtime (`codex exec`,
-model gpt-5.5, ChatGPT-account auth). Real-execution tests are marked and
-are the only tests allowed to invoke the actual runtime; everything else
-(isolation, idempotency, parity, adversarial logic) uses the deterministic
-reference adapter so the suite stays fast and bounded.
+model gpt-5.6-terra since the 2026-10-03 upstream rotation of `gpt-5.5`,
+ChatGPT-account auth). The Hermes CLI adapter is the SECOND verified runtime
+(test_phase14_hermes.py, 13/13, 2026-10-03) and is exercised by the REAL
+cross-runtime tests RT-20 (failover) and RT-21 (parity). Real-execution
+tests are marked and are the only tests allowed to invoke the actual
+runtimes; everything else (isolation, idempotency, parity, adversarial
+logic) uses the deterministic reference adapter so the suite stays fast and
+bounded.
 
 Real executions in this suite: 4 bounded read-only codex exec calls
-(RT-02 probe, RT-04/05 real execution, RT-19 end-to-end, RT-08 persistence).
+(RT-02 probe, RT-04/05 real execution, RT-19 end-to-end, RT-08 persistence)
+plus the cross-runtime tests: RT-20 (1 forced codex failure + 1 real hermes
+execution) and RT-21 (1 real codex + 1 real hermes execution).
 Timeout/failure normalization beyond what is safely inducible is tested
 against observed evidence and reference-adapter mappings (RT-15..RT-17).
 """
@@ -25,9 +31,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from paios_runtime import (
     CapabilityRegistry, CodexRuntimeAdapter, ExecutionRequest, ExecutionResult,
-    ExecutionStatus, Lifecycle, ParityEnforcer, ReferenceRuntimeAdapter,
-    RuntimeCapabilityRecord, RuntimeRegistry, SubstitutionChain,
-    SubstitutionBlocked, TimingOutAdapter, UntrustedContent,
+    ExecutionStatus, HermesRuntimeAdapter, Lifecycle, ParityEnforcer,
+    ReferenceRuntimeAdapter, RuntimeCapabilityRecord, RuntimeRegistry,
+    SubstitutionChain, SubstitutionBlocked, TimingOutAdapter, UntrustedContent,
     VerificationState, UnknownResultAdapter, inspect_runtime_output,
 )
 
@@ -323,23 +329,72 @@ class IsolationAndIntegrationTests(unittest.TestCase):
         self.assertIn("B-OK", out.stdout)
 
     def test_RT20_failover_second_verified_runtime(self):
-        """RT-20 is NOT_APPLICABLE unless a second VERIFIED runtime exists.
-        OpenCode remains CLAIMED/UNVERIFIED (opencode run hang 2026-09-16
-        re-confirmed), so cross-runtime failover stays explicitly unverified.
-        The substitution MECHANISM itself is proven at the contract level."""
+        """RT-20 REAL: a second VERIFIED runtime now exists (hermes-agent,
+        verified live 2026-10-03 via tests/test_phase14_hermes 13/13).
+        Real cross-runtime failover: the primary runtime fails with a
+        concrete, mapped failure (invalid model), the substitution chain
+        revalidates and the substitute runtime executes the SAME canonical
+        request. Task identity, authority and acceptance criteria are
+        preserved; an explicit substitution record is appended; the
+        completed result carries evidence and passes the parity check."""
+        hr = HermesRuntimeAdapter()
+        self.assertEqual(hr.health(), "AVAILABLE")
+        self.assertEqual(hr.auth_state(), "AUTHENTICATED")
         reg = CapabilityRegistry(tempfile.mkdtemp())
-        verified = [r for r in reg.all() if r.verification == VerificationState.VERIFIED
-                    and r.runtime_id not in ("codex-cli", "zcode")]
-        self.assertEqual(verified, [])   # honestly: no second verified runtime
-        # mechanism-level proof with the reference adapters
+        reg.register(RuntimeCapabilityRecord(
+            runtime_id=hr.runtime_id,
+            capabilities=set(hr.provided_capabilities),
+            lifecycle=Lifecycle.VERIFIED,
+            verification=VerificationState.VERIFIED,
+            model_access="SINGLE", tool_access="SINGLE", execution_mode="SYNC",
+            structured_output=False, streaming=False, parallelism=False,
+            long_running=False, web_capability="UNKNOWN",
+            auth_state="AUTHENTICATED",
+            limitations=["no write isolation under --safe-mode (observed)",
+                         "no structured/usage output", "no cancellation"],
+            evidence_refs=["hermes://live-exec/nous/poolside-laguna-xs-2.1-free/2026-10-03"]))
         chain = SubstitutionChain(capabilities=reg, authority_scope="policy-phase14",
                                   acceptance_criteria=["summary names the requested file"])
-        req = make_request(inputs={"behavior": "fail"})
-        failed = ReferenceRuntimeAdapter().execute(req)
-        result, record = chain.substitute(req, ReferenceRuntimeAdapter(), failed,
-                                          UnknownResultAdapter(), chain_id="rt20")
+        req = make_request(task_id="TASK-rt20")
+        primary = real_adapter(model="nonexistent-model-xyz")
+        failed = primary.execute(req)
+        self.assertEqual(failed.status, ExecutionStatus.FAILED)
+        result, record = chain.substitute(req, primary, failed, hr, chain_id="rt20")
+        self.assertEqual(result.status, ExecutionStatus.COMPLETED, result.error)
         self.assertEqual(record.reason, "EXECUTION_FAILURE")
+        self.assertEqual(record.from_runtime, "codex-cli")
+        self.assertEqual(record.to_runtime, "hermes-agent")
+        self.assertEqual(record.request_fingerprint, req.fingerprint())
         self.assertEqual(record.preserved["authority_context"], "policy-phase14")
+        self.assertEqual(record.preserved["acceptance_criteria"],
+                         ["summary names the requested file"])
+        self.assertIn(record.substitution_id, result.substitutions)
+        check = ParityEnforcer().check(req, result)
+        self.assertTrue(check.consistent, check.violations)
+
+    def test_RT21_cross_runtime_real_parity(self):
+        """RT-21 REAL: the same canonical request executes on BOTH verified
+        runtimes (codex + hermes). Task identity (fingerprint) is identical
+        across adapters, authority context is unchanged, evidence refs are
+        present on both results, verification and the parity enforcer accept
+        both. This is the Phase 13 parity suite run against real adapters on
+        both sides."""
+        req = make_request(task_id="TASK-rt21")
+        codex_res = real_adapter().execute(req)
+        hermes_res = HermesRuntimeAdapter().execute(req)
+        self.assertEqual(codex_res.status, ExecutionStatus.COMPLETED, codex_res.error)
+        self.assertEqual(hermes_res.status, ExecutionStatus.COMPLETED, hermes_res.error)
+        self.assertEqual(codex_res.request_fingerprint, req.fingerprint())
+        self.assertEqual(hermes_res.request_fingerprint, req.fingerprint())
+        self.assertNotEqual(codex_res.runtime_id, hermes_res.runtime_id)
+        self.assertTrue(codex_res.evidence_refs)
+        self.assertTrue(hermes_res.evidence_refs)
+        self.assertTrue(real_adapter().verify(codex_res)["verified"])
+        self.assertTrue(HermesRuntimeAdapter().verify(hermes_res)["verified"])
+        check = ParityEnforcer().check(req, codex_res)
+        self.assertTrue(check.consistent, check.violations)
+        check2 = ParityEnforcer().check(req, hermes_res)
+        self.assertTrue(check2.consistent, check2.violations)
 
 
 class AdversarialPhase14Tests(unittest.TestCase):
