@@ -3,8 +3,8 @@
 Version: 1.2.0
 Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
 Owner: Bhaskar Anjappa
-Last Updated: 2026-10-03
-Current execution phase: V1+ Phase 14 — Real Runtime Integration
+Last Updated: 2026-10-04
+Current execution phase: V1+ Phase 14 CLOSED — next objective: bounded agent-memory follow-up evaluation (rohitg00/agentmemory)
 
 This repository is the canonical, portable personal AI knowledge and operating layer. It is designed to work across AI runtimes without making any single model, chat history, vendor memory system, or agent framework the source of truth.
 
@@ -94,9 +94,9 @@ Child authority cannot exceed parent authority. Bots cannot self-grant authority
 
 ## Current phase
 
-**V1+ Phase 14 — Real Runtime Integration**
+**V1+ Phase 14 — Real Runtime Integration** — COMPLETED / CLOSED (2026-10-04).
 
-Phase 14 implementation is complete. Codex CLI is the first directly verified real runtime through the canonical adapter.
+Phase 14 implementation is complete. Codex CLI was the first directly verified real runtime through the canonical adapter (2026-09-17, re-executed 2026-10-04); Hermes Agent CLI is the second (2026-10-03/04). Real cross-runtime failover (RT-20) and parity (RT-21) were executed live on both verified runtimes. Universal coding-agent parity is NOT a Phase-14 exit requirement. Closeout: `12_VALIDATION/AIOS_PHASE14_CLOSEOUT_2026-10-04.md`.
 
 Completed foundations:
 - source architecture study;

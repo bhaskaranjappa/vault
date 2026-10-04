@@ -146,12 +146,13 @@ Established:
 - AIOS vendor-neutral specification;
 - bot authority protocol;
 - orchestration contract;
-- memory/context contract.
+- memory/context contract;
+- **Phase 14 real-runtime adapter contract (COMPLETED / CLOSED 2026-10-04)**: portable adapter layer at `13_AUTOMATION/runtime_parity/paios_runtime/` with two live-verified real runtimes — Codex CLI (2026-09-17, re-executed 2026-10-04) and Hermes Agent CLI (2026-10-03/04) — plus real cross-runtime failover (RT-20) and parity (RT-21). Universal coding-agent parity is NOT required.
 
-Next runtime work:
-1. Grok Bot adapter refinement for root orchestration.
-2. ZCode implementation specification and bounded test.
-3. Hermes implementation specification and bounded test.
-4. OpenCode failover implementation specification and bounded test.
-5. Lightweight ChatGPT/Claude/Gemini modules.
-6. Cross-runtime parity tests for the new capabilities.
+Runtime verification state (behavioral, owner-access-dependent):
+- Codex CLI: VERIFIED (live evidence; owner planning policy may still restrict task use).
+- Hermes Agent CLI: VERIFIED (Nous Portal auth, free-tier model).
+- OpenCode: CLAIMED / execution UNVERIFIED (recorded probe hang).
+- Grok: NOT_TESTED (no owner access at last probe).
+- Kimi: CLAIMED (quota-blocked at last probe).
+- Grok Bot adapter refinement for root orchestration: deferred until runtime access exists (NOT_TESTED — access limitation, not an implementation defect).

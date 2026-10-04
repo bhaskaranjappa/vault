@@ -2,7 +2,7 @@
 
 Version: 1.1
 Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
-Current phase: V1+ Phase 14 — Real Runtime Integration
+Current phase: V1+ Phase 14 CLOSED (2026-10-04) — next objective: bounded agent-memory follow-up evaluation (rohitg00/agentmemory)
 Active execution policy: user-selected executor from the currently usable pool
 Current usable execution pool (owner-confirmed): ZCode, OpenCode, Antigravity, Freebuff
 Codex and Cursor: owner currently has no access; do not plan work around them or infer availability
@@ -780,7 +780,7 @@ For every new capability or integration:
 15. Update canonical state and Git history.
 16. Rebenchmark the real workflow.
 
-## 29. CURRENT PHASE STATUS — 2026-10-03
+## 29. CURRENT PHASE STATUS — 2026-10-04
 
 ### Completed
 
@@ -789,29 +789,28 @@ For every new capability or integration:
 - AIOS specification, bot authority, orchestration, memory/context, governance and routing layers created.
 - Portable automation engine implemented and validated.
 - Cross-runtime parity contract implemented and validated.
-- Phase 14 real-runtime integration implemented.
-- Codex CLI verified live through the canonical adapter with bounded read-only execution.
+- **Phase 14 real-runtime integration: COMPLETED / CLOSED (2026-10-04).**
+  - Portable adapter contract implemented (`13_AUTOMATION/runtime_parity/paios_runtime/`).
+  - Two real runtimes verified through the canonical adapter with direct live execution evidence: Codex CLI (2026-09-17, re-executed 2026-10-04; working model rotated upstream `gpt-5.5` → `gpt-5.6-terra` (recorded as an external-dependency change)) and Hermes Agent CLI (2026-10-03/04, Nous Portal auth).
+  - Real cross-runtime failover (RT-20) and cross-runtime parity (RT-21) executed live on both verified runtimes.
+  - Phase-14 suite 28/28 PASS (incl. real-execution and adversarial tests); Hermes suite 13/13 PASS (one transient free-tier timeout, PASS on re-run); Phase 8–13 regressions all PASS.
+  - Closeout record: `12_VALIDATION/AIOS_PHASE14_CLOSEOUT_2026-10-04.md`.
+  - Universal coding-agent parity is NOT a Phase-14 exit requirement and was never met or required.
 - Canonical external-repository evaluation completed for Munder Difflin, Paperclip, OpenMuse and the two relevant OpenDots repositories.
+- Bounded rohitg00/agentmemory evaluation executed 2026-10-03 (`12_VALIDATION/AIOS_AGENTMEMORY_EVAL_EVIDENCE_2026-10-03.md`) — TEST RESULT: PROMISING; no integration performed.
 
-### Current incomplete objective
+### Current objective (next)
 
-**Continue Phase 14 with owner-selected, task-specific runtime validation and integration. Universal coding-agent parity is not an objective.**
+**Bounded agent-memory evaluation follow-up (rohitg00/agentmemory):** one narrowly scoped experiment testing `AGENTMEMORY_AGENT_SCOPE=isolated` end-to-end with two concurrent scoped agents (concurrent writes + restart), and re-verification against the published npm package once it catches up to the iii 0.22.1 engine pairing. Retains TEST FIRST disposition; no PAIOS integration; context injection stays disabled.
 
-Current known runtime evidence:
-- Codex CLI: VERIFIED.
+### Runtime evidence state (recorded honestly)
+
+- Codex CLI: VERIFIED (historical 2026-09-17; live executions re-observed 2026-10-04 during Phase-14 validation). The owner-confirmed execution-pool policy line above is unchanged and remains authoritative for task planning; the live evidence is recorded for accuracy and does not by itself change owner policy.
+- Hermes Agent CLI: VERIFIED (2026-10-03/04, Nous Portal auth, free-tier model).
 - OpenCode: execution UNVERIFIED; latest recorded probe hung with zero output.
-- Hermes: installed/claimed, but provider endpoint was unavailable during the latest recorded probe.
-- Grok: installed/claimed, but not signed in during the latest recorded probe.
-- Kimi: installed/claimed, but quota-blocked during the latest recorded probe.
-
-The next action is runtime-level and task-specific:
-1. Select the executor the owner is currently using from ZCode, OpenCode, Antigravity or Freebuff.
-2. Run only the bounded validation required for the current capability hypothesis.
-3. Preserve task identity, acceptance criteria and evidence if token/context exhaustion causes an executor switch.
-4. Run cross-runtime comparison only when the current task has a concrete substitution, regression or portability hypothesis.
-5. Update runtime/evaluation records only when direct evidence changes their state.
-
-No external repository should be installed merely to work around this runtime-verification gap.
+- Grok: installed/claimed, not signed in during the latest recorded probe.
+- Kimi: installed/claimed, quota-blocked during the latest recorded probe.
+- Unavailable-runtime access is a limitation, not a Phase-14 implementation defect.
 
 ### Deferred until evidence justifies it
 
@@ -824,9 +823,9 @@ No external repository should be installed merely to work around this runtime-ve
 
 ### Phase naming clarification
 
-`V1+ Phase 14 — Real Runtime Integration` is the current canonical phase.
+`V1+ Phase 14 — Real Runtime Integration` is CLOSED/COMPLETED (2026-10-04). The current canonical objective is the bounded agent-memory follow-up evaluation described in §29.
 
-The previous roadmap entries for specialist/product modules and advanced orchestration are retained as future tracks. They are not current numbered phases and must not override the real-runtime integration objective.
+The previous roadmap entries for specialist/product modules and advanced orchestration are retained as future tracks. They are not current numbered phases and must not override the current objective.
 
 
 ## 30. MASTER RULE

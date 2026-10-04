@@ -1,6 +1,12 @@
 # AIOS PHASE 14 — REAL RUNTIME INTEGRATION TESTS
 
-Status: CANONICAL V1+ — PHASE 14
+Status: HISTORICAL TEST RECORD (2026-09-17 run). Phase 14 CLOSED 2026-10-04 —
+see `12_VALIDATION/AIOS_PHASE14_CLOSEOUT_2026-10-04.md` for the current state.
+The suite has since been extended: the working Codex model rotated upstream
+`gpt-5.5` → `gpt-5.6-terra` (recorded 2026-10-03), a second real runtime
+(Hermes Agent CLI, `tests/test_phase14_hermes.py`, 13/13) was verified, and
+RT-20 became a REAL cross-runtime failover test plus a new RT-21 real
+cross-runtime parity test. The table below records the 2026-09-17 run.
 Read: `03_PROTOCOLS/AIOS_RUNTIME_ADAPTER_PROTOCOL_V1.md`
 
 Executable suite: `13_AUTOMATION/runtime_parity/tests/test_phase14.py`

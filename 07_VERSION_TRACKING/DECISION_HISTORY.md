@@ -96,3 +96,11 @@ No tool installed, connected, or authenticated. Architecture unmodified. Outreac
 - No candidate was installed, authenticated or runtime-verified. No candidate was promoted to the production runtime stack.
 - Full evidence: `02_AI_STACK/TOOL_EVALUATIONS/EXTERNAL_REPOSITORIES_2026-10-03.md`.
 
+
+## 2026-10-04 — Phase 14 closeout
+
+- V1+ Phase 14 (Real Runtime Integration) CLOSED/COMPLETED. Portable adapter contract plus two live-verified real runtimes through the canonical adapter: Codex CLI (2026-09-17, re-executed 2026-10-04; working model rotated upstream gpt-5.5 → gpt-5.6-terra) and Hermes Agent CLI (2026-10-03/04, Nous Portal auth, free-tier model). Real cross-runtime failover (RT-20) and parity (RT-21) executed live.
+- Universal coding-agent parity is NOT a Phase-14 exit requirement. Unavailable/unauthenticated runtimes (OpenCode hang, Grok sign-in, Kimi quota, Cursor) are access limitations, not implementation defects; their states are recorded honestly.
+- Owner-confirmed execution pool policy (ZCode, OpenCode, Antigravity, Freebuff; Codex/Cursor restricted) remains authoritative for task planning; live adapter evidence is recorded separately and does not by itself change owner policy.
+- Next V1+ objective: bounded agent-memory follow-up evaluation of rohitg00/agentmemory (isolated-scope concurrency + npm package verification). agentmemory retains TEST FIRST; not installed into PAIOS; not verified for PAIOS use.
+- Closeout record: `12_VALIDATION/AIOS_PHASE14_CLOSEOUT_2026-10-04.md`.
