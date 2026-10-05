@@ -1,18 +1,18 @@
-# AIOS SPECIFICATION V1
+# AIOS SPECIFICATION V1 — HISTORICAL SUPPORTING RECORD
 
-Status: PROPOSED → CANONICAL DESIGN BASELINE
-Purpose: vendor-neutral operating specification derived from Claude Fable 5.1, GPT-6 Astra/Codex, and Grok Bot architectural patterns and reconciled with PAIOS governance.
+Status: HISTORICAL SUPPORTING ARCHITECTURE
+Purpose: preserve the vendor-neutral execution architecture developed during the former PAIOS build. It remains supporting technical history for VAULT and external runtimes; it does not define VAULT as an autonomous operating system.
 
 ## 1. Core model
 
-AIOS is a control specification between canonical knowledge and execution runtimes.
+Historically, AIOS was designed as a control specification between canonical knowledge and execution runtimes. In the current VAULT model, this document is a supporting execution/context contract.
 
 ```text
 Canonical Knowledge
         ↓
 AIOS Specification
         ↓
-PAIOS / Agent / Chat / Product Kernels
+VAULT context + external agent/runtime surfaces
         ↓
 Runtime Adapters
         ↓
