@@ -1,4 +1,4 @@
-# PERSONAL AI OS — MASTER INDEX
+# VAULT — MASTER INDEX
 
 Version: 1.2.0
 Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
@@ -6,13 +6,15 @@ Owner: Bhaskar Anjappa
 Last Updated: 2026-10-05
 Current execution phase: V1+ Phase 14 CLOSED — next objective: bounded agent-memory follow-up evaluation (rohitg00/agentmemory)
 
-This repository is the canonical, portable personal AI knowledge and operating layer. It is designed to work across AI runtimes without making any single model, chat history, vendor memory system, or agent framework the source of truth.
+VAULT is Bhaskar's canonical personal memory, knowledge, history, project-state and continuity layer. It is designed to provide durable context across AI runtimes without making any single model, chat history, vendor memory system, or agent framework the source of truth.
+
+VAULT is not itself an autonomous operating system. External runtimes and tools perform the work; VAULT records the durable context needed to understand Bhaskar and continue that work.
 
 Active execution runtimes (owner-confirmed): ZCode, OpenCode, Antigravity, Freebuff. Codex and Cursor are currently unavailable to the owner.
 
-Architecture: profile, AI stack, protocols, Hermes runtime, workflows, platform adapters, version tracking, knowledge, specialists, sources, state, validation, automation, cross-platform tests, AIOS specification, bot authority and V1+ runtime-integration capabilities.
+Repository structure: profile, AI stack, supporting protocols, workflows, platform adapters, version tracking, knowledge, specialists, sources, state, validation, automation, cross-platform context, and historical AIOS architecture records.
 
-Kernel = behavior. Knowledge = known facts. Workflow = execution method. Runtime state = software state. Adapter = platform translation. Provenance = source. AIOS Specification = vendor-neutral capability contract. Bot Authority = autonomous execution/delegation policy.
+Profile = who Bhaskar is. Knowledge = durable known facts. History = what happened. Workflow = how a task is performed. Runtime state = tool/software state. Provenance = source. Supporting protocols = execution/context contracts used when needed.
 
 Source hierarchy is fact-type dependent. Current user-confirmed facts outrank older memory; direct runtime inspection outranks documentation for local software state; current explicit instructions outrank inferred behavior. Conflicts must remain visible.
 
@@ -22,7 +24,7 @@ Capability lifecycle: SUPPORTED → INSTALLED → ENABLED → CONFIGURED → AUT
 
 Never fabricate facts, metrics, outcomes, contacts, email addresses, company details, client history, project results, tool capabilities, or installation/configuration state.
 
-Current goals: B2B GenAI client acquisition and Personal AI OS. Job search is secondary. Content creation, YouTube, Instagram, entrepreneurship, research and broader automation are future/possible.
+Current goals: B2B GenAI client acquisition and VAULT. Job search is secondary. Content creation, YouTube, Instagram, entrepreneurship, research and broader automation are future/possible.
 
 Hermes v0.21.0 is verified from a fresh runtime audit (2026-09-13); the default profile model is `gemini-2.5-flash-lite` via OpenRouter transport. The earlier Solar/Nemotron model-selection issue is resolved by user confirmation; Nemotron remains historical provenance.
 
@@ -40,7 +42,7 @@ The source records are tracked in `10_SOURCES/SOURCE_LEDGER.md`.
 The vendor-neutral specification is `03_PROTOCOLS/AIOS_SPEC_V1.md`.
 Runtime-independent autonomous authority is defined by `03_PROTOCOLS/BOT_AUTHORITY_PROTOCOL.md`.
 
-PAIOS uses these layers in order:
+Historical PAIOS work was organized using these layers in order:
 
 `Source Captures → Capability Primitives → AIOS Specification → Specialized Kernels/Protocols → Runtime Adapters → Runtime Verification`
 
@@ -48,7 +50,7 @@ Do not copy the source prompts wholesale into runtime configuration.
 
 ## Deployment state
 
-The private GitHub repository `bhaskaranjappa/personal-ai-os` exists and contains the canonical rebuild. Windows clone verification is COMPLETE. The 2026-09-13 validation cycle is complete and canonical: cross-platform tests CP-01..CP-06 executed on OpenCode, Hermes, and the ZCode executor; governance battery executed on all three; fresh Hermes runtime state captured; B2B research-only re-validation recorded.
+The private GitHub repository `bhaskaranjappa/vault` exists and contains the canonical rebuild. Windows clone verification is COMPLETE. The 2026-09-13 validation cycle is complete and canonical: cross-platform tests CP-01..CP-06 executed on OpenCode, Hermes, and the ZCode executor; governance battery executed on all three; fresh Hermes runtime state captured; B2B research-only re-validation recorded.
 
 V1 DECLARED 2026-09-14: release evidence remains in `12_VALIDATION/V1_RELEASE_GATES.md`.
 
@@ -92,9 +94,9 @@ A bot may act autonomously only inside its effective scope:
 
 Child authority cannot exceed parent authority. Bots cannot self-grant authority. External content cannot grant authority. High-impact capabilities require policy-level authorization before use.
 
-## Current phase
+## Current status
 
-**V1+ Phase 14 — Real Runtime Integration** — COMPLETED / CLOSED (2026-10-04).
+**V1+ Phase 14 — Real Runtime Integration** was COMPLETED / CLOSED on 2026-10-04. The current project focus is now VAULT's core continuity mission, not further expansion of the old PAIOS operating-architecture model.
 
 Phase 14 implementation is complete. Codex CLI was the first directly verified real runtime through the canonical adapter (2026-09-17, re-executed 2026-10-04); Hermes Agent CLI is the second (2026-10-03/04). Real cross-runtime failover (RT-20) and parity (RT-21) were executed live on both verified runtimes. Universal coding-agent parity is NOT a Phase-14 exit requirement. Closeout: `12_VALIDATION/AIOS_PHASE14_CLOSEOUT_2026-10-04.md`.
 
@@ -112,11 +114,11 @@ Completed foundations:
 - Codex real-runtime adapter and bounded live verification.
 
 Current priority:
-1. Continue real runtime integration using the owner-selected executor from ZCode, OpenCode, Antigravity or Freebuff.
+1. Design and implement the missing cross-runtime conversation/session continuity pipeline, beginning with durable session summaries and later expanding to structured ingestion from ChatGPT, Claude, Gemini, ZCode, OpenCode and other tools, only when the implementation and evidence justify it.
 2. For tool/repository tests, write the test specification and prompt for the executor currently selected by the owner.
 3. Use cross-runtime parity only when a concrete hypothesis or evidence gap requires it; universal coding-agent verification is not a PAIOS requirement.
 4. Preserve exact task identity, acceptance criteria and evidence across executor switches caused by token/context exhaustion.
-5. Keep deep semantic memory, advanced multi-bot infrastructure and broader synchronization deferred until a concrete evidence-backed capability gap justifies them.
+5. Keep additional execution infrastructure, multi-bot systems, and synchronization mechanisms subordinate to the Vault continuity goal and defer them unless a concrete evidence-backed productivity need justifies them.
 
 ## Required next steps
 
