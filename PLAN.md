@@ -42,7 +42,7 @@ Do not optimize for tool count, automation count, architecture size, agent count
 Treat the current GitHub repository as authoritative.
 
 Known repository state:
-- private repository: bhaskaranjappa/personal-ai-os
+- private repository: bhaskaranjappa/vault
 - canonical branch: main
 - V1 formally released 2026-09-14
 - V1+ capability-enhancement workflow is canonical
