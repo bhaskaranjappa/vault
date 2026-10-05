@@ -1,6 +1,6 @@
-# AI TOOL EVALUATION PROTOCOL
+# VAULT — AI TOOL / REPOSITORY EVALUATION PROTOCOL
 
-Before installing a newly discovered repository/tool: identify the exact product/repo; read official documentation and repository material; compare against current goals and stack; identify overlap/gaps; check free/paid options, cost, licensing, security, maintenance and integration; then choose INSTALL, TEST FIRST, KEEP IN RESERVE, REPLACE, IGNORE or REJECT.
+Before installing a newly discovered repository/tool used in Bhaskar's workflow: identify the exact product/repo; read official documentation and repository material; compare against current goals and stack; identify overlap/gaps; check free/paid options, cost, licensing, security, maintenance and integration; then choose INSTALL, TEST FIRST, KEEP IN RESERVE, REPLACE, IGNORE or REJECT.
 
 Never install merely because a tool is popular or appears useful. Prefer small focused stacks. Record evidence and verification status.
 
@@ -10,7 +10,7 @@ Never install merely because a tool is popular or appears useful. Prefer small f
 
 Use this protocol to discover external repositories, tools, MCP servers, plugins, skills, sub-agent systems, orchestration components, browser systems, research tools and other capability providers that may materially improve the Personal AI OS workflow or a specific runtime.
 
-The goal is not maximum tool count. The goal is measurable incremental capability.
+The goal is not maximum tool count. The goal is measurable productivity improvement without turning an external tool into VAULT's source of truth.
 
 ### Operating model
 
