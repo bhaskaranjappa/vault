@@ -11,6 +11,8 @@ Initial root-orchestrator target: Grok Bot (NOT_TESTED — runtime access unavai
 Canonical source of truth: `GitHub → bhaskaranjappa/vault → main`
 Owner: Bhaskar Anjappa
 
+**Current-state rule:** this document preserves historical V1/V1+ architecture and implementation records. Unless a section is explicitly identified as current under the latest VAULT objective, treat numbered phase descriptions as historical. The active product definition is VAULT's personal memory, knowledge, history and cross-runtime continuity mission.
+
 ## 0. MISSION
 
 VAULT is Bhaskar's private canonical memory, knowledge, history and continuity repository. Its primary purpose is to preserve enough durable context that any new AI runtime can understand who Bhaskar is, what he has done, what he is doing now, what tools he uses, what decisions were made, and where work should continue.
