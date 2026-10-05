@@ -4,7 +4,7 @@ Version: 1.2.0
 Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
 Owner: Bhaskar Anjappa
 Last Updated: 2026-10-05
-Current execution phase: V1+ Phase 14 CLOSED — next objective: bounded agent-memory follow-up evaluation (rohitg00/agentmemory)
+Current status: VAULT continuity layer — historical V1+ implementation retained; next objective: cross-runtime conversation/session continuity
 
 VAULT is Bhaskar's canonical personal memory, knowledge, history, project-state and continuity layer. It is designed to provide durable context across AI runtimes without making any single model, chat history, vendor memory system, or agent framework the source of truth.
 
@@ -28,7 +28,9 @@ Current goals: B2B GenAI client acquisition and VAULT. Job search is secondary. 
 
 Hermes v0.21.0 is verified from a fresh runtime audit (2026-09-13); the default profile model is `gemini-2.5-flash-lite` via OpenRouter transport. The earlier Solar/Nemotron model-selection issue is resolved by user confirmation; Nemotron remains historical provenance.
 
-The first five-company B2B research-only benchmark is recorded. Connectsys and MaxHome.ai are the strongest research candidates; no outreach was sent.
+The first five-company B2B research-only benchmark is recorded. Connectsys and MaxHome.ai were the strongest research candidates; no outreach was sent.
+
+VAULT's primary mission is persistent personal context and continuity for Bhaskar across AI runtimes. The repository records profile, work history, projects, decisions, tools, experiments, session outcomes and current state. It does not execute tasks independently.
 
 ## AIOS architecture layer
 
@@ -54,7 +56,7 @@ The private GitHub repository `bhaskaranjappa/vault` exists and contains the can
 
 V1 DECLARED 2026-09-14: release evidence remains in `12_VALIDATION/V1_RELEASE_GATES.md`.
 
-V1+ is now an expansion of the released foundation rather than a replay of the old V1 build sequence.
+Historical V1+ work is retained as supporting architecture and evidence. It is not the current product definition.
 
 ## Cold-start / agent bootstrap
 
@@ -82,9 +84,11 @@ Execution roles:
 Standard capability pipeline:
 `Capability gap → Discover → Deep research → Primitive extraction → Protocol assessment → Bounded test → ZCode execution → OpenCode failover if required → Measure → Review → PASS/PARTIAL/FAIL → Promote/Reserve/Ignore/Reject → Canonical evidence → Runtime integration → Production rebenchmark`
 
-## Autonomous bot authority
+## Historical AIOS execution architecture
 
-Per-action human approval is no longer a universal PAIOS execution gate.
+The following authority/orchestration records belong to the historical PAIOS execution-architecture work. They are supporting contracts for external runtimes, not evidence that VAULT itself is an autonomous bot.
+
+Per-action human approval is no longer a universal gate in that historical execution model.
 
 Canonical model:
 `Owner Policy → Grok Bot (root orchestrator) → Delegated Bot → Tool/Action`
@@ -122,7 +126,7 @@ Current priority:
 
 ## Required next steps
 
-Use `PLAN.md` as the master roadmap. Do not replay historical V1 phases unless a regression requires it.
+Use `PLAN.md` for historical implementation context and the current VAULT objective. Do not replay completed V1/V1+ phases unless a new evidence gap requires it.
 
 Build principle: Truth → Portability → Reversibility → Leverage → Policy-Bounded Autonomy
 
