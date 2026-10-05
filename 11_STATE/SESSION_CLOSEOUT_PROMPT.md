@@ -1,8 +1,8 @@
-# VAULT SESSION CLOSEOUT PROMPT
+# VAULT SESSION SUMMARIZE PROMPT
 
 Purpose: reusable end-of-session prompt for ChatGPT, Claude, Gemini, ZCode, OpenCode, or another AI runtime.
 
-Use this prompt at the end of a substantial chat or coding session to produce a reviewable continuity record. The generated summary is not automatically canonical. After Bhaskar reviews and explicitly approves the summary, reconcile it against the current VAULT repository and update only the durable canonical records that actually changed.
+Use this prompt when the user says `VAULT SUMMARIZE` at the end of a substantial chat or coding session to produce a reviewable continuity record. The generated summary is not automatically canonical. After Bhaskar reviews and explicitly approves the summary, reconcile it against the current VAULT repository and update only the durable canonical records that actually changed.
 
 ```text
 [UNIVERSAL CONTEXT TRANSFER PROTOCOL]
@@ -101,10 +101,10 @@ STRICT RULES:
 11. Do not add commentary before or after the summary.
 ```
 
-## Approval and write-back procedure
+## Approval and VAULT UPDATE procedure
 
 1. Generate the summary in the current AI conversation.
-2. Bhaskar reviews it and explicitly says to update VAULT.
+2. Bhaskar reviews it. When approved, Bhaskar says `VAULT UPDATE`.
 3. The updating AI reads the current VAULT main state and reconciles the approved summary against canonical files.
 4. Update only durable profile, project, decision, history, tool-state, session-summary, or current-state records that actually changed.
 5. Preserve the approved raw session summary as a provenance record when appropriate.
@@ -113,6 +113,14 @@ STRICT RULES:
 
 The session summary is a bridge between an AI conversation and VAULT, not a replacement for canonical reconciliation.
 
+## Command semantics
+
+`VAULT SUMMARIZE` = scan the entire current chat and generate the complete dated/time-stamped session summary. Do not update the repository during this step unless the user explicitly asks for `VAULT UPDATE`.
+
+`VAULT UPDATE` = take the approved summary available in the current conversation, reconcile it against the current `bhaskaranjappa/vault` `main` branch, update the appropriate canonical records, preserve the full session summary under `11_STATE/SESSION_SUMMARIES/`, and commit the changes with the repository's Git timestamp providing the write-back time.
+
+`VAULT BOOT` = read `START.md` and follow the canonical VAULT bootstrap procedure before beginning a new task.
+
 
 ## Quick access
 
@@ -120,4 +128,6 @@ In any new AI session, ask the AI to read the canonical repository `bhaskaranjap
 
 `11_STATE/SESSION_CLOSEOUT_PROMPT.md`
 
-At the end of a substantial session, the practical command is simply: "Use VAULT's session closeout prompt and generate the full session summary." You do not need to keep a separate Notepad copy.
+At the end of a substantial session, the practical command is simply: `VAULT SUMMARIZE`. You do not need to keep a separate Notepad copy.
+
+After reviewing and approving the generated summary, use: `VAULT UPDATE`.
