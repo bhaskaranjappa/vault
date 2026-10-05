@@ -1,14 +1,14 @@
-# PERSONAL AI OS — AGENT BOOTSTRAP PROTOCOL
+# VAULT — AGENT BOOTSTRAP PROTOCOL
 
 Version: 1.0.0
 Status: V1+ ACTIVE
-Purpose: deterministic cold-start procedure for any LLM, coding agent, runtime or human operator entering the Personal AI OS.
+Purpose: deterministic cold-start procedure for any LLM, coding agent, runtime or human operator entering VAULT.
 
 ## 1. PURPOSE
 
-A new agent must be able to enter the Personal AI OS without relying on prior chat history, model memory, vendor memory, or undocumented assumptions.
+A new agent must be able to enter VAULT without relying on prior chat history, model memory, vendor memory, or undocumented assumptions.
 
-The repository is the canonical project source of truth. Runtime context is temporary execution state.
+VAULT is the canonical personal memory, knowledge, history and continuity repository. It records durable context; external runtimes perform the work. Runtime context is temporary execution state.
 
 This protocol answers:
 - Where is the canonical system?
@@ -21,8 +21,8 @@ This protocol answers:
 
 ## 2. CANONICAL ENTRYPOINT
 
-Canonical project:
-`GitHub → bhaskaranjappa/personal-ai-os → main`
+Canonical repository:
+`GitHub → bhaskaranjappa/vault → main`
 
 Canonical root document:
 `PLAN.md`
