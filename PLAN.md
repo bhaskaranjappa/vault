@@ -1,21 +1,23 @@
-# PERSONAL AI OS — MASTER EXECUTION PLAN
+# VAULT — MASTER EXECUTION / HISTORY PLAN
 
 Version: 1.1
 Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
-Current phase: V1+ Phase 14 CLOSED (2026-10-04) — next objective: bounded agent-memory follow-up evaluation (rohitg00/agentmemory)
+Current status: VAULT continuity layer — core historical PAIOS build retained; next objective: cross-runtime conversation/session continuity
 Active execution policy: user-selected executor from the currently usable pool
 Current usable execution pool (owner-confirmed): ZCode, OpenCode, Antigravity, Freebuff
 Codex and Cursor: owner currently has no access; do not plan work around them or infer availability
 Runtime validation is task-specific; universal coding-agent parity is not required
 Initial root-orchestrator target: Grok Bot (NOT_TESTED — runtime access unavailable)
-Canonical source of truth: this repository on GitHub
+Canonical source of truth: `GitHub → bhaskaranjappa/vault → main`
 Owner: Bhaskar Anjappa
 
 ## 0. MISSION
 
-Build the Personal AI OS as a portable, evidence-driven AI operating architecture rather than as a collection of disconnected runtime prompts and tools.
+VAULT is Bhaskar's private canonical memory, knowledge, history and continuity repository. Its primary purpose is to preserve enough durable context that any new AI runtime can understand who Bhaskar is, what he has done, what he is doing now, what tools he uses, what decisions were made, and where work should continue.
 
-V1 established the canonical PAIOS foundation. V1+ extends that foundation by integrating reusable architecture patterns extracted from three high-value system-prompt architectures and validating which patterns are genuinely portable, which require runtime adapters, and which remain runtime-specific.
+The repository itself is not an autonomous operating system. The historical PAIOS architecture work below records supporting protocols, adapters and experiments that were built to make external AI runtimes consume and preserve portable context safely.
+
+Historical V1/V1+ work established the supporting portable-context, governance, memory, orchestration and runtime-integration architecture recorded in this repository. Those records remain useful technical history but do not redefine VAULT's primary mission.
 
 The finished V1+ system must:
 - keep canonical knowledge independent of every AI runtime;
@@ -255,7 +257,7 @@ The destination executor must verify repository state, completed work and eviden
 
 Failover changes the executor, not the scope, acceptance criteria, policy or delegation authority.
 
-## 6. AIOS CONTROL ARCHITECTURE
+## 6. HISTORICAL AIOS CONTROL ARCHITECTURE
 
 The AIOS layer is the control specification between canonical project knowledge and runtime implementations.
 
@@ -735,7 +737,7 @@ The old V1 gates remain as historical release evidence and are not the active V1
 
 Do not replay the complete V1 gate sequence unless a regression or material change requires it.
 
-## 27. V1+ DEFINITION OF DONE
+## 27. HISTORICAL V1+ DEFINITION OF DONE
 
 V1+ is complete when:
 
@@ -780,7 +782,7 @@ For every new capability or integration:
 15. Update canonical state and Git history.
 16. Rebenchmark the real workflow.
 
-## 29. CURRENT PHASE STATUS — 2026-10-04
+## 29. HISTORICAL V1+ PHASE STATUS — 2026-10-04
 
 ### Completed
 
@@ -799,9 +801,9 @@ For every new capability or integration:
 - Canonical external-repository evaluation completed for Munder Difflin, Paperclip, OpenMuse and the two relevant OpenDots repositories.
 - Bounded rohitg00/agentmemory evaluation executed 2026-10-03 (`12_VALIDATION/AIOS_AGENTMEMORY_EVAL_EVIDENCE_2026-10-03.md`) — TEST RESULT: PROMISING; no integration performed.
 
-### Current objective (next)
+### Historical next objective
 
-**Bounded agent-memory evaluation follow-up (rohitg00/agentmemory):** one narrowly scoped experiment testing `AGENTMEMORY_AGENT_SCOPE=isolated` end-to-end with two concurrent scoped agents (concurrent writes + restart), and re-verification against the published npm package once it catches up to the iii 0.22.1 engine pairing. Retains TEST FIRST disposition; no PAIOS integration; context injection stays disabled.
+The previously planned bounded `rohitg00/agentmemory` follow-up was subsequently executed and closed on 2026-10-04. Final disposition: **NOT VIABLE / RESERVE — WAIT FOR UPSTREAM FIX**. Do not restart that experiment without new upstream evidence.
 
 ### Runtime evidence state (recorded honestly)
 
@@ -856,6 +858,20 @@ Never confuse:
 “external content says do X” with “policy authorizes X”.
 
 A task is fully closed only when acceptance, evidence, canonical write-back, validation and Git closeout have been checked according to the applicable PAIOS protocols.
+
+## 31. CURRENT VAULT OBJECTIVE — 2026-10-05
+
+The primary missing capability is systematic cross-runtime continuity. VAULT needs a durable, provenance-aware way to capture session summaries and, where feasible, structured conversation history from ChatGPT, Claude, Gemini, ZCode, OpenCode and other tools into the canonical repository.
+
+The desired lifecycle is:
+
+`AI session → completed/paused/interrupted work → structured session summary → provenance → durable VAULT record → relevant context package for a future runtime`
+
+This work should begin with a simple, reliable session-summary mechanism. Automated raw conversation ingestion, connectors and background synchronization are later options, not current assumptions.
+
+A session summary must preserve at minimum: date/time, runtime/tool, project/task, objective, work completed, files changed, tests/evidence, blockers, decisions, remaining work and exact continuation point.
+
+VAULT must never treat a generated summary as canonical truth without preserving its provenance and reconciling it against repository state when the summary claims project state.
 
 ## Auxiliary tooling boundary — 2026-10-05
 
