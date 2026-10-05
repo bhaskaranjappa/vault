@@ -27,6 +27,7 @@ You do not need to keep VAULT prompts in a separate Notepad file.
 For a new session, Bhaskar can say:
 
 - **VAULT BOOT** — read `START.md` and load the minimum relevant context from the canonical `main` branch.
+- **VAULT TEST** — evaluate a new tool/repository against VAULT's current objectives, workflows, stack and productivity needs by following `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`. Research deeply, design a bounded test, execute with the owner-selected runtime, measure the result, and produce a disposition such as PASS/PARTIAL/FAIL plus INSTALL/REPLACE/RESERVE/IGNORE/REJECT.
 - **VAULT SUMMARIZE** — read `11_STATE/SESSION_CLOSEOUT_PROMPT.md`, scan the entire current chat, and generate the complete session summary with date/time metadata. Do not update VAULT yet.
 - **VAULT UPDATE** — after Bhaskar approves the generated summary, reconcile it against the current `main` branch, preserve the full summary under `11_STATE/SESSION_SUMMARIES/`, and update only durable canonical changes with the current date/time captured by the session record and Git history.
 
@@ -135,6 +136,8 @@ If execution stops unexpectedly:
 ## 9. COMMAND RULES
 
 `VAULT BOOT` starts the canonical bootstrap process.
+
+`VAULT TEST` starts the canonical new-tool/new-repository productivity evaluation process defined in `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`.
 
 `VAULT SUMMARIZE` generates the full current-chat continuity summary.
 
