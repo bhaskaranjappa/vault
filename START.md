@@ -14,7 +14,7 @@ Start every new session by reading, in this order:
 2. Relevant `01_PROFILE/` files for Bhaskar's identity, goals, skills and preferences
 3. Relevant `08_KNOWLEDGE/` and `11_STATE/` files for the current work
 4. Relevant `11_STATE/SESSION_SUMMARIES/` records from prior sessions when available
-5. Use `11_STATE/SESSION_CLOSEOUT_PROMPT.md` at the end of substantial sessions to produce a reviewable continuity record
+5. Use `11_STATE/SESSION_CLOSEOUT_PROMPT.md` when `VAULT SUMMARIZE` is requested at the end of substantial sessions to produce a reviewable continuity record
 6. `PLAN.md` only when roadmap/history context is needed
 7. Supporting `03_PROTOCOLS/` and runtime files only when the current task requires them
 
@@ -27,8 +27,8 @@ You do not need to keep VAULT prompts in a separate Notepad file.
 For a new session, Bhaskar can say:
 
 - **VAULT BOOT** — read `START.md` and load the minimum relevant context from the canonical `main` branch.
-- **VAULT CLOSEOUT** — read `11_STATE/SESSION_CLOSEOUT_PROMPT.md` and generate the complete end-of-session summary with date/time metadata.
-- **VAULT WRITE-BACK** — after Bhaskar approves a summary, reconcile it against the current `main` branch and write back only durable changes.
+- **VAULT SUMMARIZE** — read `11_STATE/SESSION_CLOSEOUT_PROMPT.md`, scan the entire current chat, and generate the complete session summary with date/time metadata. Do not update VAULT yet.
+- **VAULT UPDATE** — after Bhaskar approves the generated summary, reconcile it against the current `main` branch, preserve the full summary under `11_STATE/SESSION_SUMMARIES/`, and update only durable canonical changes with the current date/time captured by the session record and Git history.
 
 If the current AI/runtime cannot access the private GitHub repository directly, Bhaskar must provide the relevant VAULT file or its contents for that session.
 
@@ -132,7 +132,17 @@ If execution stops unexpectedly:
 - do not claim completion;
 - do not restart completed work without a new hypothesis or evidence gap.
 
-## 9. MASTER RULE
+## 9. COMMAND RULES
+
+`VAULT BOOT` starts the canonical bootstrap process.
+
+`VAULT SUMMARIZE` generates the full current-chat continuity summary.
+
+`VAULT UPDATE` writes the approved summary and its durable changes into the canonical VAULT repository.
+
+`VAULT SUMMARIZE` does not imply `VAULT UPDATE`. Review and approval happen between them.
+
+## 10. MASTER RULE
 
 Start from canonical truth.
 Load minimum relevant context.
