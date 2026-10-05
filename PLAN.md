@@ -1,7 +1,7 @@
 # VAULT — MASTER EXECUTION / HISTORY PLAN
 
-Version: 1.1
-Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
+Version: 2.0
+Status: VAULT continuity layer — active; historical V1/V1+ execution architecture retained for provenance
 Current status: VAULT continuity layer — core historical PAIOS build retained; next objective: cross-runtime conversation/session continuity
 Active execution policy: user-selected executor from the currently usable pool
 Current usable execution pool (owner-confirmed): ZCode, OpenCode, Antigravity, Freebuff
