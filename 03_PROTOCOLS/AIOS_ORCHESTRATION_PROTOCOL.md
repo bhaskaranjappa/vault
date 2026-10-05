@@ -1,7 +1,7 @@
-# AIOS ORCHESTRATION PROTOCOL
+# AIOS ORCHESTRATION PROTOCOL — SUPPORTING CONTEXT
 
-Status: CANONICAL V1+
-Purpose: define portable multi-agent dispatch, delegation, supervision and per-agent routing derived from Astra and Grok Bot.
+Status: CANONICAL SUPPORTING PROTOCOL
+Purpose: record the orchestration contract that external runtimes may use around VAULT. VAULT itself does not dispatch agents or execute work independently.
 
 ## 1. Dispatcher model
 
