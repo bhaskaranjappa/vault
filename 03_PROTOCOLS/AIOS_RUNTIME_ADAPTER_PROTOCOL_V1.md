@@ -1,7 +1,7 @@
-# AIOS RUNTIME ADAPTER PROTOCOL V1
+# AIOS RUNTIME ADAPTER PROTOCOL V1 — SUPPORTING CONTEXT
 
-Status: CANONICAL V1+ — PHASE 13
-Purpose: define a vendor-neutral runtime adapter contract so PAIOS semantics execute consistently across runtimes without any runtime redefining canonical policy.
+Status: CANONICAL SUPPORTING PROTOCOL — HISTORICAL PHASE 13
+Purpose: record the vendor-neutral adapter contract developed to let external runtimes consume VAULT/PAIOS-era context and execution semantics. VAULT itself remains a record/context repository.
 
 Reads:
 - `AIOS_RUNTIME_INTEGRATION_MATRIX_V1.md`
