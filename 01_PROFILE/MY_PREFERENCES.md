@@ -14,3 +14,9 @@
 - Consequential external communication follows the effective owner/bot authority policy; per-action human approval is not a universal requirement.
 - Prospect quality is more important than raw lead volume.
 - Experience count is recomputed from July 2023 against the current date.
+- Current tool stack is intentionally dynamic. Treat ZCode, OpenCode, Antigravity, Freebuff and other tools as a current snapshot only; Bhaskar will explicitly tell the AI when his active tools change.
+- Prefer free tools/services while they remain sufficiently capable and available. Consider paid tools only when there is a strong practical need that materially justifies the cost; do not assume subscriptions are desired.
+- ChatGPT/Astra, Claude/Fable, and Grok Bot system-prompt architectures may be used as research inputs for improving workflows, prompts, decision-making, and operating conventions; they are not automatically canonical runtime behavior.
+- For profile enrichment, use current LinkedIn and GitHub evidence when accessible and relevant. Resume evidence is also authoritative for resume-supported claims; distinguish direct evidence from inference.
+
+Last updated: 2026-10-05 17:55 IST
