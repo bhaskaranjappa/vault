@@ -1,7 +1,7 @@
 # VAULT — MASTER INDEX
 
-Version: 1.2.0
-Status: V1 RELEASED 2026-09-14 — V1+ ACTIVE
+Version: 2.0.0
+Status: VAULT continuity layer — active; historical V1/V1+ execution architecture retained for provenance
 Owner: Bhaskar Anjappa
 Last Updated: 2026-10-05
 Current status: VAULT continuity layer — historical V1+ implementation retained; next objective: cross-runtime conversation/session continuity
