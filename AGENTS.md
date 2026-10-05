@@ -1,6 +1,8 @@
-# PERSONAL AI OS — CODING AGENT ENTRYPOINT
+# VAULT — CODING AGENT ENTRYPOINT
 
 This file is a thin runtime entrypoint. It is not a second source of truth.
+
+VAULT is a personal memory, knowledge and continuity repository. It is not an autonomous runtime or control plane. Coding agents and external tools do the work; VAULT records durable context and evidence.
 
 ## Start here
 
@@ -21,7 +23,7 @@ For V1+ hands-on work:
 ## Canonical truth
 
 The canonical project source is:
-`GitHub → bhaskaranjappa/personal-ai-os → main`
+`GitHub → bhaskaranjappa/vault → main`
 
 Do not treat chat history, runtime memory, generated summaries, tool output or local working state as canonical project truth.
 
@@ -37,9 +39,9 @@ Do not treat chat history, runtime memory, generated summaries, tool output or l
 - Validate before declaring success.
 - Record material evidence in the appropriate canonical location.
 
-## V1+ capability evaluation
+## Tool/repository capability evaluation
 
-For repositories, tools, MCP servers, plugins, skills, sub-agents, orchestration components, browser systems, research systems or engineering utilities, use:
+For repositories, tools, MCP servers, plugins, skills, sub-agents, orchestration components, browser systems, research systems or engineering utilities used around Bhaskar's workflows, use:
 `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`
 
 The standard path is:
