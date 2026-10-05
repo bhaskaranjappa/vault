@@ -11,10 +11,10 @@ This is a navigation and continuity instruction, not a second source of truth. T
 Start every new session by reading, in this order:
 
 1. `00_MASTER_INDEX.md`
-2. Relevant `01_PROFILE/` files for Bhaskar's identity, goals, skills and preferences
+2. Relevant `01_PROFILE/` files for Bhaskar's identity, goals, skills, preferences and AI working style (`01_PROFILE/AI_WORKING_STYLE.md`)
 3. Relevant `08_KNOWLEDGE/` and `11_STATE/` files for the current work
 4. Relevant `11_STATE/SESSION_SUMMARIES/` records from prior sessions when available
-5. Use `11_STATE/SESSION_CLOSEOUT_PROMPT.md` when `VAULT SUMMARIZE` is requested at the end of substantial sessions to produce a reviewable continuity record
+5. Apply `01_PROFILE/AI_WORKING_STYLE.md` as the default interaction/working style, then use `11_STATE/SESSION_CLOSEOUT_PROMPT.md` when `VAULT SUMMARIZE` is requested at the end of substantial sessions to produce a reviewable continuity record
 6. `PLAN.md` only when roadmap/history context is needed
 7. Supporting `03_PROTOCOLS/` and runtime files only when the current task requires them
 
@@ -38,6 +38,7 @@ If the current AI/runtime cannot access the private GitHub repository directly, 
 
 Before doing work, establish:
 
+- Bhaskar's applicable AI working style from `01_PROFILE/AI_WORKING_STYLE.md`;
 - current VAULT status;
 - current active objective;
 - completed work that must not be repeated;
