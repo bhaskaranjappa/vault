@@ -138,6 +138,6 @@ Build principle: Truth → Portability → Reversibility → Leverage → Policy
 
 ## Current auxiliary tooling
 
-- **Agency Agents:** focused specialist layer; 14 selected agents installed and ZCode-verified on 2026-10-05. Evidence: `02_AI_STACK/TOOL_EVALUATIONS/AGENCY_AGENTS_MUNDER_DIFFLIN_2026-10-05.md`.
+- **Agency Agents:** focused specialist layer; the same 14 selected agents are installed across ZCode, OpenCode, Antigravity and Freebuff as of 2026-10-05. ZCode is live-verified for discoverability/invocation; OpenCode and Antigravity await runtime reload/invocation verification; Freebuff has 14/14 file-verified global skills and awaits runtime reload/invocation verification. Evidence: `02_AI_STACK/TOOL_EVALUATIONS/AGENCY_AGENTS_MUNDER_DIFFLIN_2026-10-05.md`.
 - **Munder Difflin:** optional multi-agent execution/UI harness; portable Windows app installed and launched, but live task execution remains UNVERIFIED. Disposition: TEST FIRST.
 - Both remain subordinate to VAULT's canonical policy/state/authority model.
