@@ -1,7 +1,7 @@
-# AIOS AUTOMATION PROTOCOL V1
+# AIOS AUTOMATION PROTOCOL V1 — HISTORICAL SUPPORTING RECORD
 
-Status: CANONICAL V1+ — PHASE 12
-Purpose: define portable, policy-bounded automation across runtimes without making any scheduler, agent, or vendor service canonical.
+Status: HISTORICAL SUPPORTING ARCHITECTURE — PHASE 12
+Purpose: preserve the portable automation contract developed during the former PAIOS build. VAULT records automation intent and outcomes; it does not independently run a scheduler or automation service.
 
 ## 1. Automation contract
 
