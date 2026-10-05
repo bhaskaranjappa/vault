@@ -137,6 +137,7 @@ Use `PLAN.md` for historical implementation context and the current VAULT object
 Build principle: Truth → Portability → Reversibility → Leverage → Policy-Bounded Autonomy
 
 ## Current auxiliary tooling
+- **Agent-Reach:** daily external research/access capability layer; v1.5.0 installed and live-tested with ZCode, Antigravity and Freebuff; OpenCode test pending. It is an external productivity tool, not part of VAULT canonical state or control layer. Evidence: 02_AI_STACK/TOOL_EVALUATIONS/AGENT_REACH_AGENCY_PRODUCTIVITY_2026-10-05.md.
 
 - **Agency Agents:** focused specialist layer; the same 14 selected agents are installed across ZCode, OpenCode, Antigravity and Freebuff as of 2026-10-05. ZCode is live-verified for discoverability/invocation; OpenCode and Antigravity await runtime reload/invocation verification; Freebuff has 14/14 file-verified global skills and awaits runtime reload/invocation verification. Evidence: `02_AI_STACK/TOOL_EVALUATIONS/AGENCY_AGENTS_MUNDER_DIFFLIN_2026-10-05.md`.
 - **Munder Difflin:** optional multi-agent execution/UI harness; portable Windows app installed and launched, but live task execution remains UNVERIFIED. Disposition: TEST FIRST.
