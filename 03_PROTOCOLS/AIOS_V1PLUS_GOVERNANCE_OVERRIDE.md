@@ -1,9 +1,9 @@
-# AIOS V1+ GOVERNANCE OVERRIDE
+# AIOS V1+ GOVERNANCE OVERRIDE — SUPPORTING POLICY RECORD
 
-Status: CANONICAL V1+ OVERRIDE
+Status: CANONICAL SUPPORTING POLICY RECORD
 Date: 2026-09-15
 
-This file supersedes older V1 sections that require per-action human approval. Those rules remain historical provenance in older documents but are not the active V1+ execution policy.
+This file records the current delegated-authority policy developed during the former PAIOS execution architecture. It is a policy/context input for external runtimes and agents, not an authority mechanism inside VAULT itself.
 
 ## Active V1+ model
 
