@@ -40,6 +40,8 @@ Three external system-prompt architectures are treated as architectural research
 - Grok Bot — dispatch, autonomy, worker supervision, automation and authority boundaries.
 
 The normalized extraction catalog is `02_AI_STACK/AIOS_CAPABILITY_PRIMITIVES.md`.
+
+The portable application of the useful source-derived behaviors to Bhaskar's day-to-day AI/coding workflow is `01_PROFILE/AI_WORKING_STYLE.md`.
 The source records are tracked in `10_SOURCES/SOURCE_LEDGER.md`.
 The vendor-neutral specification is `03_PROTOCOLS/AIOS_SPEC_V1.md`.
 Runtime-independent autonomous authority is defined by `03_PROTOCOLS/BOT_AUTHORITY_PROTOCOL.md`.
@@ -57,6 +59,10 @@ The private GitHub repository `bhaskaranjappa/vault` exists and contains the can
 V1 DECLARED 2026-09-14: release evidence remains in `12_VALIDATION/V1_RELEASE_GATES.md`.
 
 Historical V1+ work is retained as supporting architecture and evidence. It is not the current product definition.
+
+## AI working style
+
+Portable AI interaction and coding-agent preferences are defined in `01_PROFILE/AI_WORKING_STYLE.md`. It combines current Bhaskar preferences with vendor-neutral principles extracted from historical Astra, Fable and Grok Bot architecture research. Raw source prompts are research captures, not normal runtime instructions.
 
 ## Cold-start / agent bootstrap
 
