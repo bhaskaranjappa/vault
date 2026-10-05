@@ -42,4 +42,4 @@ The session date/time describes **when the work happened**. The Git commit times
 
 ## Command usage
 
-At the end of a substantial session, use **VAULT SUMMARIZE** to generate the full current-chat summary. After review and approval, use **VAULT UPDATE** to reconcile the approved summary against the canonical `main` branch and write the durable records. **VAULT BOOT** is used at the start of a new session.
+Use **VAULT TEST** when evaluating a new tool or repository for practical productivity value. Use **VAULT SUMMARIZE** at the end of a substantial session to generate the full current-chat summary. After review and approval, use **VAULT UPDATE** to reconcile the approved summary against the canonical `main` branch and write the durable records. **VAULT BOOT** is used at the start of a new session.
