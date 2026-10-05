@@ -20,6 +20,19 @@ Start every new session by reading, in this order:
 
 Do not rely on previous chat history, model memory, generated summaries, or assumptions for canonical project state.
 
+## 1A. EASY USER COMMANDS
+
+You do not need to keep VAULT prompts in a separate Notepad file.
+
+For a new session, Bhaskar can say:
+
+- **VAULT BOOT** — read `START.md` and load the minimum relevant context from the canonical `main` branch.
+- **VAULT CLOSEOUT** — read `11_STATE/SESSION_CLOSEOUT_PROMPT.md` and generate the complete end-of-session summary with date/time metadata.
+- **VAULT WRITE-BACK** — after Bhaskar approves a summary, reconcile it against the current `main` branch and write back only durable changes.
+
+If the current AI/runtime cannot access the private GitHub repository directly, Bhaskar must provide the relevant VAULT file or its contents for that session.
+
+
 ## 2. DETERMINE CURRENT STATE
 
 Before doing work, establish:
