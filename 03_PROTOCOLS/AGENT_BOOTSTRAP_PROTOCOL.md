@@ -1,7 +1,7 @@
 # VAULT — AGENT BOOTSTRAP PROTOCOL
 
 Version: 1.0.0
-Status: V1+ ACTIVE
+Status: ACTIVE
 Purpose: deterministic cold-start procedure for any LLM, coding agent, runtime or human operator entering VAULT.
 
 ## 1. PURPOSE
@@ -38,7 +38,7 @@ The objective is to reconstruct Bhaskar's current context with minimum relevant 
 
 Every new agent or runtime entering the project should follow this sequence:
 
-`LOCATE → READ PLAN → READ MASTER INDEX → IDENTIFY CURRENT STATE → IDENTIFY TASK → LOAD RELEVANT CONTEXT → CHECK RUNTIME STATE → EXECUTE → VALIDATE → RECORD → SYNC`
+`LOCATE → READ START → READ MASTER INDEX → READ AI WORKING STYLE → IDENTIFY CURRENT STATE → IDENTIFY TASK → LOAD RELEVANT CONTEXT → CHECK RUNTIME STATE → EXECUTE → VALIDATE → RECORD → SYNC`
 
 ### Step 1 — Locate the canonical repository
 
@@ -49,25 +49,25 @@ Use branch `main` unless the task explicitly requires another branch.
 
 Verify repository identity before making changes.
 
-### Step 2 — Read `PLAN.md`
+### Step 2 — Read `START.md` and `00_MASTER_INDEX.md`
 
-Read `PLAN.md` first.
+Use `START.md` as the compact canonical boot instruction and `00_MASTER_INDEX.md` as the orientation map.
 
 Determine:
-- current V1/V1+ status;
-- primary and secondary executors;
-- current execution model;
-- current entrypoint;
-- non-negotiable rules;
+- current VAULT status;
+- current continuity objective;
+- active executor pool and selection policy;
 - current priorities;
-- prohibited actions;
+- non-negotiable rules;
 - relevant acceptance criteria.
 
-Do not assume the task begins at the start of the historical V1 build sequence.
+Read `PLAN.md` only when roadmap/history context is required. Do not assume the task begins at the start of the historical V1 build sequence.
 
-### Step 3 — Read `00_MASTER_INDEX.md`
+### Step 3 — Read `01_PROFILE/AI_WORKING_STYLE.md`
 
-Use the master index to locate the authoritative document for each required subject.
+Apply Bhaskar's portable interaction and coding-agent working preferences before task execution.
+
+Then use the master index to locate the authoritative document for each required subject.
 
 The master index is an orientation layer, not a replacement for detailed source documents.
 
@@ -154,12 +154,12 @@ Never recommend installation merely because a repository is popular, highly star
 
 ## 6. RUNTIME EXECUTION HIERARCHY
 
-For V1+ hands-on work:
+For hands-on work:
 
 ### Active execution policy
 The owner currently uses ZCode, OpenCode, Antigravity and Freebuff for hands-on execution.
 
-The owner selects the executor for each task based on access, token/context availability, task fit and workflow preference.
+The owner selects the executor for each task based on access, token/context availability, task fit and workflow preference. This is a current snapshot and may change when Bhaskar explicitly reports a change.
 
 When writing an implementation, test or repository-evaluation prompt, target the executor the owner is currently using. Adapt commands, tool calls, agent syntax, MCP setup and recovery instructions to that runtime. Do not assume capabilities from another runtime.
 
