@@ -34,6 +34,8 @@ Do not treat a local clone, chat transcript, runtime memory, generated summary, 
 
 ## 3. COLD-START SEQUENCE
 
+The objective is to reconstruct Bhaskar's current context with minimum relevant material. Do not treat legacy AIOS execution protocols as proof that VAULT itself can execute tasks.
+
 Every new agent or runtime entering the project should follow this sequence:
 
 `LOCATE → READ PLAN → READ MASTER INDEX → IDENTIFY CURRENT STATE → IDENTIFY TASK → LOAD RELEVANT CONTEXT → CHECK RUNTIME STATE → EXECUTE → VALIDATE → RECORD → SYNC`
