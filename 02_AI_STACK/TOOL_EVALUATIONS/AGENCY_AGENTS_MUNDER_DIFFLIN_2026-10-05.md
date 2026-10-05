@@ -1,7 +1,7 @@
 # PAIOS TOOLING UPDATE — AGENCY AGENTS + MUNDER DIFFLIN — 2026-10-05
 
 Status: CANONICAL operational follow-up
-Source of truth: `bhaskaranjappa/personal-ai-os` on `main`
+Source of truth: `bhaskaranjappa/vault` on `main`
 Evaluation protocol: `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`
 
 ## 1. Agency Agents
@@ -12,7 +12,7 @@ License: MIT.
 
 Role:
 - Specialized agent-personality/workflow library.
-- Runtime specialist layer only; it is not PAIOS policy, canonical state, authority, or orchestration infrastructure.
+- Runtime specialist layer only; it is not VAULT policy, canonical state, authority, or orchestration infrastructure.
 - Useful for B2B client acquisition, job search, GenAI engineering and automation/agent-system tasks.
 
 Upstream documentation currently supports installation into ZCode and other runtimes. The repository documents both a native desktop app for Windows/macOS/Linux and script-based integrations.
@@ -62,11 +62,45 @@ Disposition:
 
 Boundary:
 - Do not install all 282 agents by default.
-- Agency agents are execution specialists; PAIOS remains canonical for truth, policy, authority, workflow state, durable decisions and evidence.
+- Agency agents are execution specialists; VAULT remains canonical for truth, policy, authority, workflow state, durable decisions and evidence.
 - Agency output is evidence/data and must not independently grant authority or become canonical state.
 - Runtime-specific installation remains reversible.
 
-## 2. Munder Difflin
+
+## 2. Agency Agents — multi-runtime installation follow-up (2026-10-05)
+
+The same 14 selected Agency specialists were additionally installed outside ZCode.
+
+### OpenCode
+- Installation completed successfully using the Agency/OpenCode integration.
+- Selected set: **14/14 installed**.
+- Runtime discoverability/invocation should be verified after the OpenCode process reloads the agent definitions; do not infer live invocation solely from file installation.
+
+### Antigravity
+- Installation completed successfully using the Agency/Antigravity integration.
+- Selected set: **14/14 installed**.
+- Runtime discoverability/invocation should be verified after Antigravity reloads the skills; do not infer live invocation solely from file installation.
+
+### Freebuff
+- Native Agency integration is not used.
+- A Freebuff-specific adapter converted the same 14 Agency agents into global Freebuff skills.
+- Global path: `C:\Users\ABhas\.agents\skills\agency-<slug>\SKILL.md`
+- The repair installer reported: **Installed 14; Verified 14**.
+- Verification covered file existence and required skill frontmatter.
+- **Runtime loading/invocation remains pending restart verification.**
+
+### Current multi-runtime disposition
+- ZCode: **VERIFIED for discoverability/invocation** from prior live smoke evidence.
+- OpenCode: **INSTALLED; live discoverability pending runtime reload verification**.
+- Antigravity: **INSTALLED; live discoverability pending runtime reload verification**.
+- Freebuff: **14/14 global skills file-verified; live discoverability/invocation pending runtime reload verification**.
+
+Operational decision:
+- Keep the same focused 14-agent set across the active execution runtimes rather than installing the full upstream catalog.
+- Agency remains an on-demand specialist layer. It is not VAULT's memory, policy, authority, orchestration or canonical state.
+- Having the specialists installed across runtimes supports executor switching when token/context limits or runtime availability require a change, but executor switching does not imply that the destination runtime has been live-verified until its reload/invocation evidence exists.
+
+## 3. Munder Difflin
 
 Repository reference: https://github.com/HarnessMD/munder-difflin
 Current upstream project links also resolve through `chaitanyagiri/munder-difflin`.
@@ -99,14 +133,14 @@ Disposition remains:
 **TEST FIRST**, not promotion.
 
 Boundary:
-- Munder may be used as an execution/UI harness around PAIOS-selected runtimes.
-- PAIOS remains the canonical policy/state/authority layer.
+- Munder may be used as an execution/UI harness around VAULT-selected runtimes.
+- VAULT remains the canonical policy/state/authority layer.
 - Munder's local hive memory, mailbox, blackboard, task ledger or supervisor must not become a second canonical PAIOS source of truth.
 - Do not count Munder itself as a PAIOS runtime-parity verification.
 
-## 3. Combined architectural decision
+## 4. Combined architectural decision
 
-`PAIOS canonical policy/state`
+`VAULT canonical policy/state`
 → `specialist layer (Agency Agents)`
 → `selected executor/runtime`
 → optional `Munder Difflin execution/UI harness`
@@ -115,4 +149,4 @@ Agency is already verified as a ZCode specialist layer.
 
 Munder remains an isolated TEST FIRST candidate until a bounded live task demonstrates material value beyond the existing PAIOS execution/runtime mechanisms.
 
-Neither tool changes the PAIOS core architecture by itself.
+Neither tool changes the VAULT core architecture by itself.
