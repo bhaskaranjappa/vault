@@ -1,4 +1,6 @@
-# AI TOOL REGISTRY
+# VAULT — AI TOOL REGISTRY
+
+This registry records the external tools and runtimes Bhaskar uses around VAULT. It does not make any tool a canonical source of personal memory or project truth.
 
 Lifecycle: SUPPORTED → INSTALLED → ENABLED → CONFIGURED → AUTHENTICATED → VERIFIED.
 
