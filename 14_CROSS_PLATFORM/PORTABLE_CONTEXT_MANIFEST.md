@@ -13,7 +13,7 @@ Every runtime receives, directly or through its native adapter:
 - relevant `06_PLATFORM_ADAPTERS/` — runtime-specific translation rules
 - relevant `08_KNOWLEDGE/` — only the durable knowledge needed for the task
 
-Do not dump the entire OS into every runtime by default.
+Do not dump the entire VAULT into every runtime by default.
 
 ## Routing rule
 
