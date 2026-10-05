@@ -131,3 +131,11 @@ No tool installed, connected, or authenticated. Architecture unmodified. Outreac
 - Overhead measured: ~3.9 s added per agent switch, effective ~66.8 writes/min under the mitigated alternating pattern (~30x penalty), average write latency 0.028 s; global serialization is required yet still insufficient.
 - **Decision: B — NOT VIABLE.** The mitigation does not reliably prevent searchable-memory loss (acceptance criterion 5 fails). agentmemory disposition moves from TEST FIRST to RESERVE — WAIT FOR UPSTREAM FIX. No further PAIOS-side workarounds to be built. If upstream fixes the concurrent multi-agent index loss (and the abrupt-stop durability window), a fresh bounded evaluation could re-open the path. PAIOS runtime-memory continuity remains served by the canonical file-backed memory engine (Phase 8).
 - Evidence: `12_VALIDATION/AIOS_AGENTMEMORY_CAPTURE_SERIALIZER_EVIDENCE_2026-10-04.md`.
+
+## 2026-10-05 — Agency Agents and Munder Difflin operational state
+
+- **Agency Agents** (`msitarzewski/agency-agents`) is promoted to the focused runtime specialist layer for the owner's ZCode workflow. Direct evidence: 282 ZCode conversions generated on 2026-10-05; 14 selected specialists installed at `C:\Users\ABhas\.zcode\agents`; all 14 definitions present and valid; all 14 discoverable; live `code-reviewer` smoke test passed.
+- Agency does **not** become PAIOS infrastructure. PAIOS remains canonical for truth, policy, authority, workflow state, durable decisions, provenance and evidence.
+- **Munder Difflin** remains **TEST FIRST**. The source-build path failed under the current Windows/Node 25 environment, so a portable Windows release was used successfully. The app launched and OpenCode was visible, but a live end-to-end Munder task has not yet been verified.
+- Munder may be evaluated as an optional execution/UI harness, but its local memory, mailbox, blackboard, task ledger and supervisor must remain non-canonical.
+- No change to PAIOS core architecture, authority model or active executor pool.
