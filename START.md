@@ -10,12 +10,12 @@ This is a navigation and continuity instruction, not a second source of truth. T
 
 Start every new session by reading, in this order:
 
-1. `PLAN.md`
-2. `00_MASTER_INDEX.md`
-3. `03_PROTOCOLS/AGENT_BOOTSTRAP_PROTOCOL.md`
-4. `03_PROTOCOLS/AIOS_SPEC_V1.md`
-5. `03_PROTOCOLS/BOT_AUTHORITY_PROTOCOL.md`
-6. The task-specific protocol, workflow, state and runtime files identified by the bootstrap procedure.
+1. `00_MASTER_INDEX.md`
+2. Relevant `01_PROFILE/` files for Bhaskar's identity, goals, skills and preferences
+3. Relevant `08_KNOWLEDGE/` and `11_STATE/` files for the current work
+4. Relevant conversation/session summaries when available
+5. `PLAN.md` only when roadmap/history context is needed
+6. Supporting `03_PROTOCOLS/` and runtime files only when the current task requires them
 
 Do not rely on previous chat history, model memory, generated summaries, or assumptions for canonical project state.
 
@@ -23,7 +23,7 @@ Do not rely on previous chat history, model memory, generated summaries, or assu
 
 Before doing work, establish:
 
-- current V1/V1+ status;
+- current VAULT status;
 - current active objective;
 - completed work that must not be repeated;
 - current tool/runtime lifecycle states;
@@ -37,12 +37,12 @@ Load only the minimum relevant canonical context required for the task.
 
 Use the repository's applicable protocol before acting.
 
-For V1+ capability or repository evaluation, use:
+For external tool/repository evaluation, use:
 `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`
 
 Execution selection, token-limit switching and runtime-specific prompt/test rules in that protocol override older generic executor-order assumptions.
 
-For coding-agent work, use the owner-selected active executor from the current pool: ZCode, OpenCode, Antigravity or Freebuff.
+For coding-agent work, use the owner-selected executor from the current pool: ZCode, OpenCode, Antigravity or Freebuff. The executor performs the task; VAULT records durable context and evidence.
 
 The owner may switch executors when token/context limits, availability, task fit or workflow preference require it. Preserve the exact execution state through the handoff procedure when switching.
 
