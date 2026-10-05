@@ -19,3 +19,10 @@
 4. V1+ tasks (non-blocking, post-V1): retest Claude Code when its local API gateway (localhost:8082) is running — 13 prepared prompt files at `paios-runtime-evidence\2026-09-13\claude-code\`; validate Claude chat / Gemini adapters only if they enter the actual workflow.
 5. Hermes G-06 stale-information failure: runtime-layer, NOT default-model-specific — 2026-09-13 retest reproduces on nemotron-3-super-120b 2/2 (gemma free models 429; ultra timeout). Canonical layer adequate — same test passes on OpenCode and ZCode. Resolution via model change unlikely with current free models; retest when a stronger model is available.
 6. ~~Declare V1 after release gates pass~~ DONE 2026-09-14 — declared with Gate D/G/H rulings per decision record in `07_VERSION_TRACKING/DECISION_HISTORY.md`.
+
+## Current auxiliary tooling state — 2026-10-05
+
+- **Agency Agents:** INSTALLED + VERIFIED for ZCode specialist discoverability/invocation. 14 selected agents installed at `C:\Users\ABhas\.zcode\agents`; live `code-reviewer` smoke test passed. Full roster was not installed.
+- **Munder Difflin:** portable Windows app INSTALLED and launch-verified; OpenCode visible in the UI. End-to-end task execution UNVERIFIED. Disposition remains TEST FIRST.
+- Canonical evidence: `02_AI_STACK/TOOL_EVALUATIONS/AGENCY_AGENTS_MUNDER_DIFFLIN_2026-10-05.md` and `02_AI_STACK/TOOL_EVALUATIONS/EXTERNAL_REPOSITORIES_2026-10-03.md`.
+- Architectural boundary: neither tool becomes canonical PAIOS policy/state/authority.
