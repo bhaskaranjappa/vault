@@ -6,19 +6,23 @@ VAULT is a personal memory, knowledge and continuity repository. It is not an au
 
 ## Start here
 
-1. Read `PLAN.md`.
+1. Read `START.md` and follow the canonical VAULT bootstrap procedure.
 2. Read `00_MASTER_INDEX.md`.
-3. Read `03_PROTOCOLS/AGENT_BOOTSTRAP_PROTOCOL.md`.
-4. Determine the current V1+ objective and active task.
-5. Load only the relevant canonical protocols, workflows, state and runtime documents.
-6. Inspect Git state before making changes.
+3. Read `01_PROFILE/AI_WORKING_STYLE.md` for Bhaskar's portable AI/coding-agent working preferences.
+4. Read `03_PROTOCOLS/AGENT_BOOTSTRAP_PROTOCOL.md`.
+5. Determine the current VAULT objective and active task.
+6. Load only the relevant canonical protocols, workflows, state and runtime documents.
+7. Inspect Git state before making changes.
 
-## Execution hierarchy
+## Execution policy
 
-For V1+ hands-on work:
-- **ZCode** is the preferred executor.
-- **OpenCode** is the secondary/failover executor.
-- When ZCode exhausts usable tokens/context, becomes unavailable, or cannot continue reliably, preserve state with `11_STATE/EXECUTOR_HANDOFF_TEMPLATE.md` and resume in OpenCode from the first incomplete action.
+Use the owner-selected executor from the current pool:
+- **ZCode**
+- **OpenCode**
+- **Antigravity**
+- **Freebuff**
+
+Select based on access, task fit, token/context availability and workflow preference. When switching executors, preserve state with `11_STATE/EXECUTOR_HANDOFF_TEMPLATE.md` and resume from the first incomplete action.
 
 ## Canonical truth
 
@@ -45,7 +49,7 @@ For repositories, tools, MCP servers, plugins, skills, sub-agents, orchestration
 `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`
 
 The standard path is:
-`Capability gap → Discover → Research deeply → Assess → Bounded experiment → ZCode → OpenCode failover if needed → Measure → Review → Decide → Record → Promote → Rebenchmark`
+`Capability/productivity gap → Discover → Research deeply → Assess → Bounded experiment → Owner-selected executor → Preserve state/switch if needed → Measure → Review → Decide → Record → Promote → Rebenchmark`
 
 ## Completion
 
