@@ -1,6 +1,9 @@
 # MY AI STACK
 
-Primary roles:
+VAULT role:
+- VAULT — canonical personal memory, profile, history, project context, decisions and session continuity. It does not execute work independently.
+
+Primary execution/reasoning roles:
 - Hermes Agent — orchestration and automation
 - OpenCode — development/debugging
 - ChatGPT — reasoning, research and architecture
