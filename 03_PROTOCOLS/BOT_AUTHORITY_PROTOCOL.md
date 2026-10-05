@@ -1,11 +1,11 @@
-# BOT AUTHORITY PROTOCOL
+# BOT AUTHORITY PROTOCOL — HISTORICAL SUPPORTING RECORD
 
-Status: CANONICAL
-Purpose: define autonomous authority for Grok Bot and future PAIOS bots without requiring per-action human approval.
+Status: HISTORICAL SUPPORTING ARCHITECTURE
+Purpose: preserve the delegated-authority model developed during the former PAIOS autonomous-execution architecture. This does not mean VAULT itself has autonomous authority.
 
 ## 1. Authority model
 
-PAIOS uses delegated machine authority.
+The former PAIOS execution architecture used delegated machine authority. VAULT remains a record/context layer; authority belongs to the external runtime/workflow that is actually executing.
 
 The owner establishes the root policy. An authorized root bot operates under that policy and may delegate bounded authority to other bots.
 
