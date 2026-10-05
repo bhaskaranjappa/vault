@@ -1,7 +1,7 @@
-# AIOS RUNTIME INTEGRATION MATRIX V1
+# AIOS RUNTIME INTEGRATION MATRIX V1 — SUPPORTING CONTEXT
 
-Status: CANONICAL
-Purpose: map the vendor-neutral AIOS specification to runtime-specific implementation surfaces.
+Status: CANONICAL SUPPORTING RECORD
+Purpose: record how external runtimes were mapped to the former AIOS architecture and how they may consume VAULT context. This matrix does not imply that VAULT itself executes those runtimes.
 
 ## 1. Integration rule
 
