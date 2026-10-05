@@ -8,15 +8,17 @@ Never install merely because a tool is popular or appears useful. Prefer small f
 
 ### Purpose
 
-Use this protocol to discover external repositories, tools, MCP servers, plugins, skills, sub-agent systems, orchestration components, browser systems, research tools and other capability providers that may materially improve the Personal AI OS workflow or a specific runtime.
+Use this protocol to discover external repositories, tools, MCP servers, plugins, skills, sub-agent systems, orchestration components, browser systems, research tools and other capability providers that may materially improve Bhaskar's productivity, workflow quality, execution speed, reliability, or decision quality within the VAULT-centered tool ecosystem.
 
-The goal is not maximum tool count. The goal is measurable productivity improvement without turning an external tool into VAULT's source of truth.
+The goal is not maximum tool count. The goal is measurable practical improvement to Bhaskar's work. VAULT remains the canonical memory, knowledge, history and continuity layer; external tools are execution/capability providers and must not become VAULT's source of truth.
 
 ### Operating model
 
+**VAULT is the canonical context layer.** The current VAULT profile, goals, tool state and relevant workflows establish why a candidate is being evaluated and what baseline it must improve.
+
 **ChatGPT or another capable research LLM** is the research and evaluation planner.
 
-**Active executor pool:** the owner currently uses ZCode, OpenCode, Antigravity and Freebuff. The owner selects the runtime for each hands-on task according to access, token/context limits, task fit and workflow preference.
+**Active executor pool:** the owner currently uses ZCode, OpenCode, Antigravity and Freebuff. The owner selects the runtime for each hands-on task according to access, token/context limits, task fit and workflow preference. This pool is a current snapshot and may change when Bhaskar explicitly reports a change.
 
 **Prompt/test design rule:** every implementation, installation, repository-evaluation or benchmark prompt must be written for the executor the owner is currently using. Use that runtime's native commands, agent model, MCP/configuration surface and recovery mechanisms. Do not assume another runtime's interface.
 
@@ -47,7 +49,8 @@ Codex and Cursor are currently unavailable to the owner and should not be select
    - Record known limits and unknowns.
 
 4. **Protocol-based suitability decision**
-   - Compare the candidate with the current Personal AI OS stack and the identified capability gap.
+   - Compare the candidate with the current VAULT tool/runtime stack and the identified capability gap.
+   - Judge the candidate primarily by incremental productivity value: whether it helps Bhaskar complete real work faster, better, more reliably, or with materially less manual effort.
    - Assess overlap, incremental value, maintenance burden, cost, licensing, security, privacy, reversibility and integration complexity.
    - Produce a bounded test specification only when the candidate has a credible path to measurable value.
    - Candidate disposition before runtime testing: `IGNORE`, `KEEP IN RESERVE`, `TEST FIRST`, or another approved decision state.
@@ -75,7 +78,9 @@ Codex and Cursor are currently unavailable to the owner and should not be select
    - The executor switch is execution continuity, not permission to expand scope.
 
 7. **Runtime evaluation**
-   - Compare baseline versus tool-enhanced workflow using the same decision-relevant task set.
+   - Compare the current baseline workflow versus the tool-enhanced workflow using the same decision-relevant task set.
+   - Prefer a real Bhaskar workflow or representative task over a synthetic benchmark when practical.
+   - Measure whether the tool reduces repeated manual work, shortens execution time, improves output quality, increases useful coverage, or removes a meaningful workflow bottleneck.
    - Measure, where relevant: evidence quality, coverage, false positives/negatives, speed, cost, provenance completeness, reliability, operational complexity, governance compliance and unique decision value.
    - Test failure and missing-data behavior, not only the happy path.
    - Do not weaken thresholds after observing poor results.
@@ -95,6 +100,7 @@ Codex and Cursor are currently unavailable to the owner and should not be select
 
 10. **Canonical recording**
     - Record the candidate, evaluation date, source evidence, test design, runtime used, result, measurements, provenance, lifecycle state and final disposition.
+    - Record the practical productivity impact demonstrated or the specific reason value remains unproven.
     - Update the AI tool registry and decision history when the evidence changes canonical state.
     - Store raw or large runtime evidence outside the canonical repository when appropriate, with stable references and hashes where practical.
     - Tool output is evidence input, never canonical truth.
@@ -159,7 +165,7 @@ For unknown or lightly established projects:
 
 Any tool that receives sensitive credentials, filesystem write access, browser control, email/external communication, code execution, autonomous agent authority or other high-impact privileges requires appropriately strong verification regardless of who built it.
 
-The objective is not to prefer Big Tech over open source. The objective is to spend diligence where failure or misuse would matter, while still verifying that every promoted component closes a real capability gap.
+The objective is not to prefer Big Tech over open source. The objective is to spend diligence where failure or misuse would matter, while still verifying that every promoted component closes a real capability gap and produces useful productivity value.
 
 ### Cross-LLM portability
 
@@ -169,7 +175,7 @@ Each runtime may use its native tools, plugins, MCP clients, sub-agents or skill
 
 The portable instruction is:
 
-`Discover → Research deeply → Assess gap/fit → Specify bounded experiment → Execute in ZCode → Fail over to OpenCode if needed → Measure → Review → Decide → Record canonically → Promote → Rebenchmark`
+`Identify real productivity gap → Discover → Research deeply → Assess gap/fit → Specify bounded experiment → Execute in the owner-selected runtime → Preserve state and switch executor if needed → Measure baseline vs enhanced workflow → Review → Decide → Record canonically → Promote only if justified → Rebenchmark`
 
 ### Governance boundaries
 
@@ -177,6 +183,7 @@ The portable instruction is:
 - No secret material committed to the repository.
 - No unnecessary write permissions.
 - No architecture expansion merely to accommodate a candidate tool.
+- No tool should be promoted solely because it is technically impressive; it must provide a credible and evidence-backed productivity or workflow benefit.
 - No installation solely for popularity, novelty or completeness.
 - No restart from zero after executor failover when a valid handoff exists.
 - No final promotion without evidence.
