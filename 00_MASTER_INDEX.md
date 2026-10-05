@@ -123,3 +123,9 @@ Current priority:
 Use `PLAN.md` as the master roadmap. Do not replay historical V1 phases unless a regression requires it.
 
 Build principle: Truth → Portability → Reversibility → Leverage → Policy-Bounded Autonomy
+
+## Current auxiliary tooling
+
+- **Agency Agents:** focused specialist layer; 14 selected agents installed and ZCode-verified on 2026-10-05. Evidence: `02_AI_STACK/TOOL_EVALUATIONS/AGENCY_AGENTS_MUNDER_DIFFLIN_2026-10-05.md`.
+- **Munder Difflin:** optional multi-agent execution/UI harness; portable Windows app installed and launched, but live task execution remains UNVERIFIED. Disposition: TEST FIRST.
+- Both remain subordinate to the PAIOS canonical policy/state/authority model.
