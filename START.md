@@ -13,9 +13,10 @@ Start every new session by reading, in this order:
 1. `00_MASTER_INDEX.md`
 2. Relevant `01_PROFILE/` files for Bhaskar's identity, goals, skills and preferences
 3. Relevant `08_KNOWLEDGE/` and `11_STATE/` files for the current work
-4. Relevant conversation/session summaries when available
-5. `PLAN.md` only when roadmap/history context is needed
-6. Supporting `03_PROTOCOLS/` and runtime files only when the current task requires them
+4. Relevant `11_STATE/SESSION_SUMMARIES/` records from prior sessions when available
+5. Use `11_STATE/SESSION_CLOSEOUT_PROMPT.md` at the end of substantial sessions to produce a reviewable continuity record
+6. `PLAN.md` only when roadmap/history context is needed
+7. Supporting `03_PROTOCOLS/` and runtime files only when the current task requires them
 
 Do not rely on previous chat history, model memory, generated summaries, or assumptions for canonical project state.
 
