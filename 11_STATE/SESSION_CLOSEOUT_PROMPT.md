@@ -74,8 +74,11 @@ conversation observation, user statement, runtime output, repository evidence, e
 Mark uncertainty explicitly.
 
 ## SESSION METADATA
-Date:
-Approximate start/end time if known:
+Session date (YYYY-MM-DD):
+Session timezone: Asia/Kolkata (IST, UTC+05:30)
+Approximate/exact start time (24-hour, IST):
+Approximate/exact end time (24-hour, IST):
+Closeout summary generated at (YYYY-MM-DD HH:MM:SS IST):
 AI runtime(s):
 Coding executor(s):
 Project/repository:
@@ -94,7 +97,8 @@ STRICT RULES:
 7. Capture interruptions caused by token limits, stopped execution, runtime failure, unavailable tools, or deferred work.
 8. Identify the exact first incomplete action for continuation.
 9. Keep the summary complete enough for a new AI runtime to understand Bhaskar's current context without reading the whole conversation.
-10. Do not add commentary before or after the summary.
+10. Record the session date and available start/end/closeout times explicitly so the chronology is clear. Use IST (UTC+05:30) for VAULT timestamps. If an exact time is unavailable, write "unknown" or "approximate" rather than inventing one.
+11. Do not add commentary before or after the summary.
 ```
 
 ## Approval and write-back procedure
@@ -108,3 +112,12 @@ STRICT RULES:
 7. Validate the changes, inspect Git state, commit, synchronize to main when required, and report the exact result.
 
 The session summary is a bridge between an AI conversation and VAULT, not a replacement for canonical reconciliation.
+
+
+## Quick access
+
+In any new AI session, ask the AI to read the canonical repository `bhaskaranjappa/vault` on `main`, then open:
+
+`11_STATE/SESSION_CLOSEOUT_PROMPT.md`
+
+At the end of a substantial session, the practical command is simply: "Use VAULT's session closeout prompt and generate the full session summary." You do not need to keep a separate Notepad copy.
