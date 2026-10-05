@@ -39,3 +39,7 @@ Every session summary should make the chronology explicit. Use:
 When an AI cannot know an exact time, it must write `unknown` or `approximate` rather than inventing a timestamp.
 
 The session date/time describes **when the work happened**. The Git commit timestamp separately records **when VAULT was updated**. Together they provide both activity chronology and repository write-back chronology.
+
+## Command usage
+
+At the end of a substantial session, use **VAULT SUMMARIZE** to generate the full current-chat summary. After review and approval, use **VAULT UPDATE** to reconcile the approved summary against the canonical `main` branch and write the durable records. **VAULT BOOT** is used at the start of a new session.
