@@ -231,3 +231,51 @@ For the current Phase 14 objective:
 4. Do not count agentmemory as a second runtime; it is a memory capability provider and adapter surface.
 
 No runtime installation, authentication, or benchmark execution was performed in this research pass.
+
+## 12. Operational follow-up — 2026-10-05
+
+### 12.1 Agency Agents — promoted as a runtime specialist layer
+
+Repository: https://github.com/msitarzewski/agency-agents
+
+The upstream project now documents a native desktop app for Windows/macOS/Linux and script-based installation into multiple runtimes, including ZCode.
+
+Direct owner/runtime evidence on Windows:
+- Clone: `C:\Users\ABhas\agency-agents`.
+- ZCode conversion: 282 agents converted on 2026-10-05.
+- Global ZCode destination: `C:\Users\ABhas\.zcode\agents`.
+- 14 selected specialists installed.
+- All 14 definitions validated for frontmatter and discoverability.
+- Live `code-reviewer` invocation succeeded as a smoke test.
+- No PAIOS architecture or canonical-state mechanism was changed.
+
+Decision:
+**INSTALL as a focused specialist layer for ZCode.**
+
+Boundary:
+Agency supplies reusable specialist behavior; PAIOS remains authoritative for policy, authority, durable project state, provenance and evidence. Do not install the full corpus merely for completeness.
+
+### 12.2 Munder Difflin — installation follow-up
+
+Repository reference: https://github.com/HarnessMD/munder-difflin
+
+Munder remains **TEST FIRST** from the 2026-10-03 evaluation.
+
+Operational evidence:
+- Source installation was attempted under `C:\Users\ABhas\munder-difflin`.
+- The source-build path failed in `better-sqlite3` native compilation under Node.js 25 because a prebuilt binary was unavailable and the Windows SDK was missing.
+- A separate latest Windows portable EXE was then downloaded and launched successfully.
+- OpenCode was selected/visible in the Munder interface.
+- A successful live end-to-end task result is not yet recorded; therefore runtime task execution remains **UNVERIFIED**.
+
+Decision:
+Keep Munder as **TEST FIRST** and isolated from PAIOS canonical control/state. It may become an execution/UI harness if a bounded experiment demonstrates material value beyond existing PAIOS runtime mechanisms.
+
+### 12.3 Current combined architecture
+
+`PAIOS canonical policy/state`
+→ `Agency specialist layer`
+→ `owner-selected executor/runtime`
+→ optional `Munder execution/UI harness`
+
+Neither component is a second canonical source of truth.
