@@ -12,7 +12,7 @@ VAULT is not itself an autonomous operating system. External runtimes and tools 
 
 Active execution runtimes (owner-confirmed): ZCode, OpenCode, Antigravity, Freebuff. Codex and Cursor are currently unavailable to the owner.
 
-Repository structure: profile, AI stack, supporting protocols, workflows, platform adapters, version tracking, knowledge, specialists, sources, state, validation, automation, cross-platform context, and historical AIOS architecture records.
+Repository structure: profile, AI stack, supporting protocols, workflows, platform adapters, version tracking, knowledge, specialists, sources, state, session summaries/continuity, validation, automation, cross-platform context, and historical AIOS architecture records.
 
 Profile = who Bhaskar is. Knowledge = durable known facts. History = what happened. Workflow = how a task is performed. Runtime state = tool/software state. Provenance = source. Supporting protocols = execution/context contracts used when needed.
 
