@@ -10,6 +10,13 @@
 - Languages: English professional, Kannada native, Hindi conversational
 - Geographic preference: Bengaluru; India + remote/global acceptable; international acceptable
 
+## Career / employment preferences
+
+- Target roles: Generative AI, Agentic AI, Forward Deployed Engineer, and related AI/ML/DL/GenAI engineering roles.
+- Employment type: full-time, contract, or equivalent opportunities are acceptable.
+- Work arrangement: onsite, hybrid, and remote are all acceptable.
+- Geography: no fixed regional restriction by default. When a search must be limited to a particular region, Bhaskar will specify that region for the task.
+
 ## Professional focus
 
 - Generative AI / LLM application engineering
@@ -42,4 +49,15 @@
 
 Do not hardcode years of experience. Recompute from July 2023 against the current date. Do not inflate skills merely because a technology appears in a resume.
 
-Last updated: 2026-10-05 16:46 IST
+## Public professional profiles
+
+- LinkedIn: https://linkedin.com/in/bhaskar-anjappa-9070a231
+- GitHub: https://github.com/bhaskaranjappa
+- Hugging Face: https://huggingface.co/BhaskarAnjappa
+
+## Profile enrichment policy
+
+- Strongest skills should be inferred/validated from the latest resume plus current LinkedIn and GitHub evidence when those sources are available, rather than relying only on self-declared rankings.
+- Career and tool preferences may change; future explicit updates from Bhaskar supersede this snapshot.
+
+Last updated: 2026-10-05 17:55 IST
