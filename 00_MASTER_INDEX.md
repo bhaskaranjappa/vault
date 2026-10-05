@@ -71,9 +71,9 @@ For any new LLM, coding agent, runtime or human operator entering the project, s
 Then use `AGENTS.md` as the thin coding-agent entrypoint and `03_PROTOCOLS/AGENT_BOOTSTRAP_PROTOCOL.md` as the authoritative cold-start procedure.
 
 Bootstrap order:
-`Canonical GitHub repository → START.md → PLAN.md → 00_MASTER_INDEX.md → AGENTS.md / Agent Bootstrap Protocol → current state → task-specific protocols/workflows/state → runtime state → execute → validate → record → sync → closeout`
+`Canonical GitHub repository → START.md → 00_MASTER_INDEX.md → relevant profile + AI working style → AGENTS.md / Agent Bootstrap Protocol → current state → task-specific protocols/workflows/state → runtime state → execute → validate → record → sync → summarize/update when applicable`
 
-## V1+ execution model
+## Current execution model
 
 The canonical AI Tool / Repository Discovery and Capability-Enhancement Workflow is defined in `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`.
 
@@ -88,7 +88,7 @@ Execution roles:
 - Other runtimes: use only when the owner has access and the task provides a concrete reason to test or integrate them. Do not require all coding agents to be verified.
 
 Standard capability pipeline:
-`Capability gap → Discover → Deep research → Primitive extraction → Protocol assessment → Bounded test → ZCode execution → OpenCode failover if required → Measure → Review → PASS/PARTIAL/FAIL → Promote/Reserve/Ignore/Reject → Canonical evidence → Runtime integration → Production rebenchmark`
+`Real productivity/capability gap → Discover → Deep research → Assess → Bounded test → Owner-selected executor → Preserve state/switch if required → Measure → Review → PASS/PARTIAL/FAIL → INSTALL/REPLACE/RESERVE/IGNORE/REJECT → Canonical evidence → Integration → Rebenchmark`
 
 ## Historical AIOS execution architecture
 
@@ -140,4 +140,4 @@ Build principle: Truth → Portability → Reversibility → Leverage → Policy
 
 - **Agency Agents:** focused specialist layer; 14 selected agents installed and ZCode-verified on 2026-10-05. Evidence: `02_AI_STACK/TOOL_EVALUATIONS/AGENCY_AGENTS_MUNDER_DIFFLIN_2026-10-05.md`.
 - **Munder Difflin:** optional multi-agent execution/UI harness; portable Windows app installed and launched, but live task execution remains UNVERIFIED. Disposition: TEST FIRST.
-- Both remain subordinate to the PAIOS canonical policy/state/authority model.
+- Both remain subordinate to VAULT's canonical policy/state/authority model.
