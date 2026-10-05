@@ -55,3 +55,30 @@ No candidate was installed, authenticated or runtime-verified during this evalua
 |---|---|---|---|
 | **kkonstvol-lab/obsidian-memory** | KEEP IN RESERVE | human-readable Obsidian/Markdown memory and source-backed wiki reference | PAIOS remains the sole canonical source of truth; use only as a sidecar/view or after a concrete knowledge-workspace gap |
 | **rohitg00/agentmemory** | RESERVE — WAIT FOR UPSTREAM FIX | external persistent-memory capability provider behind a PAIOS adapter | runtime memory remains non-canonical; PAIOS authority, policy and durable project state remain authoritative. Bounded evaluation 2026-10-03 — PROMISING. Isolated-scope follow-up 2026-10-04 — PARTIAL: per-call agentId isolation correct; NOT a security boundary; `AGENTMEMORY_AGENT_SCOPE=isolated` silently degrades without server `AGENT_ID`; pre-durability capture loss on abrupt kill. Wrapper prototype 2026-10-04 — PARTIAL: fail-closed wrapper contract passed 14/15; WR-09 upstream defect silently drops one agent's acknowledged writes from the search index under multi-agent concurrent capture. CaptureSerializer mitigation experiment 2026-10-04 (`AIOS_AGENTMEMORY_CAPTURE_SERIALIZER_EVIDENCE_2026-10-04.md`) — **FAIL, decision NOT VIABLE**: mitigation passed burst-then-switch workloads (A 3/3, B 3/3, restart clean) but failed deterministically 2/2 under interleaved per-write switching even with per-switch quiesce; unmitigated control did not reproduce (defect stochastic); ~3.9 s per agent switch (~30× throughput penalty); abrupt stop ≤1 s after ack loses acknowledged writes at storage level. Zero cross-agent leakage in every run to date. Requires upstream fix of concurrent multi-agent index loss (and durability window) before any re-evaluation. NOT INSTALLED into PAIOS, NOT VERIFIED for PAIOS use |
+
+## Operational tooling follow-up — 2026-10-05
+
+### Agency Agents
+
+- Repository: https://github.com/msitarzewski/agency-agents
+- Dedicated app: https://agencyagents.app
+- Role: specialist agent/workflow library at the runtime layer; not a PAIOS control plane or source of truth.
+- ZCode conversion completed 2026-10-05: 282 agents converted.
+- Exactly 14 selected agents installed globally at `C:\Users\ABhas\.zcode\agents`.
+- Installed set: ai-engineer, automation-governance-architect, code-reviewer, codebase-onboarding-engineer, email-intelligence-engineer, multi-agent-systems-architect, outbound-strategist, prompt-engineer, rag-pipeline-engineer, recruitment-specialist, research-synthesist, resume-tailor, sales-outreach, workflow-architect.
+- Direct ZCode verification: all 14 files present; valid `name`/`description` frontmatter; all 14 discoverable; live `code-reviewer` smoke test passed.
+- Lifecycle: SUPPORTED → INSTALLED → VERIFIED for ZCode discoverability/invocation.
+- Disposition: INSTALL as a focused specialist layer. Do not install the full roster by default.
+- PAIOS remains canonical for policy, authority, workflow state, durable decisions, provenance and evidence.
+
+### Munder Difflin
+
+- Repository reference: https://github.com/HarnessMD/munder-difflin
+- Role: optional local multi-agent execution/UI harness around terminal coding CLIs; not a PAIOS control plane.
+- Existing disposition: TEST FIRST.
+- 2026-10-05 operational follow-up: source-build path failed during `better-sqlite3` native build under Node.js 25 because no matching prebuilt binary was available and the Windows SDK was missing. This did not affect the separate portable-app path.
+- Latest Windows portable EXE was downloaded and launched successfully; OpenCode was selected/visible.
+- Live end-to-end Munder task execution is not yet verified; a minimal `hello.txt` smoke test was proposed but no successful result is recorded.
+- Lifecycle: INSTALLED / app launch operational; runtime task execution UNVERIFIED.
+- Disposition remains TEST FIRST.
+- PAIOS policy/state/authority remain canonical; Munder local memory, mailbox, blackboard, task ledger and supervisor are runtime-side data/mechanisms only.
