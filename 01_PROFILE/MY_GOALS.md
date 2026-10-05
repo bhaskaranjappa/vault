@@ -2,7 +2,7 @@
 
 ## Active
 - B2B GenAI contracting / client acquisition
-- Personal AI OS
+- VAULT — persistent personal memory, history and AI continuity
 
 ## Secondary
 - Job search
