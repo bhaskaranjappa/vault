@@ -1,7 +1,11 @@
-# Personal AI OS
+# VAULT
 
-Portable personal AI knowledge and operating system for Bhaskar Anjappa.
+Bhaskar's private personal AI memory, knowledge, history and continuity repository.
 
-Canonical source: private Git repository.
+VAULT is a record/context layer. It does not independently browse, execute agents, send emails, schedule jobs, or operate computers.
 
-Start at `00_MASTER_INDEX.md`.
+Former name: Personal AI OS (PAIOS), renamed 2026-10-05.
+
+Canonical source: `GitHub → bhaskaranjappa/vault → main`.
+
+Start at `START.md`.
