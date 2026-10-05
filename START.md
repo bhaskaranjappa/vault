@@ -1,10 +1,10 @@
-# PERSONAL AI OS — START HERE
+# VAULT — START HERE
 
-Purpose: use this file as the compact boot instruction for any new LLM, coding agent, runtime, bot, or human operator entering the Personal AI OS.
+Purpose: use this file as the compact boot instruction for any new LLM, coding agent, runtime, bot, or human operator entering VAULT.
 
-This is a navigation and operating instruction, not a second source of truth. The canonical source of truth is:
+This is a navigation and continuity instruction, not a second source of truth. The canonical source of truth is:
 
-`GitHub → bhaskaranjappa/personal-ai-os → main`
+`GitHub → bhaskaranjappa/vault → main`
 
 ## 1. BOOT
 
@@ -50,8 +50,7 @@ Do not require universal coding-agent testing. For any repository/tool test, wri
 
 Codex and Cursor are currently unavailable to the owner and must not be selected unless the owner explicitly reports access again.
 
-For autonomous multi-bot work, use:
-`Grok Bot → delegated bots`
+For autonomous multi-bot or external execution work, use the task-specific supporting protocols. VAULT itself is not an autonomous runtime.
 
 Use `11_STATE/EXECUTOR_HANDOFF_TEMPLATE.md` whenever execution moves between agents/runtimes. The destination executor must resume from the first incomplete action rather than restart completed work.
 
@@ -61,13 +60,13 @@ Preserve scope, acceptance criteria, provenance, conflicts, least privilege, rev
 
 When evaluating a candidate repository or product:
 
-`Personal AI OS PLAN → relevant protocol/workflow → candidate README/orientation → full official documentation → source/config/releases/issues as needed → bounded experiment → evidence → decision`
+`VAULT current objective → relevant protocol/workflow → candidate README/orientation → full official documentation → source/config/releases/issues as needed → bounded experiment → evidence → decision`
 
 Do not stop at a README when the task requires understanding the full capability set.
 
 Do not install merely because a repository is popular, highly starred, novel, or interesting.
 
-Evaluate against a concrete capability gap and the current Personal AI OS stack.
+Evaluate against a concrete capability gap and the current VAULT workflow and tool stack.
 
 ## 5. CANONICAL WRITE-BACK
 
