@@ -1,13 +1,13 @@
-# AIOS MEMORY + CONTEXT PROTOCOL
+# AIOS MEMORY + CONTEXT PROTOCOL — SUPPORTING CONTEXT
 
-Status: CANONICAL V1+
-Purpose: define portable memory persistence, retrieval, relevance gating and selective context transfer derived primarily from Claude Fable and Astra.
+Status: CANONICAL SUPPORTING PROTOCOL
+Purpose: record portable memory/context rules used by external runtimes to consume and preserve VAULT context. VAULT remains the canonical record; this document does not turn VAULT into an autonomous runtime.
 
 ## 1. Memory layers
 
 AIOS recognizes four memory classes:
 
-1. Canonical knowledge — versioned PAIOS files; highest project authority.
+1. Canonical knowledge — versioned VAULT files; highest project authority.
 2. Runtime/session state — temporary operational state for the current task.
 3. Persistent memory — durable user/project memories stored outside the model weights.
 4. Conversation history — historical context that may inform retrieval but never silently overrides current canonical truth.
