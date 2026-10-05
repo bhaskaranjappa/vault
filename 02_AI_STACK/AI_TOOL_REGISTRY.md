@@ -38,6 +38,22 @@ Lifecycle precision (distinction preserved — no state asserted without evidenc
 - **Hunter.io, Apollo MCP, Crunchbase, OpenOutreach, Brave Search MCP**: **IGNORE** (owner decisions 2026-09-13). OpenOutreach IGNORE independently re-confirmed 2026-09-15 by implementation-level comparison test vs Scrapling: verified NO arbitrary-website scraping (discovery = BetterContact licensed DB API; no scraping library in `openoutfind` source); live `find` blocked on external account/credits; adds no capability over Scrapling+agent. Evidence: `02_AI_STACK/TOOL_EVALUATIONS/OPENOUTREACH_VS_SCRAPLING_TEST_2026-09-15.md`.
 - **Scrapling B2B benchmark (2026-09-15)**: extraction-layer role confirmed for B2B lead finding — 26 domains discovered via Bing HTML (plain Fetcher), 11/12 company-site extractions with careers/contact follow-up and email capture, JSONL agent-consumable output; DDG HTML 202 anti-bot and JS-only shells are documented failure modes. Discovery alone is noisy — agent/LLM qualification layer remains required.
 
+### Agent-Reach — daily productivity capability layer (2026-10-05)
+
+- Repository: https://github.com/Panniantong/Agent-Reach
+- Role: external research/access capability layer used around VAULT and the active runtimes; not a VAULT component, control plane, memory store or source of truth.
+- Version: v1.5.0, installed in C:\Users\ABhas\.agent-reach-venv.
+- English Skill: C:\Users\ABhas\.agents\skills\agent-reach\SKILL.md.
+- Verified in this session: GitHub via gh CLI; web extraction via Jina Reader; earlier Exa search through mcporter; YouTube via yt-dlp.
+- ZCode: Agent-Reach Skill discovered and followed automatically from a natural-language research request; GitHub/web routing verified.
+- Antigravity: Agent-Reach used with research-synthesist; GitHub/Jina research completed.
+- Freebuff: Agent-Reach used with installed Agency Skills; research-synthesist methodology was applied by the main agent rather than confirmed as a separate sub-agent.
+- OpenCode: test pending at session close.
+- Real workflow: Agent-Reach + email-intelligence-engineer identified the public company/founders contact founders@usesalus.ai for Vedant Singh / Salus; no personal address was guessed.
+- User-observed productivity signal: workflows normally taking approximately 30–40 minutes were completed in approximately 3 minutes when specialist-agent + Agent-Reach workflows were used. This is an owner observation, not an independently benchmarked metric.
+- Authenticated/social channels remain configuration-dependent.
+- Disposition: INSTALL / KEEP ACTIVE for daily productivity use.
+- Full evidence: 02_AI_STACK/TOOL_EVALUATIONS/AGENT_REACH_AGENCY_PRODUCTIVITY_2026-10-05.md.
 ## External repository evaluations — 2026-10-03
 
 | Repository | Disposition | Intended role | Boundary |
