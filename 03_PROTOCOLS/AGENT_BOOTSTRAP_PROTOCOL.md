@@ -43,7 +43,7 @@ Every new agent or runtime entering the project should follow this sequence:
 ### Step 1 — Locate the canonical repository
 
 Find or open the repository:
-`bhaskaranjappa/personal-ai-os`
+`bhaskaranjappa/vault`
 
 Use branch `main` unless the task explicitly requires another branch.
 
@@ -117,7 +117,7 @@ When uncertain, follow references from `PLAN.md` and `00_MASTER_INDEX.md` instea
 
 ## 4. SOURCE HIERARCHY
 
-Use the Personal AI OS source hierarchy:
+Use the VAULT source hierarchy:
 
 1. Current explicit user-confirmed facts.
 2. Direct runtime inspection for local runtime state.
@@ -292,7 +292,7 @@ If any of these cannot be determined, inspect the canonical repository further b
 
 A supported LLM or coding agent may use this compact instruction:
 
-`Open the canonical Personal AI OS repository. Read PLAN.md first, then 00_MASTER_INDEX.md. Determine the current V1+ state and active objective. Load only the authoritative protocols, workflows, state and runtime documents required for the current task. Do not rely on chat history or runtime memory as canonical truth. For hands-on work, use the executor currently selected by the owner from ZCode, OpenCode, Antigravity or Freebuff. Design prompts and tests for that runtime's native surface. Switch executors when token/context limits require it, preserving state through the handoff procedure. Do not require universal coding-agent testing. Validate results, preserve provenance and conflicts, update the correct canonical records, and never restart completed work without a new evidence gap or hypothesis.`
+`Open the canonical VAULT repository. Read 00_MASTER_INDEX.md first, then the relevant profile, knowledge, state and session-continuity records. Determine Bhaskar's current context and the active task. Load only the minimum relevant supporting protocols and runtime files required for the task. Do not rely on chat history or runtime memory as canonical truth. For hands-on work, use the executor currently selected by the owner from ZCode, OpenCode, Antigravity or Freebuff. Design prompts and tests for that runtime's native surface. Switch executors when token/context limits require it, preserving state through the handoff procedure. Do not require universal coding-agent testing. Validate results, preserve provenance and conflicts, update the correct canonical records, and never restart completed work without a new evidence gap or hypothesis.`
 
 ## 15. DESIGN PRINCIPLE
 
