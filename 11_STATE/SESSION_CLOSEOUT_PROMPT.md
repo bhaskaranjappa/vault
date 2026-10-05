@@ -115,6 +115,8 @@ The session summary is a bridge between an AI conversation and VAULT, not a repl
 
 ## Command semantics
 
+`VAULT TEST` = evaluate a new tool or repository against VAULT's current objectives, workflows, tool/runtime stack and productivity needs by following `03_PROTOCOLS/AI_TOOL_EVALUATION_PROTOCOL.md`. Produce evidence, measurements and a final disposition; do not promote a candidate without evidence.
+
 `VAULT SUMMARIZE` = scan the entire current chat and generate the complete dated/time-stamped session summary. Do not update the repository during this step unless the user explicitly asks for `VAULT UPDATE`.
 
 `VAULT UPDATE` = take the approved summary available in the current conversation, reconcile it against the current `bhaskaranjappa/vault` `main` branch, update the appropriate canonical records, preserve the full session summary under `11_STATE/SESSION_SUMMARIES/`, and commit the changes with the repository's Git timestamp providing the write-back time.
