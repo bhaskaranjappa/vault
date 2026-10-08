@@ -3,8 +3,8 @@
 Version: 2.0.0
 Status: VAULT continuity layer — active; historical V1/V1+ execution architecture retained for provenance
 Owner: Bhaskar Anjappa
-Last Updated: 2026-10-05
-Current status: VAULT continuity layer — historical V1+ implementation retained; next objective: cross-runtime conversation/session continuity
+Last Updated: 2026-10-08
+Current status: VAULT continuity layer — active and stable; historical PAIOS V1/V1+ retained for provenance; strategic reset 2026-10-08
 
 VAULT is Bhaskar's canonical personal memory, knowledge, history, project-state and continuity layer. It is designed to provide durable context across AI runtimes without making any single model, chat history, vendor memory system, or agent framework the source of truth.
 
@@ -31,6 +31,8 @@ Hermes v0.21.0 is verified from a fresh runtime audit (2026-09-13); the default 
 The first five-company B2B research-only benchmark is recorded. Connectsys and MaxHome.ai were the strongest research candidates; no outreach was sent.
 
 VAULT's primary mission is persistent personal context and continuity for Bhaskar across AI runtimes. The repository records profile, work history, projects, decisions, tools, experiments, session outcomes and current state. It does not execute tasks independently.
+
+**Strategic reset 2026-10-08:** historical PAIOS is frozen; AgentMemory is rejected for integration; the cross-LLM memory/AI-continuity startup thesis is discontinued; the next startup direction must be selected from evidence-backed problem discovery.
 
 ## AIOS architecture layer
 
@@ -124,11 +126,11 @@ Completed foundations:
 - Codex real-runtime adapter and bounded live verification.
 
 Current priority:
-1. Design and implement the missing cross-runtime conversation/session continuity pipeline, beginning with durable session summaries and later expanding to structured ingestion from ChatGPT, Claude, Gemini, ZCode, OpenCode and other tools, only when the implementation and evidence justify it.
-2. For tool/repository tests, write the test specification and prompt for the executor currently selected by the owner.
-3. Use cross-runtime parity only when a concrete hypothesis or evidence gap requires it; universal coding-agent verification is not a PAIOS requirement.
-4. Preserve exact task identity, acceptance criteria and evidence across executor switches caused by token/context exhaustion.
-5. Keep additional execution infrastructure, multi-bot systems, and synchronization mechanisms subordinate to the Vault continuity goal and defer them unless a concrete evidence-backed productivity need justifies them.
+1. Keep VAULT stable as the canonical personal continuity/knowledge layer; do not expand it into a general AI OS or memory SaaS without evidence.
+2. Maintain BOOT / TEST / SUMMARIZE / UPDATE with provenance, current-state precedence and explicit reconciliation.
+3. Apply the capability-gap and evidence protocol to tools/repositories; do not add infrastructure without a concrete productivity need.
+4. Preserve exact task identity, acceptance criteria and evidence across executor switches.
+5. Start a fresh startup problem-discovery process from real customer pain and evidence; do not assume the next product involves AI memory, agents or continuity.
 
 ## Required next steps
 
