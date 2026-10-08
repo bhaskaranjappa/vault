@@ -861,22 +861,30 @@ Never confuse:
 
 A task is fully closed only when acceptance, evidence, canonical write-back, validation and Git closeout have been checked according to the applicable PAIOS protocols.
 
-## 31. CURRENT VAULT OBJECTIVE — 2026-10-05
+## 31. STRATEGIC RESET — 2026-10-08
 
-The primary missing capability is systematic cross-runtime continuity. VAULT needs a durable, provenance-aware way to capture session summaries and, where feasible, structured conversation history from ChatGPT, Claude, Gemini, ZCode, OpenCode and other tools into the canonical repository.
+The previous objective of implementing systematic cross-runtime conversation/session continuity is superseded.
 
-The desired lifecycle is:
+- **VAULT:** KEEP STABLE as the personal canonical continuity/knowledge layer.
+- **Historical PAIOS:** FROZEN; do not create new PAIOS phases merely to expand architecture.
+- **AgentMemory:** REJECTED as a VAULT dependency because the previously reproduced isolated-mode privacy defect remains decisive.
+- **Cross-LLM memory / AI continuity startup:** DISCONTINUED as an active product thesis; technically plausible but commercially unvalidated.
+- **Startup direction:** RESET; no replacement startup selected.
 
-`AI session → completed/paused/interrupted work → structured session summary → provenance → durable VAULT record → relevant context package for a future runtime`
+### New startup-selection gate
 
-This work should begin with a simple, reliable session-summary mechanism. Automated raw conversation ingestion, connectors and background synchronization are later options, not current assumptions.
+Before new product architecture:
+1. specific user/buyer;
+2. recurring or severe pain;
+3. measurable time, money, risk or operational consequence;
+4. current workaround;
+5. reason existing solutions are insufficient;
+6. willingness to pay or strong market evidence;
+7. smallest useful intervention;
+8. real-user validation.
 
-A session summary must preserve at minimum: date/time, runtime/tool, project/task, objective, work completed, files changed, tests/evidence, blockers, decisions, remaining work and exact continuation point.
+Further automatic cross-LLM ingestion, browser capture, semantic-memory infrastructure or context-compilation work is deferred unless a new concrete evidence-backed productivity requirement appears.
 
-VAULT must never treat a generated summary as canonical truth without preserving its provenance and reconciling it against repository state when the summary claims project state.
+### Required next action
 
-## Auxiliary tooling boundary — 2026-10-05
-
-- Agency Agents is an optional specialist-agent layer for the owner-selected executor, currently ZCode. It does not alter the PAIOS control architecture.
-- Munder Difflin is an optional execution/UI harness candidate and remains TEST FIRST; it must not become a second canonical control plane or source of durable PAIOS state.
-- Tool additions follow the existing capability-gap, bounded-test, evidence and canonical-writeback rules.
+Begin evidence-backed problem discovery for a new useful product direction. Do not assume that direction is AI memory, AIOS, agents or continuity.
