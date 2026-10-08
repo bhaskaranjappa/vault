@@ -1,8 +1,8 @@
 # VAULT — MASTER EXECUTION / HISTORY PLAN
 
 Version: 2.0
-Status: VAULT continuity layer — active; historical V1/V1+ execution architecture retained for provenance
-Current status: VAULT continuity layer — core historical PAIOS build retained; next objective: cross-runtime conversation/session continuity
+Status: VAULT continuity layer — active and stable; historical V1/V1+ execution architecture retained for provenance
+Current status: Strategic reset 2026-10-08 — VAULT stable; PAIOS frozen; AgentMemory rejected for integration; AI-memory/continuity startup direction discontinued; next objective: evidence-backed problem discovery
 Active execution policy: user-selected executor from the currently usable pool
 Current usable execution pool (owner-confirmed): ZCode, OpenCode, Antigravity, Freebuff
 Codex and Cursor: owner currently has no access; do not plan work around them or infer availability
@@ -11,7 +11,7 @@ Initial root-orchestrator target: Grok Bot (NOT_TESTED — runtime access unavai
 Canonical source of truth: `GitHub → bhaskaranjappa/vault → main`
 Owner: Bhaskar Anjappa
 
-**Current-state rule:** this document preserves historical V1/V1+ architecture and implementation records. Unless a section is explicitly identified as current under the latest VAULT objective, treat numbered phase descriptions as historical. The active product definition is VAULT's personal memory, knowledge, history and cross-runtime continuity mission.
+**Current-state rule:** this document preserves historical V1/V1+ architecture and implementation records. Unless a section is explicitly identified as current under the latest VAULT objective, treat numbered phase descriptions as historical. The active definition is VAULT's personal memory, knowledge, history and continuity repository. Historical PAIOS architecture is provenance/reference only.
 
 ## 0. MISSION
 
@@ -801,11 +801,11 @@ For every new capability or integration:
   - Closeout record: `12_VALIDATION/AIOS_PHASE14_CLOSEOUT_2026-10-04.md`.
   - Universal coding-agent parity is NOT a Phase-14 exit requirement and was never met or required.
 - Canonical external-repository evaluation completed for Munder Difflin, Paperclip, OpenMuse and the two relevant OpenDots repositories.
-- Bounded rohitg00/agentmemory evaluation executed 2026-10-03 (`12_VALIDATION/AIOS_AGENTMEMORY_EVAL_EVIDENCE_2026-10-03.md`) — TEST RESULT: PROMISING; no integration performed.
+- Bounded rohitg00/agentmemory evaluation executed 2026-10-03 (`12_VALIDATION/AIOS_AGENTMEMORY_EVAL_EVIDENCE_2026-10-03.md`) — initial TEST RESULT: PROMISING; later isolation follow-up reproduced private-memory leakage; final disposition: NOT VIABLE / REJECTED FOR VAULT INTEGRATION.
 
 ### Historical next objective
 
-The previously planned bounded `rohitg00/agentmemory` follow-up was subsequently executed and closed on 2026-10-04. Final disposition: **NOT VIABLE / RESERVE — WAIT FOR UPSTREAM FIX**. Do not restart that experiment without new upstream evidence.
+The previously planned bounded `rohitg00/agentmemory` follow-up was subsequently executed and closed on 2026-10-04. Final disposition: **NOT VIABLE / REJECTED FOR VAULT INTEGRATION** because isolated-mode private-memory leakage was reproduced. Do not restart that experiment without materially new upstream evidence.
 
 ### Runtime evidence state (recorded honestly)
 
@@ -827,7 +827,7 @@ The previously planned bounded `rohitg00/agentmemory` follow-up was subsequently
 
 ### Phase naming clarification
 
-`V1+ Phase 14 — Real Runtime Integration` is CLOSED/COMPLETED (2026-10-04). The current canonical objective is the bounded agent-memory follow-up evaluation described in §29.
+`V1+ Phase 14 — Real Runtime Integration` is CLOSED/COMPLETED (2026-10-04). The current canonical objective is now the 2026-10-08 strategic reset described in §31; the historical agent-memory follow-up is closed.
 
 The previous roadmap entries for specialist/product modules and advanced orchestration are retained as future tracks. They are not current numbered phases and must not override the current objective.
 
