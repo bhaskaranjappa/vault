@@ -24,7 +24,7 @@ Capability lifecycle: SUPPORTED → INSTALLED → ENABLED → CONFIGURED → AUT
 
 Never fabricate facts, metrics, outcomes, contacts, email addresses, company details, client history, project results, tool capabilities, or installation/configuration state.
 
-Current goals: B2B GenAI client acquisition and VAULT. Job search is secondary. Content creation, YouTube, Instagram, entrepreneurship, research and broader automation are future/possible.
+Current goals: VAULT maintenance/continuity and B2B GenAI client acquisition. Job search is secondary. Content creation, YouTube, Instagram, entrepreneurship, research and broader automation are future/possible. Startup/product selection is reset to evidence-backed problem discovery.
 
 Hermes v0.21.0 is verified from a fresh runtime audit (2026-09-13); the default profile model is `gemini-2.5-flash-lite` via OpenRouter transport. The earlier Solar/Nemotron model-selection issue is resolved by user confirmation; Nemotron remains historical provenance.
 
