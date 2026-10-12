@@ -56,7 +56,7 @@ Do not copy the source prompts wholesale into runtime configuration.
 
 ## Deployment state
 
-The private GitHub repository `bhaskaranjappa/vault` exists and contains the canonical rebuild. Windows clone verification is COMPLETE. The 2026-09-13 validation cycle is complete and canonical: cross-platform tests CP-01..CP-06 executed on OpenCode, Hermes, and the ZCode executor; governance battery executed on all three; fresh Hermes runtime state captured; B2B research-only re-validation recorded.
+The public GitHub repository `bhaskaranjappa/vault` contains the canonical rebuild. Windows clone verification is COMPLETE. The 2026-09-13 validation cycle is complete and canonical: cross-platform tests CP-01..CP-06 executed on OpenCode, Hermes, and the ZCode executor; governance battery executed on all three; fresh Hermes runtime state captured; B2B research-only re-validation recorded.
 
 V1 DECLARED 2026-09-14: release evidence remains in `12_VALIDATION/V1_RELEASE_GATES.md`.
 

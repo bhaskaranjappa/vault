@@ -149,7 +149,7 @@ For an AI model, coding agent, or human operator beginning a session:
 4. Confirm what is complete, what remains, and what evidence supports the current state.
 5. At closeout, follow the summarize → review → update → validate workflow.
 
-If the current environment cannot access the private repository, provide the specific authorized files or excerpts needed for that session. Repository access and automatic synchronization must never be assumed.
+If the current environment cannot fetch the repository directly, provide the specific files or excerpts needed for that session. Direct access and automatic synchronization must never be assumed.
 
 ---
 

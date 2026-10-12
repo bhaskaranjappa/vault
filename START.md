@@ -31,7 +31,7 @@ For a new session, Bhaskar can say:
 - **VAULT SUMMARIZE** — read `11_STATE/SESSION_CLOSEOUT_PROMPT.md`, scan the entire current chat, and generate the complete session summary with date/time metadata. Do not update VAULT yet.
 - **VAULT UPDATE** — after Bhaskar approves the generated summary, reconcile it against the current `main` branch, preserve the full summary under `11_STATE/SESSION_SUMMARIES/`, and update only durable canonical changes with the current date/time captured by the session record and Git history.
 
-If the current AI/runtime cannot access the private GitHub repository directly, Bhaskar must provide the relevant VAULT file or its contents for that session.
+If the current AI/runtime cannot access the public GitHub repository directly because the runtime lacks GitHub access or connectivity, provide the relevant VAULT file or its contents for that session.
 
 
 ## 2. DETERMINE CURRENT STATE
