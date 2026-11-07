@@ -139,3 +139,12 @@ No tool installed, connected, or authenticated. Architecture unmodified. Outreac
 - **Munder Difflin** remains **TEST FIRST**. The source-build path failed under the current Windows/Node 25 environment, so a portable Windows release was used successfully. The app launched and OpenCode was visible, but a live end-to-end Munder task has not yet been verified.
 - Munder may be evaluated as an optional execution/UI harness, but its local memory, mailbox, blackboard, task ledger and supervisor must remain non-canonical.
 - No change to PAIOS core architecture, authority model or active executor pool.
+
+
+## 2026-11-08 — Enterprise RAG cloud deployment decisions
+
+- **Selective deployment chosen over full GitHub-to-Hugging-Face synchronization.** The owner wants to deploy only the files required for a change; whole-tree sync could remove Space-specific files and runtime data.
+- **Zilliz collection standardized as `knowledge_base`.** New AWS Frankfurt cluster `Free-01`; use 384-dimensional BGE-small vectors with COSINE AUTOINDEX. Zilliz Cloud retrieval uses `level: 1`; local Milvus fallback keeps `nprobe: 10`.
+- **Groq generation model set to Qwen 3.8 27B** (`qwen/qwen3.8-27b`) after the prior Llama model returned `model_not_found`. Code supports `GROQ_MODEL` override and defaults to Qwen.
+- **No blind re-ingestion.** The cloud migration completed with 9,574 vectors reported across 10 PDFs. The ingestion script now refuses to insert into a non-empty target collection.
+- **Security follow-up is mandatory:** public Hugging Face Space still contains `.env` and source PDFs. Replacement credentials were reported, but old credentials must be revoked and the public file removed; historical exposure remains a separate concern. PDF redistribution authorization and passage disclosure policy are unresolved.
