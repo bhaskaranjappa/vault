@@ -26,3 +26,15 @@
 - **Munder Difflin:** portable Windows app INSTALLED and launch-verified; OpenCode visible in the UI. End-to-end task execution UNVERIFIED. Disposition remains TEST FIRST.
 - Canonical evidence: `02_AI_STACK/TOOL_EVALUATIONS/AGENCY_AGENTS_MUNDER_DIFFLIN_2026-10-05.md` and `02_AI_STACK/TOOL_EVALUATIONS/EXTERNAL_REPOSITORIES_2026-10-03.md`.
 - Architectural boundary: neither tool becomes canonical PAIOS policy/state/authority.
+
+
+## Enterprise RAG deployment state — 2026-11-08
+
+- **Owner-confirmed working:** [Enterprise RAG GitHub](https://github.com/bhaskaranjappa/Enterprise-RAG) and public [Hugging Face Space](https://huggingface.co/spaces/BhaskarAnjappa/Enterprise_RAG). Local project: `C:\Users\ABhas\projects\enterprise-rag`.
+- Zilliz Cloud cluster `Free-01`, AWS Frankfurt, collection `knowledge_base`, 384-dimensional BGE embeddings, COSINE AUTOINDEX. Bhaskar's migration output reported 9,574 inserted vectors from 10 PDFs; treat as reported insert total, not independently queried count.
+- Retrieval code selectively deployed to Hugging Face and read back. Deployment commit: `44c81456aed10fc4dcf6543e9428a31eecb95db2`; verified collection name and Zilliz `level: 1` parameter.
+- Groq generation moved from unavailable `llama-3.3-70b-versatile` to `qwen/qwen3.8-27b`. GitHub `api/generate.py`, `.env.example`, and README updated. Bhaskar confirmed the application works after this change.
+- Deployment policy: selective file deployment only; full-tree sync rejected as unnecessary/destructive for this workflow.
+- **Critical unresolved security work:** public Hugging Face Space still contains `.env` and all 10 PDFs. The `.env` had previously contained populated credentials. Credential rotation reported, but historical exposure is not removed. Public PDF redistribution rights are unverified. Deployed UI also displays complete retrieved passages.
+- Pending: remove public `.env`; verify old keys revoked; determine PDF redistribution permission and remove if not authorized; decide passage-vs-answer-only policy; optionally add read-scoped HF token; perform formal RAG quality/latency evaluation.
+- Detailed project state: `08_KNOWLEDGE/PROJECTS/ENTERPRISE_RAG_KNOWLEDGE_BASE.md`. Session evidence: `11_STATE/SESSION_SUMMARIES/2026-11-08_chatgpt_enterprise-rag-deployment.md`.
