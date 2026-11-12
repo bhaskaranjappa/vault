@@ -3,7 +3,7 @@
 Version: 2.0.0
 Status: VAULT continuity layer — active; historical V1/V1+ execution architecture retained for provenance
 Owner: Bhaskar Anjappa
-Last Updated: 2026-10-08
+Last Updated: 2026-11-12
 Current status: VAULT continuity layer — active and stable; historical PAIOS V1/V1+ retained for provenance; strategic reset 2026-10-08
 
 VAULT is Bhaskar's canonical personal memory, knowledge, history, project-state and continuity layer. It is designed to provide durable context across AI runtimes without making any single model, chat history, vendor memory system, or agent framework the source of truth.
@@ -33,6 +33,16 @@ The first five-company B2B research-only benchmark is recorded. Connectsys and M
 VAULT's primary mission is persistent personal context and continuity for Bhaskar across AI runtimes. The repository records profile, work history, projects, decisions, tools, experiments, session outcomes and current state. It does not execute tasks independently.
 
 **Strategic reset 2026-10-08:** historical PAIOS is frozen; AgentMemory is rejected for integration; the cross-LLM memory/AI-continuity startup thesis is discontinued; the next startup direction must be selected from evidence-backed problem discovery.
+
+## JOBS project knowledge
+
+The detailed JOBS project context, YC-led pipeline architecture, tool history, decisions and historical source summaries are recorded under `08_KNOWLEDGE/PROJECTS/JOB_SEARCH_SYSTEM/`.
+
+The private operational workspace is `https://github.com/bhaskaranjappa/jobs`. VAULT stores durable cross-project context; JOBS owns live job/contact records, run artifacts, drafts and the outreach tracker. Do not duplicate the operational tracker into this public repository.
+
+The historical summary copies in VAULT redact direct email addresses because this repository is public. The original unredacted summaries are preserved in the private JOBS `MEMORY.md`.
+
+Job search remains a secondary goal in VAULT's overall priority hierarchy. Recording detailed project context does not promote it to the primary strategic objective.
 
 ## AIOS architecture layer
 
