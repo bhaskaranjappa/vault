@@ -100,3 +100,8 @@ No candidate was installed, authenticated or runtime-verified during this evalua
 - Lifecycle: INSTALLED / app launch operational; runtime task execution UNVERIFIED.
 - Disposition remains TEST FIRST.
 - PAIOS policy/state/authority remain canonical; Munder local memory, mailbox, blackboard, task ledger and supervisor are runtime-side data/mechanisms only.
+
+
+## Job-search-specific tools
+
+The detailed YC/Work at a Startup, Apollo, Agent-Reach, Prospector, Scrapling, Gmail, OpenOutreach and runtime evaluation history for Bhaskar's JOBS workflow is maintained in `08_KNOWLEDGE/PROJECTS/JOB_SEARCH_SYSTEM/TOOL_HISTORY.md` in VAULT and the operational registry in the private `bhaskaranjappa/jobs` repository. Do not copy JOBS-specific contact data or credentials into this general registry.

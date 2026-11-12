@@ -43,3 +43,8 @@ The session date/time describes **when the work happened**. The Git commit times
 ## Command usage
 
 Use **VAULT TEST** when evaluating a new tool or repository for practical productivity value. Use **VAULT SUMMARIZE** at the end of a substantial session to generate the full current-chat summary. After review and approval, use **VAULT UPDATE** to reconcile the approved summary against the canonical `main` branch and write the durable records. **VAULT BOOT** is used at the start of a new session.
+
+
+## JOBS / VAULT integration record
+
+The 2026-11-12 JOBS project-context promotion is recorded in `2026-11-12_chatgpt_jobs-vault-integration.md`. Project-specific historical summaries are also retained under `08_KNOWLEDGE/PROJECTS/JOB_SEARCH_SYSTEM/HISTORY/`.
