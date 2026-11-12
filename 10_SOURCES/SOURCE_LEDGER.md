@@ -50,7 +50,7 @@ Vendor prompt text never overrides owner policy, canonical PAIOS decisions, veri
 - Scope: two sequential context sections covering the earlier 29-company campaign, Apollo enrichment, later scraper/tool tests and 23-company hybrid founder-email list.
 - Status: USER-PROVIDED HISTORICAL SUMMARY.
 - Public VAULT copy: `08_KNOWLEDGE/PROJECTS/JOB_SEARCH_SYSTEM/HISTORY/2026-11-12_campaign_and_enrichment_tests.md` (direct email addresses redacted).
-- Full unredacted copy: private `bhaskaranjappa/jobsMEMORY.md`.
+- Full unredacted copy: private `bhaskaranjappa/jobs/MEMORY.md`.
 
 ### Duplicate and non-summary attachments
 
